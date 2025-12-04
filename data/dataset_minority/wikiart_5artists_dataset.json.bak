@@ -1,0 +1,2277 @@
+[
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_0.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 0",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_1.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "nude_painting",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Fantin Latour 1",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_2.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 2",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_3.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 3",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_4.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 4",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_5.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "religious_painting",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Fantin Latour 5",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_6.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 6",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_7.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 7",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_8.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 8",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_9.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 9",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_10.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 10",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_11.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 11",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_12.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "nude_painting",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 12",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_13.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 13",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_14.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 14",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_15.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 15",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_16.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 16",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_17.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 17",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_18.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 18",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_19.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Fantin Latour 19",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_20.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 20",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_21.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 21",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_22.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 22",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_23.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "nude_painting",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Fantin Latour 23",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_24.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 24",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_25.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 25",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_26.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "nude_painting",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Fantin Latour 26",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_27.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 27",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_28.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 28",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_29.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 29",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_30.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 30",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_31.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 31",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_32.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 32",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_33.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 33",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fantin_latour/fantin_latour_34.jpg",
+    "artist": "henri-fantin-latour",
+    "concepts": {
+      "artist": "henri-fantin-latour",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Fantin Latour 34",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_0.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 0",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_1.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 1",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_2.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "portrait",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 2",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_3.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "cityscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 3",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_4.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "portrait",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 4",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_5.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "cityscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 5",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_6.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 6",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_7.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "abstract_painting",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 7",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_8.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "cityscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 8",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_9.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 9",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_10.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 10",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_11.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 11",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_12.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "still_life",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 12",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_13.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "cityscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 13",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_14.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 14",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_15.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "portrait",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 15",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_16.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "genre_painting",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 16",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_17.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "portrait",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 17",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_18.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 18",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_19.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 19",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_20.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 20",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_21.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 21",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_22.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "cityscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 22",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_23.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 23",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_24.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 24",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_25.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 25",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_26.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 26",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_27.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 27",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_28.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "nude_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Mc Escher 28",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_29.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "landscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Mc Escher 29",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_30.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 30",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_31.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 31",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_32.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "genre_painting",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 32",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_33.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "genre_painting",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 33",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/mc_escher/mc_escher_34.jpg",
+    "artist": "m.c.-escher",
+    "concepts": {
+      "artist": "m.c.-escher",
+      "genre": "illustration",
+      "style": "Expressionism",
+      "media": [],
+      "art_movement": "Expressionism"
+    },
+    "title": "Mc Escher 34",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_0.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 0",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_1.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 1",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_2.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 2",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_3.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 3",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_4.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 4",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_5.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 5",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_6.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 6",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_7.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 7",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_8.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 8",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_9.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 9",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_10.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "sketch_and_study",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 10",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_11.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 11",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_12.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "religious_painting",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 12",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_13.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 13",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_14.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 14",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_15.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 15",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_16.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "cityscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 16",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_17.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 17",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_18.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 18",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_19.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 19",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_20.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 20",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_21.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 21",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_22.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 22",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_23.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 23",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_24.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "cityscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 24",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_25.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 25",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_26.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 26",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_27.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 27",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_28.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 28",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_29.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 29",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_30.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 30",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_31.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 31",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_32.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 32",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_33.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 33",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/ciurlionis/ciurlionis_34.jpg",
+    "artist": "mikalojus-ciurlionis",
+    "concepts": {
+      "artist": "mikalojus-ciurlionis",
+      "genre": "landscape",
+      "style": "Symbolism",
+      "media": [],
+      "art_movement": "Symbolism"
+    },
+    "title": "Ciurlionis 34",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_0.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 0",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_1.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 1",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_2.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 2",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_3.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 3",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_4.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 4",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_5.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "cityscape",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 5",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_6.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "still_life",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 6",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_7.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 7",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_8.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 8",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_9.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 9",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_10.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 10",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_11.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 11",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_12.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 12",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_13.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 13",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_14.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 14",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_15.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 15",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_16.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 16",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_17.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 17",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_18.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 18",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_19.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 19",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_20.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 20",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_21.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 21",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_22.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 22",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_23.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 23",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_24.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 24",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_25.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 25",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_26.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 26",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_27.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 27",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_28.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 28",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_29.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 29",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_30.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "portrait",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 30",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_31.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 31",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_32.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Realism",
+      "media": [],
+      "art_movement": "Realism"
+    },
+    "title": "Bogdanov Belsky 32",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_33.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 33",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/bogdanov_belsky/bogdanov_belsky_34.jpg",
+    "artist": "nikolay-bogdanov-belsky",
+    "concepts": {
+      "artist": "nikolay-bogdanov-belsky",
+      "genre": "genre_painting",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": "Impressionism"
+    },
+    "title": "Bogdanov Belsky 34",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_0.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 0",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_1.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 1",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_2.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 2",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_3.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "landscape",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 3",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_4.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 4",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_5.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 5",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_6.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 6",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_7.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 7",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_8.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 8",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_9.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 9",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_10.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 10",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_11.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 11",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_12.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 12",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_13.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 13",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_14.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 14",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_15.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 15",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_16.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "abstract_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 16",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_17.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 17",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_18.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 18",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_19.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 19",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_20.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 20",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_21.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 21",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_22.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 22",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_23.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 23",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_24.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 24",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_25.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "cityscape",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 25",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_26.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 26",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_27.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 27",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_28.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 28",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_29.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 29",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_30.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "portrait",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 30",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_31.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 31",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_32.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 32",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_33.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "genre_painting",
+      "style": "Cubism",
+      "media": [],
+      "art_movement": "Cubism"
+    },
+    "title": "Fernand Leger 33",
+    "date": ""
+  },
+  {
+    "image": "dataset_small/fernand_leger/fernand_leger_34.jpg",
+    "artist": "fernand-leger",
+    "concepts": {
+      "artist": "fernand-leger",
+      "genre": "sketch_and_study",
+      "style": "Naive_Art_Primitivism",
+      "media": [],
+      "art_movement": "Naive_Art_Primitivism"
+    },
+    "title": "Fernand Leger 34",
+    "date": ""
+  }
+]

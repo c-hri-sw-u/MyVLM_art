@@ -17,7 +17,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--input",
-        default="/home/ubuntu/MyVLM_art/data/dataset/wikiart_5artists_dataset.json",
+        default="/home/ubuntu/MyVLM_art/data/dataset_minority/wikiart_5artists_dataset.json",
         help="Path to input dataset JSON",
     )
     parser.add_argument(
