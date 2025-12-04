@@ -1,6 +1,6 @@
 [
   {
-    "image": "van_gogh/van_gogh_0.jpg",
+    "image": "dataset/van_gogh/van_gogh_0.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -13,7 +13,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_1.jpg",
+    "image": "dataset/van_gogh/van_gogh_1.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -26,7 +26,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_2.jpg",
+    "image": "dataset/van_gogh/van_gogh_2.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -39,7 +39,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_3.jpg",
+    "image": "dataset/van_gogh/van_gogh_3.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -52,7 +52,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_4.jpg",
+    "image": "dataset/van_gogh/van_gogh_4.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -65,7 +65,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_5.jpg",
+    "image": "dataset/van_gogh/van_gogh_5.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -78,7 +78,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_6.jpg",
+    "image": "dataset/van_gogh/van_gogh_6.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -91,7 +91,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_7.jpg",
+    "image": "dataset/van_gogh/van_gogh_7.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -104,7 +104,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_8.jpg",
+    "image": "dataset/van_gogh/van_gogh_8.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -117,7 +117,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_9.jpg",
+    "image": "dataset/van_gogh/van_gogh_9.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -130,7 +130,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_10.jpg",
+    "image": "dataset/van_gogh/van_gogh_10.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -143,7 +143,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_11.jpg",
+    "image": "dataset/van_gogh/van_gogh_11.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -156,7 +156,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_12.jpg",
+    "image": "dataset/van_gogh/van_gogh_12.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -169,7 +169,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_13.jpg",
+    "image": "dataset/van_gogh/van_gogh_13.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -182,7 +182,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_14.jpg",
+    "image": "dataset/van_gogh/van_gogh_14.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -195,7 +195,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_15.jpg",
+    "image": "dataset/van_gogh/van_gogh_15.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -208,7 +208,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_16.jpg",
+    "image": "dataset/van_gogh/van_gogh_16.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -221,7 +221,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_17.jpg",
+    "image": "dataset/van_gogh/van_gogh_17.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -234,7 +234,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_18.jpg",
+    "image": "dataset/van_gogh/van_gogh_18.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -247,7 +247,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_19.jpg",
+    "image": "dataset/van_gogh/van_gogh_19.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -260,7 +260,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_20.jpg",
+    "image": "dataset/van_gogh/van_gogh_20.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -273,7 +273,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_21.jpg",
+    "image": "dataset/van_gogh/van_gogh_21.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -286,7 +286,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_22.jpg",
+    "image": "dataset/van_gogh/van_gogh_22.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -299,7 +299,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_23.jpg",
+    "image": "dataset/van_gogh/van_gogh_23.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -312,7 +312,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_24.jpg",
+    "image": "dataset/van_gogh/van_gogh_24.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -325,7 +325,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_25.jpg",
+    "image": "dataset/van_gogh/van_gogh_25.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -338,7 +338,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_26.jpg",
+    "image": "dataset/van_gogh/van_gogh_26.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -351,7 +351,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_27.jpg",
+    "image": "dataset/van_gogh/van_gogh_27.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -364,7 +364,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_28.jpg",
+    "image": "dataset/van_gogh/van_gogh_28.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -377,7 +377,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_29.jpg",
+    "image": "dataset/van_gogh/van_gogh_29.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -390,7 +390,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_30.jpg",
+    "image": "dataset/van_gogh/van_gogh_30.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -403,7 +403,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_31.jpg",
+    "image": "dataset/van_gogh/van_gogh_31.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -416,7 +416,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_32.jpg",
+    "image": "dataset/van_gogh/van_gogh_32.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -429,7 +429,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_33.jpg",
+    "image": "dataset/van_gogh/van_gogh_33.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -442,7 +442,7 @@
     "date": ""
   },
   {
-    "image": "van_gogh/van_gogh_34.jpg",
+    "image": "dataset/van_gogh/van_gogh_34.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
@@ -455,7 +455,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_0.jpg",
+    "image": "dataset/monet/monet_0.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -468,7 +468,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_1.jpg",
+    "image": "dataset/monet/monet_1.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -481,7 +481,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_2.jpg",
+    "image": "dataset/monet/monet_2.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -494,7 +494,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_3.jpg",
+    "image": "dataset/monet/monet_3.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -507,7 +507,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_4.jpg",
+    "image": "dataset/monet/monet_4.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -520,7 +520,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_5.jpg",
+    "image": "dataset/monet/monet_5.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -533,7 +533,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_6.jpg",
+    "image": "dataset/monet/monet_6.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -546,7 +546,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_7.jpg",
+    "image": "dataset/monet/monet_7.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -559,7 +559,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_8.jpg",
+    "image": "dataset/monet/monet_8.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -572,7 +572,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_9.jpg",
+    "image": "dataset/monet/monet_9.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -585,7 +585,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_10.jpg",
+    "image": "dataset/monet/monet_10.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -598,7 +598,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_11.jpg",
+    "image": "dataset/monet/monet_11.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -611,7 +611,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_12.jpg",
+    "image": "dataset/monet/monet_12.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -624,7 +624,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_13.jpg",
+    "image": "dataset/monet/monet_13.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -637,7 +637,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_14.jpg",
+    "image": "dataset/monet/monet_14.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -650,7 +650,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_15.jpg",
+    "image": "dataset/monet/monet_15.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -663,7 +663,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_16.jpg",
+    "image": "dataset/monet/monet_16.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -676,7 +676,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_17.jpg",
+    "image": "dataset/monet/monet_17.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -689,7 +689,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_18.jpg",
+    "image": "dataset/monet/monet_18.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -702,7 +702,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_19.jpg",
+    "image": "dataset/monet/monet_19.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -715,7 +715,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_20.jpg",
+    "image": "dataset/monet/monet_20.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -728,7 +728,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_21.jpg",
+    "image": "dataset/monet/monet_21.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -741,7 +741,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_22.jpg",
+    "image": "dataset/monet/monet_22.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -754,7 +754,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_23.jpg",
+    "image": "dataset/monet/monet_23.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -767,7 +767,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_24.jpg",
+    "image": "dataset/monet/monet_24.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -780,7 +780,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_25.jpg",
+    "image": "dataset/monet/monet_25.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -793,7 +793,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_26.jpg",
+    "image": "dataset/monet/monet_26.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -806,7 +806,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_27.jpg",
+    "image": "dataset/monet/monet_27.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -819,7 +819,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_28.jpg",
+    "image": "dataset/monet/monet_28.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -832,7 +832,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_29.jpg",
+    "image": "dataset/monet/monet_29.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -845,7 +845,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_30.jpg",
+    "image": "dataset/monet/monet_30.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -858,7 +858,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_31.jpg",
+    "image": "dataset/monet/monet_31.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -871,7 +871,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_32.jpg",
+    "image": "dataset/monet/monet_32.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -884,7 +884,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_33.jpg",
+    "image": "dataset/monet/monet_33.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -897,7 +897,7 @@
     "date": ""
   },
   {
-    "image": "monet/monet_34.jpg",
+    "image": "dataset/monet/monet_34.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
@@ -910,7 +910,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_0.jpg",
+    "image": "dataset/picasso/picasso_0.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -923,7 +923,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_1.jpg",
+    "image": "dataset/picasso/picasso_1.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -936,7 +936,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_2.jpg",
+    "image": "dataset/picasso/picasso_2.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -949,7 +949,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_3.jpg",
+    "image": "dataset/picasso/picasso_3.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -962,7 +962,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_4.jpg",
+    "image": "dataset/picasso/picasso_4.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -975,7 +975,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_5.jpg",
+    "image": "dataset/picasso/picasso_5.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -988,7 +988,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_6.jpg",
+    "image": "dataset/picasso/picasso_6.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1001,7 +1001,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_7.jpg",
+    "image": "dataset/picasso/picasso_7.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1014,7 +1014,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_8.jpg",
+    "image": "dataset/picasso/picasso_8.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1027,7 +1027,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_9.jpg",
+    "image": "dataset/picasso/picasso_9.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1040,7 +1040,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_10.jpg",
+    "image": "dataset/picasso/picasso_10.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1053,7 +1053,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_11.jpg",
+    "image": "dataset/picasso/picasso_11.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1066,7 +1066,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_12.jpg",
+    "image": "dataset/picasso/picasso_12.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1079,7 +1079,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_13.jpg",
+    "image": "dataset/picasso/picasso_13.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1092,7 +1092,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_14.jpg",
+    "image": "dataset/picasso/picasso_14.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1105,7 +1105,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_15.jpg",
+    "image": "dataset/picasso/picasso_15.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1118,7 +1118,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_16.jpg",
+    "image": "dataset/picasso/picasso_16.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1131,7 +1131,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_17.jpg",
+    "image": "dataset/picasso/picasso_17.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1144,7 +1144,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_18.jpg",
+    "image": "dataset/picasso/picasso_18.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1157,7 +1157,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_19.jpg",
+    "image": "dataset/picasso/picasso_19.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1170,7 +1170,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_20.jpg",
+    "image": "dataset/picasso/picasso_20.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1183,7 +1183,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_21.jpg",
+    "image": "dataset/picasso/picasso_21.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1196,7 +1196,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_22.jpg",
+    "image": "dataset/picasso/picasso_22.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1209,7 +1209,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_23.jpg",
+    "image": "dataset/picasso/picasso_23.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1222,7 +1222,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_24.jpg",
+    "image": "dataset/picasso/picasso_24.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1235,7 +1235,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_25.jpg",
+    "image": "dataset/picasso/picasso_25.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1248,7 +1248,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_26.jpg",
+    "image": "dataset/picasso/picasso_26.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1261,7 +1261,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_27.jpg",
+    "image": "dataset/picasso/picasso_27.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1274,7 +1274,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_28.jpg",
+    "image": "dataset/picasso/picasso_28.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1287,7 +1287,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_29.jpg",
+    "image": "dataset/picasso/picasso_29.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1300,7 +1300,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_30.jpg",
+    "image": "dataset/picasso/picasso_30.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1313,7 +1313,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_31.jpg",
+    "image": "dataset/picasso/picasso_31.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1326,7 +1326,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_32.jpg",
+    "image": "dataset/picasso/picasso_32.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1339,7 +1339,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_33.jpg",
+    "image": "dataset/picasso/picasso_33.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1352,7 +1352,7 @@
     "date": ""
   },
   {
-    "image": "picasso/picasso_34.jpg",
+    "image": "dataset/picasso/picasso_34.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
@@ -1365,7 +1365,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_0.jpg",
+    "image": "dataset/rembrandt/rembrandt_0.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1378,7 +1378,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_1.jpg",
+    "image": "dataset/rembrandt/rembrandt_1.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1391,7 +1391,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_2.jpg",
+    "image": "dataset/rembrandt/rembrandt_2.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1404,7 +1404,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_3.jpg",
+    "image": "dataset/rembrandt/rembrandt_3.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1417,7 +1417,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_4.jpg",
+    "image": "dataset/rembrandt/rembrandt_4.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1430,7 +1430,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_5.jpg",
+    "image": "dataset/rembrandt/rembrandt_5.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1443,7 +1443,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_6.jpg",
+    "image": "dataset/rembrandt/rembrandt_6.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1456,7 +1456,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_7.jpg",
+    "image": "dataset/rembrandt/rembrandt_7.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1469,7 +1469,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_8.jpg",
+    "image": "dataset/rembrandt/rembrandt_8.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1482,7 +1482,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_9.jpg",
+    "image": "dataset/rembrandt/rembrandt_9.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1495,7 +1495,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_10.jpg",
+    "image": "dataset/rembrandt/rembrandt_10.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1508,7 +1508,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_11.jpg",
+    "image": "dataset/rembrandt/rembrandt_11.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1521,7 +1521,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_12.jpg",
+    "image": "dataset/rembrandt/rembrandt_12.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1534,7 +1534,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_13.jpg",
+    "image": "dataset/rembrandt/rembrandt_13.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1547,7 +1547,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_14.jpg",
+    "image": "dataset/rembrandt/rembrandt_14.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1560,7 +1560,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_15.jpg",
+    "image": "dataset/rembrandt/rembrandt_15.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1573,7 +1573,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_16.jpg",
+    "image": "dataset/rembrandt/rembrandt_16.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1586,7 +1586,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_17.jpg",
+    "image": "dataset/rembrandt/rembrandt_17.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1599,7 +1599,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_18.jpg",
+    "image": "dataset/rembrandt/rembrandt_18.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1612,7 +1612,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_19.jpg",
+    "image": "dataset/rembrandt/rembrandt_19.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1625,7 +1625,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_20.jpg",
+    "image": "dataset/rembrandt/rembrandt_20.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1638,7 +1638,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_21.jpg",
+    "image": "dataset/rembrandt/rembrandt_21.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1651,7 +1651,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_22.jpg",
+    "image": "dataset/rembrandt/rembrandt_22.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1664,7 +1664,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_23.jpg",
+    "image": "dataset/rembrandt/rembrandt_23.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1677,7 +1677,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_24.jpg",
+    "image": "dataset/rembrandt/rembrandt_24.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1690,7 +1690,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_25.jpg",
+    "image": "dataset/rembrandt/rembrandt_25.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1703,7 +1703,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_26.jpg",
+    "image": "dataset/rembrandt/rembrandt_26.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1716,7 +1716,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_27.jpg",
+    "image": "dataset/rembrandt/rembrandt_27.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1729,7 +1729,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_28.jpg",
+    "image": "dataset/rembrandt/rembrandt_28.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1742,7 +1742,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_29.jpg",
+    "image": "dataset/rembrandt/rembrandt_29.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1755,7 +1755,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_30.jpg",
+    "image": "dataset/rembrandt/rembrandt_30.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1768,7 +1768,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_31.jpg",
+    "image": "dataset/rembrandt/rembrandt_31.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1781,7 +1781,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_32.jpg",
+    "image": "dataset/rembrandt/rembrandt_32.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1794,7 +1794,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_33.jpg",
+    "image": "dataset/rembrandt/rembrandt_33.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1807,7 +1807,7 @@
     "date": ""
   },
   {
-    "image": "rembrandt/rembrandt_34.jpg",
+    "image": "dataset/rembrandt/rembrandt_34.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
@@ -1820,7 +1820,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_0.jpg",
+    "image": "dataset/da_vinci/da_vinci_0.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1833,7 +1833,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_1.jpg",
+    "image": "dataset/da_vinci/da_vinci_1.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1846,7 +1846,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_2.jpg",
+    "image": "dataset/da_vinci/da_vinci_2.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1859,7 +1859,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_3.jpg",
+    "image": "dataset/da_vinci/da_vinci_3.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1872,7 +1872,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_4.jpg",
+    "image": "dataset/da_vinci/da_vinci_4.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1885,7 +1885,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_5.jpg",
+    "image": "dataset/da_vinci/da_vinci_5.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1898,7 +1898,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_6.jpg",
+    "image": "dataset/da_vinci/da_vinci_6.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1911,7 +1911,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_7.jpg",
+    "image": "dataset/da_vinci/da_vinci_7.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1924,7 +1924,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_8.jpg",
+    "image": "dataset/da_vinci/da_vinci_8.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1937,7 +1937,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_9.jpg",
+    "image": "dataset/da_vinci/da_vinci_9.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1950,7 +1950,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_10.jpg",
+    "image": "dataset/da_vinci/da_vinci_10.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1963,7 +1963,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_11.jpg",
+    "image": "dataset/da_vinci/da_vinci_11.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1976,7 +1976,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_12.jpg",
+    "image": "dataset/da_vinci/da_vinci_12.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -1989,7 +1989,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_13.jpg",
+    "image": "dataset/da_vinci/da_vinci_13.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2002,7 +2002,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_14.jpg",
+    "image": "dataset/da_vinci/da_vinci_14.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2015,7 +2015,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_15.jpg",
+    "image": "dataset/da_vinci/da_vinci_15.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2028,7 +2028,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_16.jpg",
+    "image": "dataset/da_vinci/da_vinci_16.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2041,7 +2041,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_17.jpg",
+    "image": "dataset/da_vinci/da_vinci_17.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2054,7 +2054,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_18.jpg",
+    "image": "dataset/da_vinci/da_vinci_18.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2067,7 +2067,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_19.jpg",
+    "image": "dataset/da_vinci/da_vinci_19.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2080,7 +2080,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_20.jpg",
+    "image": "dataset/da_vinci/da_vinci_20.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2093,7 +2093,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_21.jpg",
+    "image": "dataset/da_vinci/da_vinci_21.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2106,7 +2106,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_22.jpg",
+    "image": "dataset/da_vinci/da_vinci_22.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2119,7 +2119,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_23.jpg",
+    "image": "dataset/da_vinci/da_vinci_23.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2132,7 +2132,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_24.jpg",
+    "image": "dataset/da_vinci/da_vinci_24.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2145,7 +2145,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_25.jpg",
+    "image": "dataset/da_vinci/da_vinci_25.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2158,7 +2158,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_26.jpg",
+    "image": "dataset/da_vinci/da_vinci_26.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2171,7 +2171,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_27.jpg",
+    "image": "dataset/da_vinci/da_vinci_27.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2184,7 +2184,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_28.jpg",
+    "image": "dataset/da_vinci/da_vinci_28.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2197,7 +2197,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_29.jpg",
+    "image": "dataset/da_vinci/da_vinci_29.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2210,7 +2210,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_30.jpg",
+    "image": "dataset/da_vinci/da_vinci_30.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2223,7 +2223,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_31.jpg",
+    "image": "dataset/da_vinci/da_vinci_31.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2236,7 +2236,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_32.jpg",
+    "image": "dataset/da_vinci/da_vinci_32.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2249,7 +2249,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_33.jpg",
+    "image": "dataset/da_vinci/da_vinci_33.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
@@ -2262,7 +2262,7 @@
     "date": ""
   },
   {
-    "image": "da_vinci/da_vinci_34.jpg",
+    "image": "dataset/da_vinci/da_vinci_34.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
