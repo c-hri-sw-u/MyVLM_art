@@ -74,6 +74,7 @@ def _encode_image_base64(image_path: Path) -> str:
 def synthesize_targets(samples: List[Dict[str, Any]], prompt_builder, target_builder, model: str, reveal_labels: bool = True, include_reasoning: bool = False, structured_cfg: Dict[str, Any] = None):
     cache_keys = {}
     cache_reason = {}
+    cache_raw = {}
     for s in samples:
         labels = s["labels_per_dim"]
         prompt = prompt_builder(labels, s.get("concept_signals"), mode="train_semi_structured", reveal_labels=reveal_labels, include_reasoning=include_reasoning, structured_cfg=structured_cfg)
@@ -88,6 +89,7 @@ def synthesize_targets(samples: List[Dict[str, Any]], prompt_builder, target_bui
         }]
         temp = 0.2 if include_reasoning else 0.0
         content = call_openrouter(messages, model=model, temperature=temp)
+        cache_raw[s["image_path"]] = content
         # Post-filtering: extract keys block if reasoning present
         if include_reasoning:
             ks_start = (structured_cfg or {}).get("keys_start", "[BEGIN_KEYS]")
@@ -113,7 +115,7 @@ def synthesize_targets(samples: List[Dict[str, Any]], prompt_builder, target_bui
         # Ensure keys presence; fallback deterministic
         lines_ok = all(k in (content_keys or "").lower() for k in ["artist:", "style:", "genre:"])
         cache_keys[s["image_path"]] = content_keys if lines_ok else target_builder(labels, s.get("concept_signals"), mode="train_semi_structured")
-    return cache_keys, cache_reason
+    return cache_keys, cache_reason, cache_raw
 
 
 def save_targets(cache: Dict[str, str], output_path: Path):
@@ -126,18 +128,19 @@ def _default_paths():
     dataset_path = PROJECT_ROOT / "data/dataset/wikiart_5artists_dataset.json"
     images_root = PROJECT_ROOT / "data/dataset/"
     model = os.environ.get("OPENROUTER_MODEL", "x-ai/grok-4.1-fast")
-    out_path = PROJECT_ROOT / "artifacts/synth_targets_test.json"
+    out_path = PROJECT_ROOT / "artifacts/synth_targets.csv"
     return dataset_path, images_root, model, out_path
 
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="Synthesize target texts with OpenRouter (multimodal)")
-    parser.add_argument("--reveal_labels", type=str, default="true", help="Whether to reveal ground-truth labels in the prompt (true/false)")
-    parser.add_argument("--reasoning", type=str, default="false", help="Whether to include a reasoning block with sentinels (true/false)")
-    parser.add_argument("--dataset_path", type=str, default=None, help="Path to dataset JSON (relative to project root or absolute)")
-    parser.add_argument("--images_root", type=str, default=None, help="Images root directory (relative or absolute)")
-    parser.add_argument("--output", type=str, default=None, help="Output JSON path (relative or absolute)")
+    import csv
+    parser = argparse.ArgumentParser(description="Synthesize target CSV for entire dataset (multimodal)")
+    parser.add_argument("--reveal_labels", type=str, default="true")
+    parser.add_argument("--reasoning", type=str, default="true")
+    parser.add_argument("--dataset_path", type=str, default=None)
+    parser.add_argument("--images_root", type=str, default=None)
+    parser.add_argument("--output", type=str, default=None)
     args = parser.parse_args()
     reveal = str(args.reveal_labels).lower() in ["1", "true", "yes", "y"]
     include_reasoning = str(args.reasoning).lower() in ["1", "true", "yes", "y"]
@@ -159,32 +162,37 @@ def main():
     if not dataset_path.exists():
         print(f"Dataset JSON not found: {dataset_path}")
         return
+    print(f"Config:\n  dataset_path: {dataset_path}\n  images_root: {images_root}\n  model: {model}\n  output: {out_path}\n  reveal_labels: {reveal}\n  reasoning: {include_reasoning}")
     ds = ConceptGraphDataset(dataset_path=dataset_path, images_root=images_root)
     if len(ds) == 0:
         print("Dataset is empty")
         return
-    idx = random.randrange(len(ds))
-    sample = ds[idx]
-    labels = sample["labels_per_dim"]
-    signals = sample.get("concept_signals")
-    prompt = build_prompt(labels, signals, mode="train_semi_structured", reveal_labels=reveal, include_reasoning=include_reasoning, structured_cfg=structured_cfg)
-    print("Prompt:\n" + prompt)
-    try:
-        cache_keys, cache_reason = synthesize_targets([sample], build_prompt, build_target, model=model, reveal_labels=reveal, include_reasoning=include_reasoning, structured_cfg=structured_cfg)
+    rows = []
+    for i in range(len(ds)):
+        s = ds[i]
+        labels = s["labels_per_dim"]
+        signals = s.get("concept_signals")
+        prompt = build_prompt(labels, signals, mode="train_semi_structured", reveal_labels=reveal, include_reasoning=include_reasoning, structured_cfg=structured_cfg)
+        print(f"[{i+1}/{len(ds)}] image: {s['image_path']}")
+        print("Prompt:\n" + prompt)
+        cache_keys, cache_reason, cache_raw = synthesize_targets([s], build_prompt, build_target, model=model, reveal_labels=reveal, include_reasoning=include_reasoning, structured_cfg=structured_cfg)
+        raw_out = next(iter(cache_raw.values()))
+        print("Raw Output:\n" + raw_out)
         keys_out = next(iter(cache_keys.values()))
-        print("Keys Block:\n" + keys_out)
-        if include_reasoning:
-            reason_out = next(iter(cache_reason.values()))
-            if reason_out:
-                print("Reason Block:\n" + reason_out)
-            else:
-                print("Reason Block:\n<empty>")
-    except Exception as e:
-        print(f"Synthesis failed: {e}")
-        fallback = build_target(labels, signals, mode="train_semi_structured")
-        cache_keys = {sample["image_path"]: fallback}
-        print("Fallback Keys:\n" + fallback)
-    save_targets(cache_keys, out_path)
+        reason_out = next(iter(cache_reason.values())) if include_reasoning else ""
+        try:
+            rel_path = Path(s["image_path"]).resolve().relative_to(images_root.resolve())
+        except Exception:
+            try:
+                rel_path = Path(s["image_path"]).resolve().relative_to(PROJECT_ROOT.resolve())
+            except Exception:
+                rel_path = Path(s["image_path"]).name
+        rows.append([str(rel_path), labels.get("artist", ""), labels.get("style", ""), labels.get("genre", ""), keys_out, reason_out])
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with out_path.open("w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["image_path", "artist", "style", "genre", "target_keys", "target_reason"])
+        writer.writerows(rows)
     print(f"Saved to: {out_path}")
 
 
