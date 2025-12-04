@@ -22,7 +22,14 @@ class ConceptGraphDataset(Dataset):
         self.records: List[Dict[str, Any]] = []
         for r in records:
             img_rel = r.get("image", "")
-            img_path = self.images_root / img_rel
+            img_rel_path = Path(img_rel)
+            if img_rel_path.is_absolute():
+                img_path = img_rel_path
+            else:
+                parts = img_rel_path.parts
+                if len(parts) > 0 and parts[0] == self.images_root.name:
+                    img_rel_path = Path(*parts[1:])
+                img_path = self.images_root / img_rel_path
             c = r.get("concepts", {})
             media = c.get("media", [])
             if isinstance(media, str):
