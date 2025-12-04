@@ -5,6 +5,39 @@ from enum import Enum, auto
 import numpy as np
 import torch
 
+# myvlm/common.py（在文件顶部添加）
+def get_device():
+    """
+    自动检测最佳可用设备
+    - CUDA (NVIDIA GPU)
+    - MPS (Apple Silicon)  
+    - CPU (fallback)
+    """
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        return torch.device("mps")
+    else:
+        return torch.device("cpu")
+
+def get_device_info():
+    """打印设备信息，方便调试"""
+    device = get_device()
+    print(f"Using device: {device}")
+    
+    if device.type == "cuda":
+        print(f"  GPU: {torch.cuda.get_device_name(0)}")
+        print(f"  Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
+    elif device.type == "mps":
+        print("  Apple Silicon GPU (MPS)")
+    else:
+        print("  CPU mode (no GPU acceleration)")
+    
+    return device
+
+# 全局设备变量（供其他模块使用）
+DEVICE = get_device()
+
 
 class ConceptType(Enum):
     OBJECT = auto()
