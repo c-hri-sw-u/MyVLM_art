@@ -123,10 +123,10 @@ def save_targets(cache: Dict[str, str], output_path: Path):
 
 
 def _default_paths():
-    dataset_path = Path("/home/ubuntu/MyVLM_art/data/dataset/wikiart_5artists_dataset.json")
-    images_root = Path("/home/ubuntu/MyVLM_art/data/dataset/")
+    dataset_path = PROJECT_ROOT / "data/dataset/wikiart_5artists_dataset.json"
+    images_root = PROJECT_ROOT / "data/dataset/"
     model = os.environ.get("OPENROUTER_MODEL", "x-ai/grok-4.1-fast")
-    out_path = Path("/home/ubuntu/MyVLM_art/artifacts/synth_targets_test.json")
+    out_path = PROJECT_ROOT / "artifacts/synth_targets_test.json"
     return dataset_path, images_root, model, out_path
 
 
@@ -135,12 +135,27 @@ def main():
     parser = argparse.ArgumentParser(description="Synthesize target texts with OpenRouter (multimodal)")
     parser.add_argument("--reveal_labels", type=str, default="true", help="Whether to reveal ground-truth labels in the prompt (true/false)")
     parser.add_argument("--reasoning", type=str, default="false", help="Whether to include a reasoning block with sentinels (true/false)")
+    parser.add_argument("--dataset_path", type=str, default=None, help="Path to dataset JSON (relative to project root or absolute)")
+    parser.add_argument("--images_root", type=str, default=None, help="Images root directory (relative or absolute)")
+    parser.add_argument("--output", type=str, default=None, help="Output JSON path (relative or absolute)")
     args = parser.parse_args()
     reveal = str(args.reveal_labels).lower() in ["1", "true", "yes", "y"]
     include_reasoning = str(args.reasoning).lower() in ["1", "true", "yes", "y"]
     structured_cfg = {"keys_start": "[BEGIN_KEYS]", "keys_end": "[END_KEYS]", "reason_start": "[BEGIN_REASON]", "reason_end": "[END_REASON]"}
 
     dataset_path, images_root, model, out_path = _default_paths()
+    if args.dataset_path:
+        dataset_path = Path(args.dataset_path)
+        if not dataset_path.is_absolute():
+            dataset_path = PROJECT_ROOT / dataset_path
+    if args.images_root:
+        images_root = Path(args.images_root)
+        if not images_root.is_absolute():
+            images_root = PROJECT_ROOT / images_root
+    if args.output:
+        out_path = Path(args.output)
+        if not out_path.is_absolute():
+            out_path = PROJECT_ROOT / out_path
     if not dataset_path.exists():
         print(f"Dataset JSON not found: {dataset_path}")
         return
