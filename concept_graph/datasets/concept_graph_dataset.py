@@ -1,43 +1,68 @@
-"""
-简要介绍 (ZH):
-  概念图数据集。单个样本同时包含艺术家、风格、题材、媒介四个维度标签；
-  负责：
-    - 从图片构造 CLIP 原型相似度（s_c）作为概念激活信号
-    - 组织联合训练的文本目标（解释/分类）与 InfoNCE 负样本集合
+import json
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 
-Overview (EN):
-  Concept-graph dataset. Each sample carries multi-dimensional labels (artist/style/genre/media). It forms
-  prototype similarities per dimension for activation, assembles textual targets for explanation/classification,
-  and prepares negative sets for InfoNCE across dimensions.
-
-Schema:
-  - inputs: { images, labels_per_dim }
-  - outputs: { concept_signals (per concept), prompts, targets, negatives (per dimension) }
-
-TODOs (详细):
-  1) 定义 Dataset 类：__len__ / __getitem__，返回包含图像张量、概念信号、prompt/target、InfoNCE 负样本
-  2) 原型计算：调用 concept_graph/prototypes/prototype_head.py 提供的接口，得到 s_c
-  3) 文本构造：复用 reasoning/prompt_templates.py，根据激活概念生成解释或分类指令
-  4) 负样本：同维度随机采 K 个概念作为 negatives，用于 InfoNCE
-"""
-
-import torch
+from PIL import Image
 from torch.utils.data import Dataset
 
 
 class ConceptGraphDataset(Dataset):
-    def __init__(self, inputs, labels_per_dim, prototype_head, processor=None, transforms=None, device="cuda"):
-        self.inputs = inputs
-        self.labels_per_dim = labels_per_dim
+    def __init__(
+        self,
+        dataset_path: Union[str, Path],
+        images_root: Union[str, Path],
+        prototype_head: Optional[Any] = None,
+        precomputed_signals: Optional[Dict[int, Any]] = None,
+        transforms: Optional[Any] = None,
+    ):
+        self.dataset_path = Path(dataset_path)
+        self.images_root = Path(images_root)
+        with self.dataset_path.open("r") as f:
+            records = json.load(f)
+        self.records: List[Dict[str, Any]] = []
+        for r in records:
+            img_rel = r.get("image", "")
+            img_path = self.images_root / img_rel
+            c = r.get("concepts", {})
+            media = c.get("media", [])
+            if isinstance(media, str):
+                media = [] if media == "" else [media]
+            self.records.append(
+                {
+                    "image_path": img_path,
+                    "labels_per_dim": {
+                        "artist": c.get("artist", r.get("artist", "")),
+                        "style": c.get("style", ""),
+                        "genre": c.get("genre", ""),
+                        "media": media,
+                    },
+                    "title": r.get("title", ""),
+                    "date": r.get("date", ""),
+                }
+            )
         self.prototype_head = prototype_head
-        self.processor = processor
+        self.precomputed_signals = precomputed_signals or {}
         self.transforms = transforms
-        self.device = device
-        # TODO: 预计算或按需计算原型相似度 s_c，并缓存概念信号
 
-    def __len__(self):
-        return len(self.inputs["images"]) if "images" in self.inputs else 0
+    def __len__(self) -> int:
+        return len(self.records)
 
-    def __getitem__(self, idx):
-        # TODO: 返回包含图像张量、概念信号、提示词与目标文本、InfoNCE 负样本集合的字典
-        return {}
+    def __getitem__(self, idx: int) -> Dict[str, Any]:
+        rec = self.records[idx]
+        img = Image.open(rec["image_path"]).convert("RGB")
+        if self.transforms is not None:
+            img = self.transforms(img)
+        signals = None
+        if idx in self.precomputed_signals:
+            signals = self.precomputed_signals[idx]
+        elif self.prototype_head is not None:
+            out = self.prototype_head.extract_signal([rec["image_path"]])
+            signals = out.get(rec["image_path"], None)
+        return {
+            "image": img,
+            "image_path": str(rec["image_path"]),
+            "labels_per_dim": rec["labels_per_dim"],
+            "concept_signals": signals,
+            "title": rec["title"],
+            "date": rec["date"],
+        }
