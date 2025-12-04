@@ -10,13 +10,21 @@ class LLaVAConceptGraphDataset(Dataset):
         self,
         base_samples: List[Dict[str, Any]],
         processor: Any,
-        prompts_builder: Any,
+        prompt_builder: Any,
+        target_builder: Any,
+        template_mode: str = "train_semi_structured",
+        precomputed_targets: Optional[Dict[str, str]] = None,
+        structured_cfg: Optional[Dict[str, Any]] = None,
         device: str = "cuda",
         torch_dtype: torch.dtype = torch.bfloat16,
     ):
         self.samples = base_samples
         self.processor = processor
-        self.prompts_builder = prompts_builder
+        self.prompt_builder = prompt_builder
+        self.target_builder = target_builder
+        self.template_mode = template_mode
+        self.precomputed_targets = precomputed_targets or {}
+        self.structured_cfg = structured_cfg or {}
         self.device = device
         self.torch_dtype = torch_dtype
 
@@ -28,15 +36,13 @@ class LLaVAConceptGraphDataset(Dataset):
         image = s["image"]
         labels = s["labels_per_dim"]
         concept_signals = s.get("concept_signals", None)
-        prompts = self.prompts_builder(labels)  # 应返回若干候选；这里选择一个
-        prompt = prompts[0] if isinstance(prompts, list) else prompts
+        prompt = self.prompt_builder(labels, concept_signals, mode=self.template_mode, structured_cfg=self.structured_cfg)
         inputs = self.processor.image_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
         inputs = inputs.to(self.device, self.torch_dtype)
-        # 目标文本（简单版）：稳定覆盖全部维度
-        target_text_pool = [
-            f"This painting is by {labels['artist']}, in {labels['style']}, showing a {labels['genre']}."
-        ]
-        target = np.random.choice(target_text_pool, size=1, replace=False)[0]
+        if s["image_path"] in self.precomputed_targets:
+            target = self.precomputed_targets[s["image_path"]]
+        else:
+            target = self.target_builder(labels, concept_signals, mode=self.template_mode)
         batch = {
             "images": inputs,
             "prompt": prompt,
@@ -46,4 +52,3 @@ class LLaVAConceptGraphDataset(Dataset):
             "image_path": s["image_path"],
         }
         return batch
-
