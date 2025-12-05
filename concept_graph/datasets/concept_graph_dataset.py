@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Optional, Union
 
 from PIL import Image
 from torch.utils.data import Dataset
+import torch
 
 
 class ConceptGraphDataset(Dataset):
@@ -13,6 +14,7 @@ class ConceptGraphDataset(Dataset):
         images_root: Union[str, Path],
         prototype_head: Optional[Any] = None,
         precomputed_signals: Optional[Dict[int, Any]] = None,
+        precomputed_signals_path: Optional[Union[str, Path]] = None,
         transforms: Optional[Any] = None,
     ):
         self.dataset_path = Path(dataset_path)
@@ -48,7 +50,12 @@ class ConceptGraphDataset(Dataset):
                 }
             )
         self.prototype_head = prototype_head
-        self.precomputed_signals = precomputed_signals or {}
+        if precomputed_signals is not None:
+            self.precomputed_signals = precomputed_signals
+        elif precomputed_signals_path is not None:
+            self.precomputed_signals = self._load_precomputed_signals(precomputed_signals_path)
+        else:
+            self.precomputed_signals = {}
         self.transforms = transforms
 
     def __len__(self) -> int:
@@ -73,3 +80,18 @@ class ConceptGraphDataset(Dataset):
             "title": rec["title"],
             "date": rec["date"],
         }
+
+    def _load_precomputed_signals(self, path: Union[str, Path]) -> Dict[int, Dict[str, Dict[int, torch.Tensor]]]:
+        path = Path(path)
+        with path.open("r") as f:
+            payload = json.load(f)
+        raw = payload.get("signals", payload)
+        parsed: Dict[int, Dict[str, Dict[int, torch.Tensor]]] = {}
+        for idx_str, dim_dict in raw.items():
+            idx = int(idx_str)
+            parsed[idx] = {}
+            for dimension, concept_scores in dim_dict.items():
+                parsed[idx][dimension] = {}
+                for concept_idx_str, scores in concept_scores.items():
+                    parsed[idx][dimension][int(concept_idx_str)] = torch.tensor(scores, dtype=torch.float32)
+        return parsed
