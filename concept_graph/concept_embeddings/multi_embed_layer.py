@@ -23,6 +23,8 @@ Status:
 Remaining Work:
   - Add attention regularization hook for newly appended concept tokens during training.
   - Expose Top‑K gating and minimum-token guarantee as configurable options.
+     1. 归一化/对比度调节：在 export_signals.py 或 ConceptGraphDataset 注入前，先对每个维度的相似度做 z-score/温度缩放，使不同维度的分布更接近，然后再用统一阈值。
+     2. Top‑K gating：不看绝对阈值，而是“每个维度至少保留一个概念”，或“全局挑 top K 概念时保障 genre 至少占 1 个”，避免被完全压制。
   - Consolidate key/value initialization and persistence with the upstream MyVLM layer lifecycle.
   - Object/single/multi-person branches are not required for this dataset; keep as optional extension if needed.
 """
@@ -125,7 +127,3 @@ class MultiTokenConceptLayer(nn.Module):
         else:
             dists = torch.stack([cosine_distance(query, key).view(-1, 1) for key in self.keys]).view(-1, len(query))
         return dists
-
-    # TODO: Add attention regularization hooks for newly appended concept tokens
-    # TODO: Expose Top‑K gating and minimum-token guarantee via config
-    # TODO: Consolidate key/value initialization and persistence with MyVLM layer lifecycle
