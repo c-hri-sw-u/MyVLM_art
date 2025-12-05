@@ -1,3 +1,12 @@
+"""
+简要介绍 (ZH):
+  原型训练器。优化 CLIP 原型以提升类别可分性，支持 InfoNCE、可选边距与硬负样本。
+
+Overview (EN):
+  Prototype trainer for CLIP features. Optimizes prototypes to improve class separability using InfoNCE,
+  optional margin terms and hard negatives.
+"""
+
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional
@@ -155,3 +164,4 @@ class PrototypeTrainer:
             torch.save(payload, save_path)
 
         return log
+

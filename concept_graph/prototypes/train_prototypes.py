@@ -1,3 +1,12 @@
+"""
+简要介绍 (ZH):
+  原型训练 CLI。根据数据集构建各维度概念到路径映射，训练并保存原型，支持基础超参数配置。
+
+Overview (EN):
+  CLI for training prototypes. Builds per‑dimension concept‑to‑paths mapping, trains and saves prototypes
+  with basic hyperparameter configuration.
+"""
+
 import argparse
 import json
 from pathlib import Path
@@ -96,3 +105,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

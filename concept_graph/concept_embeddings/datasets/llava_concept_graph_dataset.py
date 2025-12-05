@@ -191,3 +191,16 @@ class LLaVAConceptGraphDataset(Dataset):
             device=device,
             torch_dtype=torch_dtype,
         )
+"""
+简要介绍 (ZH):
+  LLaVA 概念图数据集（阶段化 A/B）。从 CSV/JSON 载入图像与标签，
+  生成 prompt 与目标文本；在阶段 B 为 keys 与 reason 段分别赋权，用于加权 CE。
+
+Overview (EN):
+  LLaVA concept-graph dataset with phased training. Loads images and labels, builds prompts and targets,
+  and in Stage B provides per‑segment token weights (keys vs. reason) to enable weighted CE loss.
+
+Inputs/Outputs:
+  - Input: base_samples with image_path/labels; optional precomputed keys/reason
+  - Output (collate): images, input_ids, attention_mask, labels, concept_signals, token_weights (Stage B)
+"""

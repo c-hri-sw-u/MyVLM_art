@@ -1,3 +1,12 @@
+"""
+简要介绍 (ZH):
+  训练时使用的提示词与目标文本模板。支持半结构化 keys（三行）与可选 reasoning 区块。
+
+Overview (EN):
+  Prompt and target templates for training. Supports semi‑structured keys (three lines) and optional
+  reasoning block for Stage B weighted supervision.
+"""
+
 from typing import Dict, Any
 
 
@@ -55,3 +64,4 @@ def build_target(labels_per_dim: Dict[str, Any], concept_signals: Dict[str, Any]
         f"genre: {genre}",
     ]
     return "\n".join(lines)
+

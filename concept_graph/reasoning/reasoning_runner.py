@@ -8,13 +8,16 @@ Overview (EN):
   attaches concept embeddings via injection layer, and executes generation to produce textual justifications
   and optional visualizations.
 
-TODOs (详细):
-  1) 与 prompt_templates 对接，生成多模板 prompts
-  2) 构造 VLM 输入：调用 vlms/* 封装的 preprocess/generate
-  3) 概念嵌入注入：调用 inference/inference_utils.py 将当前迭代的 keys/values 写入目标层
-  4) 输出打包：文字解释 JSON，必要时保存概念图与定位图
+Status:
+  - Not implemented.
+
+Remaining Work:
+  1) Connect to prompt templates; support multiple prompt variants.
+  2) Build VLM inputs and call preprocess/generate from `vlms/*` wrappers.
+  3) Inject concept embeddings via layer utilities; manage keys/values per iteration.
+  4) Package outputs into JSON; optionally save concept graph and visualizations.
 """
 
 def run_reasoning(vlm_wrapper, activated_concepts, images, concept_embeddings, cfg):
-    # TODO: 实现推理主流程，返回 {image_path: {prompt: output_text, ...}, ...}
+    # TODO: Implement end-to-end reasoning and return {image_path: {prompt: output_text, ...}, ...}
     return {}

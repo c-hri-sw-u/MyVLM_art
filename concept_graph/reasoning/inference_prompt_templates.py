@@ -7,10 +7,13 @@ Overview (EN):
   Prompt templates for explainable reasoning. Given activated multi-granular concepts, compose conversational
   prompts for LLaVA to produce natural language justifications and descriptive outputs.
 
-TODOs (详细):
-  1) 设计多种模板：分类解释、风格描述、题材/媒介结合说明、反事实对比等
-  2) 模板填充：将激活概念按维度插入占位符，控制长度与可读性
-  3) 与 reasoning_runner.py 对接：提供函数 get_prompts(activated_concepts)
+Status:
+  - Natural and structured prompts implemented; more templates can be added.
+
+Remaining Work:
+  1) Add variants: classification explanation, style-only description, genre/medium hybrids, counterfactuals.
+  2) Improve templating and length control; expose options via config.
+  3) Integrate with `reasoning_runner.py` for multi-template selection.
 """
 
 from typing import Any, Dict, Optional

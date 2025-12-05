@@ -1,3 +1,13 @@
+"""
+简要介绍 (ZH):
+  概念图通用数据集包装器。解析 WikiArt 风格 JSON，统一输出 image_path 与多维标签，
+  可选注入预计算概念信号，用于下游数据集与推理。
+
+Overview (EN):
+  Generic concept‑graph dataset. Parses WikiArt‑like JSON to yield image paths and multi‑dimensional labels,
+  optionally attaches precomputed concept signals for downstream datasets and reasoning.
+"""
+
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
@@ -77,3 +87,4 @@ class ConceptGraphDataset(Dataset):
             "title": rec["title"],
             "date": rec["date"],
         }
+

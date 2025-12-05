@@ -7,12 +7,15 @@ Overview (EN):
   Concept graph visualization. Render activated nodes/edges with dimension-based coloring and edge weights.
   Supports saving static images and connecting to reasoning outputs.
 
-TODOs (详细):
-  1) 绘制：使用 networkx + matplotlib 或 graphviz；支持布局与主题
-  2) 标注：节点显示概念名与维度，边显示关联类型（同维度/跨维度）与权重
-  3) 输出：保存至指定路径，并可返回句柄供上游调用
+Status:
+  - Not implemented.
+
+Remaining Work:
+  1) Rendering: use networkx + matplotlib or graphviz; support layout and themes.
+  2) Annotation: show concept name/dimension on nodes; relation type and weight on edges.
+  3) Output: save to path and optionally return a handle for upstream callers.
 """
 
 def draw_graph(concept_network, output_path):
-    # TODO: 根据 concept_network 渲染图并保存
+    # TODO: Render the concept_network and save to output_path
     pass

@@ -1,3 +1,12 @@
+"""
+简要介绍 (ZH):
+  原型数据集与样本构建工具。解析数据集 JSON，生成包含图像与多维标签的样本，供原型训练使用。
+
+Overview (EN):
+  Prototype dataset and sample builder. Parses dataset JSON to yield images with multi‑dimensional labels for
+  prototype training.
+"""
+
 import json
 from pathlib import Path
 from typing import Dict, Any, List, Optional

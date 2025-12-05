@@ -1,3 +1,56 @@
+Status Update (English)
+
+Step 1: Prototype Head (Minimal Viable Version)
+- Status: Completed
+- Evidence:
+  - CLIP load and preprocessing in `concept_graph/prototypes/prototype_head.py:44–46`
+  - Prototype initialization/build/save in `concept_graph/prototypes/prototype_head.py:53–95`
+  - Signal extraction in `concept_graph/prototypes/prototype_head.py:102–129`
+  - Prototype training loop (InfoNCE + margin) in `concept_graph/prototypes/prototype_trainer.py:59–157`
+  - CLI training script in `concept_graph/prototypes/train_prototypes.py:34–98`
+  - Dataset for prototypes in `concept_graph/prototypes/prototype_dataset.py:52–74`
+- Next: Optional per-dimension temperature calibration; optional EMA updates of prototypes
+
+Step 2: Precompute Concept Signals and Integration
+- Status: Completed
+- Evidence:
+  - Batch export to JSON/CSV in `concept_graph/prototypes/export_signals.py:91–103` (JSON) and `concept_graph/prototypes/export_signals.py:113–150` (CSV)
+  - Dataset injection of precomputed signals in `concept_graph/datasets/concept_graph_dataset.py:63–79`
+- Next: Standardize artifacts path naming and JSON schema across runs
+
+Step 3: Concept Embedding Layer and Gating
+- Status: Partially Completed
+- Evidence:
+  - Multi-token injection and gating in `concept_graph/concept_embeddings/multi_embed_layer.py:49–130`
+  - mm_projector accepts `concept_signals` in `vlms/llava/model/llava_arch.py:140–146`
+- Gaps:
+  - Attention regularization hook not yet wired in `MultiTokenConceptLayer`
+  - Key/value mapping lifecycle (init/persist/load) needs consolidation
+  - Optional Top‑K gating and minimum-token guarantee are not exposed via config
+
+Step 4: LLaVA Encoding and Weighted Losses
+- Status: Implemented at dataset/collate level; Trainer not implemented
+- Evidence:
+  - Stage A/B collate and token weighting in `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:88–144`
+  - CSV loader with precomputed keys/reasons in `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:146–193`
+- Gap:
+  - `MultiTokenEmbeddingTrainer` is a stub in `concept_graph/concept_embeddings/trainer.py:35–44`
+
+Step 5: Phased Training Schedule
+- Status: Partially Completed
+- Evidence:
+  - Stage A/B data flow and weights in `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:88–144`
+- Gaps:
+  - Training loop, optimizer/scheduler, checkpointing to be implemented in `concept_graph/concept_embeddings/trainer.py`
+
+Step 6: Evaluation and Alignment
+- Status: Not Started
+- Evidence:
+  - `evaluation/metrics.py` referenced in plan but not present
+- Next:
+  - Implement metrics for Top‑1/Top‑K per dimension; macro F1; coverage and coherence for explanations
+
+原始中文计划如下：
 建议步骤
 
 步骤 1：完成原型头最小可用版本

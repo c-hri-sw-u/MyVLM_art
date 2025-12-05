@@ -1,3 +1,11 @@
+"""
+简要介绍 (ZH):
+  OpenRouter API 调用示例。展示如何在两次对话中保留并继续 reasoning_details。
+
+Overview (EN):
+  OpenRouter usage template showing how to preserve and continue reasoning_details across calls.
+"""
+
 import requests
 import json
 

@@ -4,19 +4,21 @@
   计算查询图像的相似度 s_c=cos_sim(CLIP(x_q), p_c)，并按阈值 τ 激活。
 
 Overview (EN):
-  Prototype-based concept head. Maintains per-concept prototypes in CLIP feature space and computes cosine
-  similarities for activation. Serves as the concept detection backbone for multi-granular concept graph.
+  Prototype-based concept head in CLIP feature space. Provides per-concept prototypes and cosine-similarity
+  scoring used to activate concepts and to drive gating in the embedding layer. This serves as the concept
+  detection backbone for the multi-granular concept graph.
 
 Outputs & Interface:
-  - extract_signal(image_paths, dimension) -> Dict[Path, Dict[concept_idx, Tensor([1-s, s])]]
-    将相似度 s 映射为伪概率 [1-s, s] 以复用现有对象分支距离定义。
+  - extract_signal(image_paths, dimension) -> Dict[Path, Dict[int, Tensor([1 - s, s])]]
+    Returns full similarity scores per concept for downstream gating.
 
-  
-TODOs (详细):
-  1) 加载/选择 CLIP 模型（建议 ViT‑B/16），实现特征抽取与归一化
-  2) 原型初始化：按概念聚合若干参考图像，求均值并 L2 归一化；支持离线保存/加载
-  3) extract_signal：批量处理图片，计算 s_c 并输出兼容字典格式
-  4) 阈值 τ 管理：仅标记激活概念，但输出全量 s_c 以供注入层 gating
+Status:
+  - Implemented CLIP loading, feature normalization, prototype build/save/load, and signal extraction.
+
+Remaining Work:
+  - Optional per-dimension temperature calibration of scores.
+  - Optional EMA updates of prototypes during training.
+  - Thresholding is handled downstream in MultiTokenConceptLayer; no hard filtering here.
 """
 
 from pathlib import Path
