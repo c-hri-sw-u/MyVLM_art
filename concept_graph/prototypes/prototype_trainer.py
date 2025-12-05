@@ -1,26 +1,3 @@
-"""
-PrototypeTrainer
----------------
-使用最小化的 InfoNCE 目标，在单一概念维度上微调 `PrototypeHead` 中的原型向量。
-Overview (EN):
-  Prototype trainer using InfoNCE across concept dimensions. Updates per-concept prototypes to better separate
-  concepts within the same dimension while keeping cross-dimension coherence.
-
-TODOs (详细):
-  1) 数据采样：按维度取正样本与 K 个负样本，计算 CLIP 特征并归一化
-  2) 损失设计：维度内 InfoNCE；可选跨维度正则（避免原型跨维度过近）
-  3) 原型更新：动量更新或直接梯度（若将 p_c 设为可训练参数）
-  4) 检查点：保存每维度所有概念的 p_c，供推理与注入使用
-
-期望 cfg 属性：
-    - dimension: 目标概念维度（如 "artist"）
-    - batch_size: DataLoader 批大小
-    - lr: 原型参数学习率
-    - epochs: 迭代轮数
-    - temperature: InfoNCE 温度系数
-    - save_path (可选): 训练结束后保存原型检查点的路径
-"""
-
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional

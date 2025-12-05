@@ -3,6 +3,7 @@ import re
 import torch.nn as nn
 
 from myvlm.myvlm_layer import MyVLMLayer
+from concept_graph.concept_embeddings.multi_embed_layer import MultiTokenConceptLayer
 
 
 class IdentityMap(nn.Module):
@@ -44,7 +45,10 @@ class VisionProjector(nn.Module):
     def forward(self, x, concept_signals=None):
         out = self.linear1(x)
         out = self.act(out)
-        out = self.linear2(out, concept_signals) if type(self.linear2) == MyVLMLayer else self.linear2(out)
+        if isinstance(self.linear2, (MyVLMLayer, MultiTokenConceptLayer)):
+            out = self.linear2(out, concept_signals)
+        else:
+            out = self.linear2(out)
         return out
 
     @property

@@ -5,6 +5,10 @@ import csv
 import numpy as np
 import torch
 from torch.utils.data import Dataset
+from torch.nn.utils.rnn import pad_sequence
+from vlms.llava.constants import DEFAULT_IMAGE_TOKEN, IMAGE_TOKEN_INDEX
+from vlms.llava.conversation import conv_templates, SeparatorStyle
+from vlms.llava.mm_utils import tokenizer_image_token
 
 
 class LLaVAConceptGraphDataset(Dataset):
@@ -80,6 +84,64 @@ class LLaVAConceptGraphDataset(Dataset):
             "stage_mode": self.stage_mode,
         }
         return batch
+
+    def collate_fn(self, batch: List[Dict[str, Any]]) -> Dict[str, Any]:
+        images = torch.stack([b["images"] for b in batch], dim=0)
+        concept_signals = [b.get("concept_signals") for b in batch]
+        input_ids_list = []
+        labels_list = []
+        weights_list = []
+        for b in batch:
+            inp = DEFAULT_IMAGE_TOKEN + '\n' + b["prompt"]
+            conv = conv_templates["llava_v1"].copy()
+            conv.append_message(conv.roles[0], inp)
+            conv.append_message(conv.roles[1], None)
+            prompt_full = conv.get_prompt() + " " + b["target_text"]
+            ids = tokenizer_image_token(
+                prompt_full,
+                self.processor.tokenizer,
+                IMAGE_TOKEN_INDEX,
+                return_tensors='pt'
+            ).unsqueeze(0).to(self.device)
+            sep = conv.sep + conv.roles[1] + ": "
+            parts = prompt_full.split(sep)
+            parts[0] += sep
+            instr_len = len(tokenizer_image_token(parts[0], self.processor.tokenizer)) - 2
+            targets = ids.clone()
+            targets[:, :1] = -100
+            targets[:, 1:1 + instr_len] = -100
+            input_ids_list.append(ids[0])
+            labels_list.append(targets[0])
+            if self.stage_mode == "B":
+                keys_text = b.get("target_keys", "") or ""
+                reason_text = b.get("target_reason", "") or ""
+                k_ids = tokenizer_image_token(keys_text, self.processor.tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt')
+                r_ids = tokenizer_image_token(reason_text, self.processor.tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt') if reason_text else torch.tensor([], dtype=torch.long)
+                keys_len = int(k_ids.shape[0])
+                reason_len = int(r_ids.shape[0])
+                w = torch.zeros(ids.shape[1], dtype=torch.float32, device=self.device)
+                start = 1 + instr_len
+                end_k = start + keys_len
+                end_r = end_k + reason_len
+                w[start:end_k] = float(self.w_keys)
+                if reason_len > 0:
+                    w[end_k:end_r] = float(self.w_reason)
+                weights_list.append(w)
+        pad_id = self.processor.tokenizer.pad_token_id
+        input_ids = pad_sequence(input_ids_list, batch_first=True, padding_value=pad_id)
+        attention_mask = input_ids.ne(pad_id)
+        labels = pad_sequence(labels_list, batch_first=True, padding_value=-100)
+        token_weights = None
+        if self.stage_mode == "B" and len(weights_list) > 0:
+            token_weights = pad_sequence(weights_list, batch_first=True, padding_value=0.0)
+        return {
+            "images": images,
+            "input_ids": input_ids,
+            "attention_mask": attention_mask,
+            "labels": labels,
+            "concept_signals": concept_signals,
+            "token_weights": token_weights,
+        }
 
     @staticmethod
     def from_csv(

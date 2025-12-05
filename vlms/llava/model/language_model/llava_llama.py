@@ -81,6 +81,7 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
             image_sizes: Optional[List[List[int]]] = None,
             return_dict: Optional[bool] = None,
             concept_signals: Optional[torch.Tensor] = None,
+            token_weights: Optional[torch.Tensor] = None,
     ) -> Union[Tuple, CausalLMOutputWithPast]:
 
         concept_token_idxs = None
@@ -119,6 +120,30 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,
         )
+        if labels is not None and token_weights is not None and hasattr(out, "logits"):
+            shift_logits = out.logits[..., :-1, :].contiguous()
+            shift_labels = labels[..., 1:].contiguous()
+            ce = torch.nn.CrossEntropyLoss(reduction="none")
+            loss_per_token = ce(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+            loss_per_token = loss_per_token.view(shift_labels.size(0), -1)
+            if token_weights.dim() == 1:
+                w = token_weights.view(1, 1)
+            elif token_weights.dim() == 2:
+                w = token_weights[..., 1:]
+            else:
+                w = None
+            if w is not None:
+                mask = (shift_labels != -100).float()
+                weighted = (loss_per_token * (w.to(loss_per_token.device))) * mask
+                denom = mask.sum().clamp_min(1.0)
+                new_loss = weighted.sum() / denom
+                out = type(out)(
+                    loss=new_loss,
+                    logits=out.logits,
+                    past_key_values=out.past_key_values,
+                    hidden_states=out.hidden_states,
+                    attentions=out.attentions,
+                )
         # Store the concept token indices in the output for computing attention-based regularization
         if concept_token_idxs is not None:
             out = ExtendedLLaVAOutput(

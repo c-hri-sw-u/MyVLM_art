@@ -20,6 +20,13 @@ TODOs (详细):
   3) 数据适配：复用 concept_graph/datasets/concept_graph_dataset.py 提供的联合样本结构
   4) 检查点：与 inference/inference_utils.py:17–28 的设定兼容（保存 keys/values/映射字典）
   5) 配置：扩展 configs/train_config.py，增加 max_tokens_per_concept、gating 参数、InfoNCE 权重等
+
+
+阶段化训练调度
+
+阶段 A：使用 from_csv(csv_path, images_root, ..., stage_mode="A", w_keys=1.0, w_reason=0.0)；跑若干 epoch 至稳定
+
+阶段 B：切换 stage_mode="B"，w_reason=0.2，学习理由的语言风格；定期验证三键分类是否稳定
 """
 
 import torch
