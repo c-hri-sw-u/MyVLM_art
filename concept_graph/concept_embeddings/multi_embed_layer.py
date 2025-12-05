@@ -22,9 +22,14 @@ Status:
 
 Remaining Work:
   - Add attention regularization hook for newly appended concept tokens during training.
-  - Expose Top‑K gating and minimum-token guarantee as configurable options.
-     1. 归一化/对比度调节：在 export_signals.py 或 ConceptGraphDataset 注入前，先对每个维度的相似度做 z-score/温度缩放，使不同维度的分布更接近，然后再用统一阈值。
-     2. Top‑K gating：不看绝对阈值，而是“每个维度至少保留一个概念”，或“全局挑 top K 概念时保障 genre 至少占 1 个”，避免被完全压制。
+  - 归一化/对比度调节：在 export_signals.py 或 ConceptGraphDataset 注入前，先对每个维度的相似度做 z-score/温度缩放，使不同维度的分布更接近，然后再用统一阈值。
+  - 两层筛选机制：
+    - “是否追加某概念的嵌入 token”：
+        - 阈值筛选：分数达标才视为激活（ concept_graph/concept_embeddings/multi_embed_layer.py:78–93, 95–116 ）
+        - “概念内 token gating”：已激活时，按激活强度 g 映射出要追加的 token 数
+    - 概念级筛选：
+        - 如果某个dimension(如genre), 没有可激活的token, 则追加该dimension最高的Top1 的概念
+        - 如果某个dimension(如genre), 有很可激活的token, 则筛选出该dimension最高的Top2 的概念
   - Consolidate key/value initialization and persistence with the upstream MyVLM layer lifecycle.
   - Object/single/multi-person branches are not required for this dataset; keep as optional extension if needed.
 """
