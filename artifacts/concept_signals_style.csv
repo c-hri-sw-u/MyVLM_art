@@ -1,0 +1,176 @@
+image_path,artist,style,genre,style_top1_name,style_top1_score,style_top2_name,style_top2_score,style_top3_name,style_top3_score,style_top4_name,style_top4_score
+dataset/van_gogh/van_gogh_0.jpg,vincent-van-gogh,Post_Impressionism,still_life,Post_Impressionism,0.636982,Realism,0.560762,Impressionism,0.522704,Symbolism,0.517877
+dataset/van_gogh/van_gogh_1.jpg,vincent-van-gogh,Realism,genre_painting,Realism,0.670105,Post_Impressionism,0.575119,Baroque,0.544857,Symbolism,0.505848
+dataset/van_gogh/van_gogh_2.jpg,vincent-van-gogh,Realism,landscape,Realism,0.620326,Impressionism,0.541971,Baroque,0.533574,Post_Impressionism,0.527919
+dataset/van_gogh/van_gogh_3.jpg,vincent-van-gogh,Post_Impressionism,landscape,Post_Impressionism,0.633756,Impressionism,0.585825,Realism,0.532305,Expressionism,0.487177
+dataset/van_gogh/van_gogh_4.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.668449,Post_Impressionism,0.607720,Baroque,0.519439,High_Renaissance,0.471955
+dataset/van_gogh/van_gogh_5.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.657149,Post_Impressionism,0.575790,Baroque,0.528926,Impressionism,0.519821
+dataset/van_gogh/van_gogh_6.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.624316,Post_Impressionism,0.572094,Baroque,0.536127,Impressionism,0.498938
+dataset/van_gogh/van_gogh_7.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,Post_Impressionism,0.614030,Realism,0.552302,Baroque,0.522514,Impressionism,0.516197
+dataset/van_gogh/van_gogh_8.jpg,vincent-van-gogh,Post_Impressionism,landscape,Post_Impressionism,0.665670,Impressionism,0.562252,Realism,0.529870,High_Renaissance,0.486240
+dataset/van_gogh/van_gogh_9.jpg,vincent-van-gogh,Post_Impressionism,landscape,Post_Impressionism,0.644678,Impressionism,0.582212,Symbolism,0.506139,Early_Renaissance,0.504119
+dataset/van_gogh/van_gogh_10.jpg,vincent-van-gogh,Realism,genre_painting,Realism,0.634900,Post_Impressionism,0.589493,Symbolism,0.549587,Baroque,0.526663
+dataset/van_gogh/van_gogh_11.jpg,vincent-van-gogh,Post_Impressionism,portrait,Post_Impressionism,0.638165,Realism,0.545109,Impressionism,0.541632,Expressionism,0.518322
+dataset/van_gogh/van_gogh_12.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,Post_Impressionism,0.635011,Cubism,0.526264,High_Renaissance,0.518595,Expressionism,0.516357
+dataset/van_gogh/van_gogh_13.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,Post_Impressionism,0.622701,Realism,0.587363,Baroque,0.508759,Impressionism,0.507155
+dataset/van_gogh/van_gogh_14.jpg,vincent-van-gogh,Post_Impressionism,landscape,Post_Impressionism,0.639531,Impressionism,0.592887,Realism,0.522386,Symbolism,0.508975
+dataset/van_gogh/van_gogh_15.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.626734,Post_Impressionism,0.578041,Baroque,0.518171,High_Renaissance,0.501848
+dataset/van_gogh/van_gogh_16.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,Post_Impressionism,0.637328,Realism,0.531327,Impressionism,0.516592,High_Renaissance,0.511645
+dataset/van_gogh/van_gogh_17.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Post_Impressionism,0.645838,Impressionism,0.547691,Realism,0.508916,High_Renaissance,0.492400
+dataset/van_gogh/van_gogh_18.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.660788,Post_Impressionism,0.563693,Baroque,0.543383,High_Renaissance,0.502337
+dataset/van_gogh/van_gogh_19.jpg,vincent-van-gogh,Post_Impressionism,landscape,Post_Impressionism,0.639401,Impressionism,0.553148,Realism,0.526366,Symbolism,0.511285
+dataset/van_gogh/van_gogh_20.jpg,vincent-van-gogh,Realism,still_life,Realism,0.616236,Post_Impressionism,0.553618,Impressionism,0.516347,Baroque,0.507573
+dataset/van_gogh/van_gogh_21.jpg,vincent-van-gogh,Realism,genre_painting,Realism,0.653163,Post_Impressionism,0.562436,Symbolism,0.532256,Impressionism,0.518853
+dataset/van_gogh/van_gogh_22.jpg,vincent-van-gogh,Realism,genre_painting,Realism,0.674110,Post_Impressionism,0.575494,Baroque,0.501605,Impressionism,0.487593
+dataset/van_gogh/van_gogh_23.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.635058,Post_Impressionism,0.546085,Baroque,0.542155,Symbolism,0.506281
+dataset/van_gogh/van_gogh_24.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Post_Impressionism,0.641773,Realism,0.533126,High_Renaissance,0.530610,Baroque,0.506651
+dataset/van_gogh/van_gogh_25.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Post_Impressionism,0.640051,Impressionism,0.536114,Realism,0.528897,High_Renaissance,0.497335
+dataset/van_gogh/van_gogh_26.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Post_Impressionism,0.635862,Realism,0.545892,Impressionism,0.520102,Early_Renaissance,0.504597
+dataset/van_gogh/van_gogh_27.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,Post_Impressionism,0.636666,Baroque,0.537504,Realism,0.519507,High_Renaissance,0.505218
+dataset/van_gogh/van_gogh_28.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.626626,Post_Impressionism,0.564338,High_Renaissance,0.528455,Baroque,0.522329
+dataset/van_gogh/van_gogh_29.jpg,vincent-van-gogh,Realism,portrait,Realism,0.614275,Post_Impressionism,0.583730,Symbolism,0.506493,Early_Renaissance,0.505510
+dataset/van_gogh/van_gogh_30.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,Post_Impressionism,0.624980,Impressionism,0.562798,Realism,0.512353,Expressionism,0.506169
+dataset/van_gogh/van_gogh_31.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,Post_Impressionism,0.637276,Realism,0.532574,Symbolism,0.515919,Baroque,0.509016
+dataset/van_gogh/van_gogh_32.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,Post_Impressionism,0.618692,Baroque,0.531857,Realism,0.519276,Expressionism,0.502075
+dataset/van_gogh/van_gogh_33.jpg,vincent-van-gogh,Realism,sketch_and_study,Realism,0.631663,Post_Impressionism,0.580591,Baroque,0.529224,Impressionism,0.501615
+dataset/van_gogh/van_gogh_34.jpg,vincent-van-gogh,Realism,genre_painting,Realism,0.631132,Post_Impressionism,0.541210,Impressionism,0.539940,Baroque,0.518452
+dataset/monet/monet_0.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.691421,Symbolism,0.504855,Post_Impressionism,0.503391,High_Renaissance,0.497988
+dataset/monet/monet_1.jpg,claude-monet,Impressionism,landscape,Impressionism,0.737599,Post_Impressionism,0.549082,Symbolism,0.493999,Early_Renaissance,0.493680
+dataset/monet/monet_2.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.717575,Post_Impressionism,0.524097,High_Renaissance,0.499392,Symbolism,0.488717
+dataset/monet/monet_3.jpg,claude-monet,Impressionism,landscape,Impressionism,0.703646,Post_Impressionism,0.542807,Symbolism,0.489649,High_Renaissance,0.482856
+dataset/monet/monet_4.jpg,claude-monet,Impressionism,landscape,Impressionism,0.711000,Post_Impressionism,0.564348,Symbolism,0.487793,Realism,0.480208
+dataset/monet/monet_5.jpg,claude-monet,Impressionism,landscape,Impressionism,0.720329,Post_Impressionism,0.518558,Realism,0.500632,Symbolism,0.495427
+dataset/monet/monet_6.jpg,claude-monet,Impressionism,landscape,Impressionism,0.702803,Post_Impressionism,0.545283,Symbolism,0.517818,Expressionism,0.507268
+dataset/monet/monet_7.jpg,claude-monet,Impressionism,landscape,Impressionism,0.716806,Post_Impressionism,0.507573,Symbolism,0.504999,Baroque,0.497211
+dataset/monet/monet_8.jpg,claude-monet,Impressionism,landscape,Impressionism,0.678045,Post_Impressionism,0.535805,Realism,0.515057,Cubism,0.480928
+dataset/monet/monet_9.jpg,claude-monet,Impressionism,landscape,Impressionism,0.695957,Post_Impressionism,0.551437,Expressionism,0.512469,Early_Renaissance,0.508194
+dataset/monet/monet_10.jpg,claude-monet,Impressionism,landscape,Impressionism,0.683830,Realism,0.519369,Symbolism,0.513914,Post_Impressionism,0.509721
+dataset/monet/monet_11.jpg,claude-monet,Impressionism,landscape,Impressionism,0.642431,Baroque,0.553468,Realism,0.550352,Post_Impressionism,0.507741
+dataset/monet/monet_12.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.698474,Symbolism,0.510132,Post_Impressionism,0.504801,Realism,0.497642
+dataset/monet/monet_13.jpg,claude-monet,Impressionism,landscape,Impressionism,0.704870,Post_Impressionism,0.556608,Realism,0.507072,Expressionism,0.494418
+dataset/monet/monet_14.jpg,claude-monet,Impressionism,landscape,Impressionism,0.688062,Post_Impressionism,0.541089,Realism,0.524935,Expressionism,0.500857
+dataset/monet/monet_15.jpg,claude-monet,Impressionism,landscape,Impressionism,0.682795,Realism,0.538229,Post_Impressionism,0.524657,Expressionism,0.482973
+dataset/monet/monet_16.jpg,claude-monet,Impressionism,Unknown Genre,Impressionism,0.668961,Post_Impressionism,0.552406,High_Renaissance,0.522058,Symbolism,0.512313
+dataset/monet/monet_17.jpg,claude-monet,Impressionism,landscape,Impressionism,0.717883,Baroque,0.505666,Symbolism,0.499197,Realism,0.498231
+dataset/monet/monet_18.jpg,claude-monet,Impressionism,landscape,Impressionism,0.700765,Post_Impressionism,0.541587,Symbolism,0.521034,Expressionism,0.491105
+dataset/monet/monet_19.jpg,claude-monet,Impressionism,Unknown Genre,Impressionism,0.701692,Post_Impressionism,0.543579,High_Renaissance,0.503759,Symbolism,0.502148
+dataset/monet/monet_20.jpg,claude-monet,Impressionism,landscape,Impressionism,0.711820,Post_Impressionism,0.558369,Expressionism,0.503507,Early_Renaissance,0.497894
+dataset/monet/monet_21.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.702534,Post_Impressionism,0.522689,Expressionism,0.507485,Baroque,0.485092
+dataset/monet/monet_22.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.666576,High_Renaissance,0.514745,Post_Impressionism,0.503858,Symbolism,0.501828
+dataset/monet/monet_23.jpg,claude-monet,Realism,portrait,Realism,0.599994,Impressionism,0.560620,Symbolism,0.528729,Baroque,0.523738
+dataset/monet/monet_24.jpg,claude-monet,Impressionism,portrait,Impressionism,0.634076,Post_Impressionism,0.537540,Baroque,0.509754,Symbolism,0.506489
+dataset/monet/monet_25.jpg,claude-monet,Impressionism,landscape,Impressionism,0.663041,Post_Impressionism,0.550184,Expressionism,0.529747,High_Renaissance,0.503786
+dataset/monet/monet_26.jpg,claude-monet,Impressionism,landscape,Impressionism,0.698993,Post_Impressionism,0.537172,Realism,0.509761,Symbolism,0.505935
+dataset/monet/monet_27.jpg,claude-monet,Impressionism,Unknown Genre,Impressionism,0.669049,Realism,0.533394,Post_Impressionism,0.523713,Symbolism,0.491274
+dataset/monet/monet_28.jpg,claude-monet,Impressionism,Unknown Genre,Impressionism,0.672103,Post_Impressionism,0.539022,Symbolism,0.511163,High_Renaissance,0.507134
+dataset/monet/monet_29.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.739390,Post_Impressionism,0.518853,Symbolism,0.499276,Realism,0.479784
+dataset/monet/monet_30.jpg,claude-monet,Impressionism,landscape,Impressionism,0.672476,Post_Impressionism,0.539323,Realism,0.525227,High_Renaissance,0.483699
+dataset/monet/monet_31.jpg,claude-monet,Impressionism,landscape,Impressionism,0.715491,Post_Impressionism,0.539327,Realism,0.493702,High_Renaissance,0.477133
+dataset/monet/monet_32.jpg,claude-monet,Impressionism,portrait,Impressionism,0.628266,Post_Impressionism,0.551805,Expressionism,0.522634,Realism,0.515741
+dataset/monet/monet_33.jpg,claude-monet,Impressionism,cityscape,Impressionism,0.710701,Post_Impressionism,0.530841,Symbolism,0.505347,Realism,0.493535
+dataset/monet/monet_34.jpg,claude-monet,Impressionism,landscape,Impressionism,0.683793,Post_Impressionism,0.518448,Expressionism,0.504310,Realism,0.500178
+dataset/picasso/picasso_0.jpg,pablo-picasso,Cubism,still_life,Cubism,0.652278,Impressionism,0.552451,Expressionism,0.544728,Post_Impressionism,0.531906
+dataset/picasso/picasso_1.jpg,pablo-picasso,Cubism,still_life,Cubism,0.672261,Symbolism,0.581819,Expressionism,0.556280,Synthetic_Cubism,0.520721
+dataset/picasso/picasso_2.jpg,pablo-picasso,Expressionism,genre_painting,Expressionism,0.606483,Symbolism,0.559038,Cubism,0.550389,Baroque,0.538971
+dataset/picasso/picasso_3.jpg,pablo-picasso,Synthetic_Cubism,still_life,Synthetic_Cubism,0.675336,High_Renaissance,0.564997,Cubism,0.557622,Post_Impressionism,0.532938
+dataset/picasso/picasso_4.jpg,pablo-picasso,Cubism,Unknown Genre,Cubism,0.648555,Synthetic_Cubism,0.569213,High_Renaissance,0.526233,Baroque,0.519726
+dataset/picasso/picasso_5.jpg,pablo-picasso,Symbolism,nude_painting,Symbolism,0.650032,Post_Impressionism,0.555751,Expressionism,0.530445,Realism,0.526868
+dataset/picasso/picasso_6.jpg,pablo-picasso,Cubism,still_life,Cubism,0.633276,Post_Impressionism,0.554984,Symbolism,0.532410,Realism,0.508628
+dataset/picasso/picasso_7.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,Art_Nouveau,0.684144,Post_Impressionism,0.543413,High_Renaissance,0.541637,Expressionism,0.540350
+dataset/picasso/picasso_8.jpg,pablo-picasso,Expressionism,sketch_and_study,Expressionism,0.596071,Post_Impressionism,0.555002,Symbolism,0.542927,Cubism,0.527103
+dataset/picasso/picasso_9.jpg,pablo-picasso,Post_Impressionism,nude_painting,Post_Impressionism,0.629464,Symbolism,0.555936,Impressionism,0.514992,Expressionism,0.510076
+dataset/picasso/picasso_10.jpg,pablo-picasso,Synthetic_Cubism,still_life,Synthetic_Cubism,0.691045,Cubism,0.592690,Symbolism,0.535185,Post_Impressionism,0.533640
+dataset/picasso/picasso_11.jpg,pablo-picasso,Synthetic_Cubism,still_life,Synthetic_Cubism,0.677424,Cubism,0.600754,Impressionism,0.539064,Symbolism,0.526431
+dataset/picasso/picasso_12.jpg,pablo-picasso,Symbolism,genre_painting,Symbolism,0.705800,Cubism,0.553286,Expressionism,0.531856,Impressionism,0.526208
+dataset/picasso/picasso_13.jpg,pablo-picasso,Symbolism,genre_painting,Symbolism,0.699675,Post_Impressionism,0.536670,Expressionism,0.535886,Cubism,0.529815
+dataset/picasso/picasso_14.jpg,pablo-picasso,Cubism,Unknown Genre,Cubism,0.657617,Expressionism,0.538617,High_Renaissance,0.537799,Post_Impressionism,0.537030
+dataset/picasso/picasso_15.jpg,pablo-picasso,Expressionism,portrait,Expressionism,0.594622,Cubism,0.577584,Symbolism,0.549866,Realism,0.519303
+dataset/picasso/picasso_16.jpg,pablo-picasso,Symbolism,genre_painting,Symbolism,0.683352,Post_Impressionism,0.561907,Expressionism,0.538874,Cubism,0.537153
+dataset/picasso/picasso_17.jpg,pablo-picasso,Expressionism,portrait,Expressionism,0.615780,Cubism,0.578116,Post_Impressionism,0.537868,Impressionism,0.532950
+dataset/picasso/picasso_18.jpg,pablo-picasso,Realism,sketch_and_study,Realism,0.586729,Post_Impressionism,0.552695,High_Renaissance,0.544608,Symbolism,0.508122
+dataset/picasso/picasso_19.jpg,pablo-picasso,Cubism,portrait,Cubism,0.650602,Expressionism,0.565349,Symbolism,0.552183,Impressionism,0.534800
+dataset/picasso/picasso_20.jpg,pablo-picasso,Expressionism,genre_painting,Expressionism,0.623108,Post_Impressionism,0.577009,Symbolism,0.552495,Impressionism,0.545091
+dataset/picasso/picasso_21.jpg,pablo-picasso,Expressionism,cityscape,Expressionism,0.625820,Cubism,0.559792,Impressionism,0.545486,Post_Impressionism,0.538575
+dataset/picasso/picasso_22.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,Art_Nouveau,0.647930,High_Renaissance,0.553284,Baroque,0.542956,Post_Impressionism,0.526511
+dataset/picasso/picasso_23.jpg,pablo-picasso,Expressionism,portrait,Expressionism,0.595603,Symbolism,0.579737,Impressionism,0.536781,Cubism,0.531834
+dataset/picasso/picasso_24.jpg,pablo-picasso,Symbolism,genre_painting,Symbolism,0.654292,Post_Impressionism,0.534550,Expressionism,0.531740,Impressionism,0.530285
+dataset/picasso/picasso_25.jpg,pablo-picasso,Expressionism,nude_painting,Expressionism,0.605005,Cubism,0.557169,Symbolism,0.548264,Post_Impressionism,0.544895
+dataset/picasso/picasso_26.jpg,pablo-picasso,Expressionism,portrait,Expressionism,0.597950,Post_Impressionism,0.568760,Cubism,0.554196,Impressionism,0.537497
+dataset/picasso/picasso_27.jpg,pablo-picasso,Cubism,genre_painting,Cubism,0.670138,Symbolism,0.559063,Expressionism,0.556868,Post_Impressionism,0.508384
+dataset/picasso/picasso_28.jpg,pablo-picasso,Impressionism,Unknown Genre,Impressionism,0.585866,Post_Impressionism,0.546082,Expressionism,0.542270,Symbolism,0.541055
+dataset/picasso/picasso_29.jpg,pablo-picasso,Cubism,still_life,Cubism,0.680326,Symbolism,0.580993,Expressionism,0.540079,Post_Impressionism,0.524238
+dataset/picasso/picasso_30.jpg,pablo-picasso,Impressionism,genre_painting,Impressionism,0.642220,Expressionism,0.549549,Post_Impressionism,0.540552,Symbolism,0.524066
+dataset/picasso/picasso_31.jpg,pablo-picasso,Post_Impressionism,nude_painting,Post_Impressionism,0.625586,Symbolism,0.553531,Expressionism,0.528896,Impressionism,0.515274
+dataset/picasso/picasso_32.jpg,pablo-picasso,Cubism,genre_painting,Cubism,0.656186,Symbolism,0.562438,Expressionism,0.544595,Synthetic_Cubism,0.536232
+dataset/picasso/picasso_33.jpg,pablo-picasso,Expressionism,genre_painting,Expressionism,0.599328,Impressionism,0.556975,Post_Impressionism,0.551330,Symbolism,0.531369
+dataset/picasso/picasso_34.jpg,pablo-picasso,Realism,nude_painting,Realism,0.581645,Symbolism,0.548570,Post_Impressionism,0.548154,Expressionism,0.527917
+dataset/rembrandt/rembrandt_0.jpg,rembrandt,Baroque,religious_painting,Baroque,0.707754,High_Renaissance,0.534040,Symbolism,0.513895,Realism,0.502715
+dataset/rembrandt/rembrandt_1.jpg,rembrandt,Baroque,religious_painting,Baroque,0.715417,High_Renaissance,0.521168,Symbolism,0.502996,Realism,0.493674
+dataset/rembrandt/rembrandt_2.jpg,rembrandt,Baroque,religious_painting,Baroque,0.684980,Symbolism,0.520764,High_Renaissance,0.519586,Realism,0.502335
+dataset/rembrandt/rembrandt_3.jpg,rembrandt,Baroque,portrait,Baroque,0.694906,Realism,0.517349,High_Renaissance,0.512590,Post_Impressionism,0.497331
+dataset/rembrandt/rembrandt_4.jpg,rembrandt,Baroque,Unknown Genre,Baroque,0.713022,Realism,0.522705,Post_Impressionism,0.515559,High_Renaissance,0.497216
+dataset/rembrandt/rembrandt_5.jpg,rembrandt,Baroque,genre_painting,Baroque,0.692434,Post_Impressionism,0.539059,Realism,0.534580,High_Renaissance,0.492860
+dataset/rembrandt/rembrandt_6.jpg,rembrandt,Baroque,Unknown Genre,Baroque,0.683167,High_Renaissance,0.536579,Early_Renaissance,0.500172,Cubism,0.497510
+dataset/rembrandt/rembrandt_7.jpg,rembrandt,Baroque,religious_painting,Baroque,0.682955,Symbolism,0.529789,High_Renaissance,0.529337,Realism,0.519884
+dataset/rembrandt/rembrandt_8.jpg,rembrandt,Baroque,genre_painting,Baroque,0.678860,Realism,0.533792,High_Renaissance,0.511217,Post_Impressionism,0.507263
+dataset/rembrandt/rembrandt_9.jpg,rembrandt,Baroque,Unknown Genre,Baroque,0.652277,Post_Impressionism,0.559358,High_Renaissance,0.537313,Realism,0.495044
+dataset/rembrandt/rembrandt_10.jpg,rembrandt,Baroque,genre_painting,Baroque,0.702424,Post_Impressionism,0.533798,Realism,0.528592,High_Renaissance,0.504219
+dataset/rembrandt/rembrandt_11.jpg,rembrandt,Baroque,portrait,Baroque,0.697957,Realism,0.525880,High_Renaissance,0.503743,Post_Impressionism,0.494999
+dataset/rembrandt/rembrandt_12.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.703849,Post_Impressionism,0.534078,Realism,0.512036,High_Renaissance,0.503843
+dataset/rembrandt/rembrandt_13.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.654027,Post_Impressionism,0.553245,Realism,0.509243,High_Renaissance,0.506942
+dataset/rembrandt/rembrandt_14.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.657095,Post_Impressionism,0.541599,Realism,0.518489,High_Renaissance,0.513952
+dataset/rembrandt/rembrandt_15.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.713835,High_Renaissance,0.529269,Post_Impressionism,0.524443,Impressionism,0.487196
+dataset/rembrandt/rembrandt_16.jpg,rembrandt,Baroque,religious_painting,Baroque,0.674052,High_Renaissance,0.539385,Realism,0.510072,Symbolism,0.508271
+dataset/rembrandt/rembrandt_17.jpg,rembrandt,Baroque,portrait,Baroque,0.698805,Realism,0.510107,Symbolism,0.502821,High_Renaissance,0.499029
+dataset/rembrandt/rembrandt_18.jpg,rembrandt,Baroque,portrait,Baroque,0.706377,High_Renaissance,0.523950,Impressionism,0.513264,Early_Renaissance,0.508639
+dataset/rembrandt/rembrandt_19.jpg,rembrandt,Baroque,Unknown Genre,Baroque,0.634442,High_Renaissance,0.528138,Early_Renaissance,0.527751,Post_Impressionism,0.516380
+dataset/rembrandt/rembrandt_20.jpg,rembrandt,Baroque,genre_painting,Baroque,0.688206,Realism,0.534931,Post_Impressionism,0.534024,High_Renaissance,0.521336
+dataset/rembrandt/rembrandt_21.jpg,rembrandt,Baroque,portrait,Baroque,0.646915,High_Renaissance,0.555520,Impressionism,0.503989,Realism,0.501539
+dataset/rembrandt/rembrandt_22.jpg,rembrandt,Baroque,portrait,Baroque,0.688409,High_Renaissance,0.521940,Impressionism,0.509810,Realism,0.505192
+dataset/rembrandt/rembrandt_23.jpg,rembrandt,Baroque,genre_painting,Baroque,0.701185,Realism,0.516834,Post_Impressionism,0.516807,High_Renaissance,0.513502
+dataset/rembrandt/rembrandt_24.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.697957,High_Renaissance,0.559111,Post_Impressionism,0.508932,Impressionism,0.496362
+dataset/rembrandt/rembrandt_25.jpg,rembrandt,Baroque,portrait,Baroque,0.701386,High_Renaissance,0.517412,Early_Renaissance,0.500104,Realism,0.496276
+dataset/rembrandt/rembrandt_26.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.647236,High_Renaissance,0.555495,Post_Impressionism,0.540800,Realism,0.529812
+dataset/rembrandt/rembrandt_27.jpg,rembrandt,Baroque,portrait,Baroque,0.675794,Impressionism,0.517121,Realism,0.512709,Post_Impressionism,0.510586
+dataset/rembrandt/rembrandt_28.jpg,rembrandt,Baroque,Unknown Genre,Baroque,0.674464,High_Renaissance,0.545589,Early_Renaissance,0.512427,Impressionism,0.509932
+dataset/rembrandt/rembrandt_29.jpg,rembrandt,Baroque,portrait,Baroque,0.670547,Early_Renaissance,0.522335,High_Renaissance,0.520299,Post_Impressionism,0.511320
+dataset/rembrandt/rembrandt_30.jpg,rembrandt,Baroque,portrait,Baroque,0.672053,High_Renaissance,0.545796,Early_Renaissance,0.520172,Impressionism,0.498008
+dataset/rembrandt/rembrandt_31.jpg,rembrandt,Baroque,landscape,Baroque,0.652269,Impressionism,0.543583,Post_Impressionism,0.528741,Realism,0.526297
+dataset/rembrandt/rembrandt_32.jpg,rembrandt,Baroque,Unknown Genre,Baroque,0.629871,Post_Impressionism,0.546630,High_Renaissance,0.545628,Realism,0.519730
+dataset/rembrandt/rembrandt_33.jpg,rembrandt,Baroque,religious_painting,Baroque,0.716025,Symbolism,0.515743,Impressionism,0.506727,Early_Renaissance,0.504735
+dataset/rembrandt/rembrandt_34.jpg,rembrandt,Baroque,sketch_and_study,Baroque,0.673936,High_Renaissance,0.544618,Post_Impressionism,0.509600,Early_Renaissance,0.503381
+dataset/da_vinci/da_vinci_0.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.669858,Early_Renaissance,0.574307,Cubism,0.545814,Synthetic_Cubism,0.507178
+dataset/da_vinci/da_vinci_1.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,Early_Renaissance,0.637922,High_Renaissance,0.581614,Symbolism,0.535750,Realism,0.517867
+dataset/da_vinci/da_vinci_2.jpg,leonardo-da-vinci,High_Renaissance,portrait,High_Renaissance,0.690760,Early_Renaissance,0.544081,Baroque,0.541476,Post_Impressionism,0.522391
+dataset/da_vinci/da_vinci_3.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,High_Renaissance,0.653113,Early_Renaissance,0.571853,Baroque,0.509684,Impressionism,0.497163
+dataset/da_vinci/da_vinci_4.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,High_Renaissance,0.643565,Early_Renaissance,0.566473,Baroque,0.540750,Post_Impressionism,0.502463
+dataset/da_vinci/da_vinci_5.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.709814,Baroque,0.534677,Post_Impressionism,0.530510,Early_Renaissance,0.518849
+dataset/da_vinci/da_vinci_6.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.678835,Early_Renaissance,0.571458,Cubism,0.509781,Baroque,0.506071
+dataset/da_vinci/da_vinci_7.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,Early_Renaissance,0.633586,High_Renaissance,0.629781,Cubism,0.522454,Post_Impressionism,0.521056
+dataset/da_vinci/da_vinci_8.jpg,leonardo-da-vinci,Early_Renaissance,portrait,Early_Renaissance,0.646176,High_Renaissance,0.584448,Impressionism,0.524044,Baroque,0.504571
+dataset/da_vinci/da_vinci_9.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.661346,Early_Renaissance,0.562323,Baroque,0.551501,Post_Impressionism,0.505668
+dataset/da_vinci/da_vinci_10.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.636972,Baroque,0.592561,Post_Impressionism,0.528648,Early_Renaissance,0.526623
+dataset/da_vinci/da_vinci_11.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.689898,Early_Renaissance,0.563265,Post_Impressionism,0.529738,Cubism,0.506962
+dataset/da_vinci/da_vinci_12.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.662255,Baroque,0.556149,Early_Renaissance,0.549843,Realism,0.500161
+dataset/da_vinci/da_vinci_13.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.716615,Early_Renaissance,0.527733,Post_Impressionism,0.514202,Baroque,0.511811
+dataset/da_vinci/da_vinci_14.jpg,leonardo-da-vinci,High_Renaissance,portrait,High_Renaissance,0.614060,Early_Renaissance,0.604109,Impressionism,0.520957,Baroque,0.510962
+dataset/da_vinci/da_vinci_15.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.655631,Baroque,0.544747,Early_Renaissance,0.544186,Post_Impressionism,0.520856
+dataset/da_vinci/da_vinci_16.jpg,leonardo-da-vinci,High_Renaissance,landscape,High_Renaissance,0.632030,Post_Impressionism,0.541795,Cubism,0.523103,Synthetic_Cubism,0.509898
+dataset/da_vinci/da_vinci_17.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,Early_Renaissance,0.665807,High_Renaissance,0.595311,Symbolism,0.541110,Baroque,0.529477
+dataset/da_vinci/da_vinci_18.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.673863,Early_Renaissance,0.559734,Baroque,0.534407,Post_Impressionism,0.519072
+dataset/da_vinci/da_vinci_19.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.652994,Early_Renaissance,0.567581,Post_Impressionism,0.535239,Realism,0.520130
+dataset/da_vinci/da_vinci_20.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.657000,Early_Renaissance,0.559563,Realism,0.524333,Post_Impressionism,0.518942
+dataset/da_vinci/da_vinci_21.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.642545,Early_Renaissance,0.556703,Realism,0.519969,Post_Impressionism,0.519616
+dataset/da_vinci/da_vinci_22.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,High_Renaissance,0.646895,Early_Renaissance,0.585332,Baroque,0.520348,Symbolism,0.510358
+dataset/da_vinci/da_vinci_23.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,High_Renaissance,0.643321,Baroque,0.531598,Early_Renaissance,0.530418,Post_Impressionism,0.507947
+dataset/da_vinci/da_vinci_24.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.700195,Early_Renaissance,0.537335,Post_Impressionism,0.524079,Baroque,0.506125
+dataset/da_vinci/da_vinci_25.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.652988,Post_Impressionism,0.544554,Baroque,0.522825,Impressionism,0.505556
+dataset/da_vinci/da_vinci_26.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,High_Renaissance,0.615898,Early_Renaissance,0.595198,Baroque,0.551393,Post_Impressionism,0.515982
+dataset/da_vinci/da_vinci_27.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.692553,Post_Impressionism,0.539886,Early_Renaissance,0.537132,Baroque,0.530749
+dataset/da_vinci/da_vinci_28.jpg,leonardo-da-vinci,High_Renaissance,portrait,High_Renaissance,0.657737,Early_Renaissance,0.564979,Baroque,0.523647,Post_Impressionism,0.521792
+dataset/da_vinci/da_vinci_29.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,High_Renaissance,0.616998,Early_Renaissance,0.601224,Symbolism,0.565308,Baroque,0.518271
+dataset/da_vinci/da_vinci_30.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,High_Renaissance,0.638611,Early_Renaissance,0.583775,Baroque,0.520898,Symbolism,0.518435
+dataset/da_vinci/da_vinci_31.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.666261,Post_Impressionism,0.531981,Baroque,0.519625,Early_Renaissance,0.512049
+dataset/da_vinci/da_vinci_32.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,Early_Renaissance,0.622778,High_Renaissance,0.615544,Post_Impressionism,0.521019,Baroque,0.511548
+dataset/da_vinci/da_vinci_33.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,High_Renaissance,0.626747,Baroque,0.535886,Post_Impressionism,0.530981,Impressionism,0.516588
+dataset/da_vinci/da_vinci_34.jpg,leonardo-da-vinci,High_Renaissance,portrait,High_Renaissance,0.643368,Early_Renaissance,0.581964,Symbolism,0.514204,Cubism,0.512407

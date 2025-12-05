@@ -60,9 +60,13 @@ class ConceptGraphDataset(Dataset):
         if self.transforms is not None:
             img = self.transforms(img)
         signals = None
-        if idx in self.precomputed_signals:
-            signals = self.precomputed_signals[idx]
-        elif self.prototype_head is not None:
+        if isinstance(self.precomputed_signals, list):
+            if idx < len(self.precomputed_signals):
+                signals = self.precomputed_signals[idx]
+        elif isinstance(self.precomputed_signals, dict):
+            if idx in self.precomputed_signals:
+                signals = self.precomputed_signals[idx]
+        if signals is None and self.prototype_head is not None:
             out = self.prototype_head.extract_signal([rec["image_path"]])
             signals = out.get(rec["image_path"], None)
         return {
