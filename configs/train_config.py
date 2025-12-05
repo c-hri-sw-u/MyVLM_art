@@ -54,6 +54,16 @@ class EmbeddingTrainingConfig:
     device: str = 'cuda'
     # Torch dtype to use
     torch_dtype: torch.dtype = torch.bfloat16
+    # Max tokens per concept
+    max_tokens_per_concept: int = 4
+    # Global budget per sample
+    max_concepts_per_sample: int = 0
+    # Backoff tolerance delta
+    backoff_delta: float = 0.0
+    # Signal normalization mode
+    normalize_mode: str = 'none'
+    # Temperature for contrast scaling
+    temperature: float = 1.0
 
     def __post_init__(self):
         self.concept_data_path = self.data_root / self.concept_name
@@ -65,4 +75,3 @@ class EmbeddingTrainingConfig:
                 f"Concept head path {self.concept_head_path} does not exist!"
         self.output_path = self.output_root / self.concept_name / f'seed_{self.seed}'
         self.output_path.mkdir(exist_ok=True, parents=True)
-

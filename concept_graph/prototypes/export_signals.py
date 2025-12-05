@@ -60,6 +60,7 @@ def main():
     parser.add_argument("--format", type=str, default="json")
     parser.add_argument("--topk", type=int, default=3)
     parser.add_argument("--normalize", type=str, default="none")
+    parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--clip", type=str, default="true")
     args = parser.parse_args()
 
@@ -70,6 +71,7 @@ def main():
     fmt = args.format.strip().lower() if args.format else (out_path.suffix.lstrip(".") or "json")
     topk = max(1, int(args.topk))
     normalize_mode = args.normalize.strip().lower()
+    temperature = float(args.temperature)
     do_clip = str(args.clip).lower() in ["1", "true", "yes", "y"]
 
     meta = load_ckpt_meta(ckpt_path)
@@ -92,9 +94,12 @@ def main():
         if do_clip:
             x = max(-1.0, min(1.0, x))
         if normalize_mode == "zero_one":
-            return 0.5 * (x + 1.0)
+            x = 0.5 * (x + 1.0)
         elif normalize_mode == "clamp_zero":
-            return max(0.0, x)
+            x = max(0.0, x)
+        x = max(-1.0, min(1.0, x))
+        if normalize_mode == "zscore":
+            pass
         return x
 
     if fmt == "json":
@@ -105,7 +110,38 @@ def main():
                 i = idx_of.get(p)
                 if i is None:
                     continue
-                results[i][dim] = to_jsonable(sig)
+                items = []
+                for k_idx, vec in sig.items():
+                    s = float(vec[1].item()) if hasattr(vec[1], "item") else float(vec[1])
+                    items.append((k_idx, s))
+                if normalize_mode == "zscore":
+                    vals = [t[1] for t in items]
+                    mean = sum(vals) / max(1, len(vals))
+                    var = sum((v - mean) * (v - mean) for v in vals) / max(1, len(vals))
+                    std = var ** 0.5
+                    normed = []
+                    for k_idx, s in items:
+                        z = (s - mean) / (std + 1e-6)
+                        p = 1.0 / (1.0 + torch.exp(torch.tensor(-z))).item()
+                        if temperature != 1.0:
+                            p = float(max(0.0, min(1.0, p)) ** (1.0 / max(1e-6, temperature)))
+                        normed.append((k_idx, float(max(0.0, min(1.0, p)))))
+                    items = normed
+                else:
+                    normed = []
+                    for k_idx, s in items:
+                        s2 = norm_s(s)
+                        if temperature != 1.0:
+                            s2 = float(max(0.0, min(1.0, s2)) ** (1.0 / max(1e-6, temperature)))
+                        normed.append((k_idx, float(max(0.0, min(1.0, s2)))))
+                    items = normed
+                sig_out: Dict[int, torch.Tensor] = {}
+                for k_idx, s in items:
+                    vec = sig.get(k_idx)
+                    d0 = float(vec[0].item()) if hasattr(vec[0], "item") else float(vec[0])
+                    t = torch.tensor([d0, s], dtype=torch.float32)
+                    sig_out[int(k_idx) if not isinstance(k_idx, int) else k_idx] = t.unsqueeze(0)
+                results[i][dim] = to_jsonable(sig_out)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         with out_path.open("w") as f:
             json.dump(results, f)
@@ -141,6 +177,27 @@ def main():
                 name = legends[d][idx] if idx < len(legends[d]) else str(idx)
                 s = float(vec[1].item()) if hasattr(vec[1], "item") else float(vec[1])
                 items.append((name, s))
+            if normalize_mode == "zscore":
+                vals = [t[1] for t in items]
+                mean = sum(vals) / max(1, len(vals))
+                var = sum((v - mean) * (v - mean) for v in vals) / max(1, len(vals))
+                std = var ** 0.5
+                items2 = []
+                for name, s in items:
+                    z = (s - mean) / (std + 1e-6)
+                    p = 1.0 / (1.0 + torch.exp(torch.tensor(-z))).item()
+                    if temperature != 1.0:
+                        p = float(max(0.0, min(1.0, p)) ** (1.0 / max(1e-6, temperature)))
+                    items2.append((name, float(max(0.0, min(1.0, p)))))
+                items = items2
+            else:
+                items2 = []
+                for name, s in items:
+                    s2 = norm_s(s)
+                    if temperature != 1.0:
+                        s2 = float(max(0.0, min(1.0, s2)) ** (1.0 / max(1e-6, temperature)))
+                    items2.append((name, float(max(0.0, min(1.0, s2)))))
+                items = items2
             items.sort(key=lambda t: t[1], reverse=True)
             for k in range(topk):
                 if k < len(items):
@@ -161,4 +218,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

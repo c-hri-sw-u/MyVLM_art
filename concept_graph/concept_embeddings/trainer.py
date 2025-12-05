@@ -245,6 +245,8 @@ class MultiTokenEmbeddingTrainer:
                 threshold=self.cfg.threshold,
                 torch_dtype=self.myvlm.vlm.torch_dtype,
                 device=self.device,
+                max_concepts_per_sample=getattr(self.cfg, "max_concepts_per_sample", 0),
+                backoff_delta=getattr(self.cfg, "backoff_delta", 0.0),
             )
             setattr(edit_module, layer_name, layer)
         concept_idxs = set()
