@@ -15,15 +15,15 @@ cfg = MyVLMArtConfig(
     personalization_task=PersonalizationTask.CAPTIONING,
     output_root=Path("./outputs"),
     data_root=Path("./data"),
-    optimization_steps=2,
+    optimization_steps=1,
     learning_rate=1.0,
     batch_size=1,
     reg_lambda=0.0,
     device='cuda',
     torch_dtype=torch.bfloat16,
     threshold=0.75,
-    max_tokens_per_concept=2,
-    max_concepts_per_sample=2,
+    max_tokens_per_concept=1,
+    max_concepts_per_sample=1,
     backoff_delta=0.05,
 )
 

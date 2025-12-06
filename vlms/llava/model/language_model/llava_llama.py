@@ -133,8 +133,25 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
             else:
                 w = None
             if w is not None:
+                w = w.to(loss_per_token.device)
+                seq_len = loss_per_token.size(1)
+                if w.dim() == 1:
+                    w = w.view(1, 1).expand(loss_per_token.size(0), seq_len)
+                elif w.dim() == 2:
+                    if w.size(1) != seq_len:
+                        if w.size(1) > seq_len:
+                            w = w[:, :seq_len]
+                        else:
+                            pad = torch.zeros(w.size(0), seq_len - w.size(1), device=w.device, dtype=w.dtype)
+                            w = torch.cat([w, pad], dim=1)
                 mask = (shift_labels != -100).float()
-                weighted = (loss_per_token * (w.to(loss_per_token.device))) * mask
+                if mask.size(1) != seq_len:
+                    if mask.size(1) > seq_len:
+                        mask = mask[:, :seq_len]
+                    else:
+                        pad_m = torch.zeros(mask.size(0), seq_len - mask.size(1), device=mask.device, dtype=mask.dtype)
+                        mask = torch.cat([mask, pad_m], dim=1)
+                weighted = (loss_per_token * w) * mask
                 denom = mask.sum().clamp_min(1.0)
                 new_loss = weighted.sum() / denom
                 out = type(out)(

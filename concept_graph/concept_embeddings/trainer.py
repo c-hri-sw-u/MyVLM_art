@@ -12,16 +12,6 @@ Inputs/Outputs:
   - Inputs: batched images, activated concept signals (prototype similarities), prompts & targets
   - Outputs: checkpoints of concept embeddings per iteration, evaluation logs on validation split
 
-Status:
-  - Implemented. Includes Stage A/B training, token‑weighted CE for keys/reason, attention regularization,
-    multi‑token injection via mm_projector, periodic validation, and checkpointing of keys/values.
-
-Remaining Work:
-  1) Extend metrics/validation for per‑dimension accuracy and coherence.
-  2) Optional: merge multi‑dimension signals (style/genre) and expose gating options via config.
-  3) Optional: add serialization for key‑to‑value mapping when using external initialization.
-
-
 阶段化训练调度：
 阶段 A：使用 from_csv(csv_path, images_root, ..., stage_mode="A", w_keys=1.0, w_reason=0.0)；跑若干 epoch 至稳定
 阶段 B：切换 stage_mode="B"，w_reason=0.2，学习理由的语言风格；定期验证三键分类是否稳定
@@ -72,10 +62,12 @@ class MultiTokenEmbeddingTrainer:
 
         optimizer, scheduler = None, None
 
-        pbar_a = tqdm(range(self.stage_a_steps))
-        for i in pbar_a:
+        pbar_a = tqdm(total=self.stage_a_steps, desc="Stage A")
+        for i in range(self.stage_a_steps):
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", i)
-            for batch_idx, batch in enumerate(self._train_loaders["A"]):
+            dl_a = self._train_loaders["A"]
+            pbar_batches_a = tqdm(dl_a, total=len(dl_a), leave=False, desc=f"Train A {i+1}/{self.stage_a_steps}")
+            for batch_idx, batch in enumerate(pbar_batches_a):
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
                 outputs = self.myvlm.vlm.model(**batch)
                 if optimizer is None:
@@ -100,9 +92,10 @@ class MultiTokenEmbeddingTrainer:
                 optimizer.step()
                 scheduler.step()
                 optimizer.zero_grad()
-                pbar_a.set_description(f"Stage A | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
+                pbar_batches_a.set_description(f"Train A {i+1}/{self.stage_a_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 if self.myvlm._should_validate(i, batch_idx):
-                    self.myvlm.validate(self._val_loaders["A"])
+                    tqdm.write(f"Validating A step {i+1}")
+                    self.myvlm.validate(self._val_loaders["A"], desc=f"Validation A {i+1}/{self.stage_a_steps}")
                 if self.myvlm._should_save_checkpoint(i, batch_idx):
                     state = {}
                     if hasattr(layer_module, "keys") and layer_module.keys is not None:
@@ -111,13 +104,20 @@ class MultiTokenEmbeddingTrainer:
                         state["values"] = layer_module.values.clone().detach().requires_grad_(False).cpu()
                     if state:
                         checkpoints[i] = state
-                        torch.save(checkpoints, self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt")
+                        path = self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt"
+                        torch.save(checkpoints, path)
+                        pbar_batches_a.set_postfix(save="ok")
+                        tqdm.write(f"Checkpoint saved: {path} (step {i})")
+            pbar_batches_a.close()
+            pbar_a.update(1)
 
-        pbar_b = tqdm(range(self.stage_b_steps))
-        for j in pbar_b:
+        pbar_b = tqdm(total=self.stage_b_steps, desc="Stage B")
+        for j in range(self.stage_b_steps):
             step = self.stage_a_steps + j
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", step)
-            for batch_idx, batch in enumerate(self._train_loaders["B"]):
+            dl_b = self._train_loaders["B"]
+            pbar_batches_b = tqdm(dl_b, total=len(dl_b), leave=False, desc=f"Train B {j+1}/{self.stage_b_steps}")
+            for batch_idx, batch in enumerate(pbar_batches_b):
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
                 outputs = self.myvlm.vlm.model(**batch)
                 loss = outputs.loss
@@ -139,9 +139,10 @@ class MultiTokenEmbeddingTrainer:
                 optimizer.step()
                 scheduler.step()
                 optimizer.zero_grad()
-                pbar_b.set_description(f"Stage B | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
+                pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 if self.myvlm._should_validate(step, batch_idx):
-                    self.myvlm.validate(self._val_loaders["B"])
+                    tqdm.write(f"Validating B step {step}")
+                    self.myvlm.validate(self._val_loaders["B"], desc=f"Validation B {j+1}/{self.stage_b_steps}")
                 if self.myvlm._should_save_checkpoint(step, batch_idx):
                     state = {}
                     if hasattr(layer_module, "keys") and layer_module.keys is not None:
@@ -150,7 +151,12 @@ class MultiTokenEmbeddingTrainer:
                         state["values"] = layer_module.values.clone().detach().requires_grad_(False).cpu()
                     if state:
                         checkpoints[step] = state
-                        torch.save(checkpoints, self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt")
+                        path = self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt"
+                        torch.save(checkpoints, path)
+                        pbar_batches_b.set_postfix(save="ok")
+                        tqdm.write(f"Checkpoint saved: {path} (step {step})")
+            pbar_batches_b.close()
+            pbar_b.update(1)
 
         setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "mode", MyVLMLayerMode.INFERENCE)
         return checkpoints
