@@ -14,12 +14,15 @@ from vlms.vlm_wrapper import Processor
 
 class MyLLaVA(MyVLM):
 
-    def validate(self, val_dataloader, temperature: float = 0.2, top_p: float = 0.7):
+    def validate(self, val_dataloader, temperature: float = 0.2, top_p: float = 0.7, max_new_tokens: int = 64):
         conv = conv_templates["llava_v1"].copy()
         stop_str = conv.sep if conv.sep_style != SeparatorStyle.TWO else conv.sep2
         keywords = [stop_str]
         outputs = []
-        for val_batch in tqdm(val_dataloader):
+        max_batches = int(getattr(self.cfg, "val_subset_n", 10))
+        for i, val_batch in enumerate(tqdm(val_dataloader)):
+            if i >= max_batches:
+                break
             stopping_criteria = KeywordsStoppingCriteria(keywords,
                                                          self.vlm.processor.tokenizer,
                                                          val_batch['input_ids'])
@@ -37,7 +40,7 @@ class MyLLaVA(MyVLM):
                                                     do_sample=True,
                                                     temperature=temperature,
                                                     top_p=top_p,
-                                                    max_new_tokens=512)
+                                                    max_new_tokens=max_new_tokens)
             output = self.vlm.processor.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
             output = [out.strip() for out in output]
             outputs.append(output[0])

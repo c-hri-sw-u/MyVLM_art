@@ -42,8 +42,9 @@ class MyVLMArtConfig:
     priority: str = 'artist,style,genre'     # 维度优先级（公平保留与剩余预算填充时使用）
 
     # 运行时派生属性
-    save_interval: int = 25
+    save_interval: int = 1
     val_interval: int = 25
+    val_subset_n: int = 5
     seed: int = 42
 
     def __post_init__(self):
