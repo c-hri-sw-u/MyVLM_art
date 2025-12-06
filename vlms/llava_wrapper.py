@@ -38,6 +38,14 @@ class LLaVAWrapper(VLMWrapper):
                                                                      device=self.device)
         processor = Processor(tokenizer=tokenizer, image_processor=image_processor)
         model.prepare_mm_projector_for_grace()
+        try:
+            model.config.use_cache = False
+        except Exception:
+            pass
+        try:
+            model.gradient_checkpointing_enable()
+        except Exception:
+            pass
         try:  # Seems like we need to wrap this in a try-except sometimes. Not really sure why, but it seems to work.
             model = model.to(self.device)
         except:

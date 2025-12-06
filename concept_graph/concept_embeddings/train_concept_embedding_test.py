@@ -10,7 +10,7 @@ from concept_graph.concept_embeddings.trainer import MultiTokenEmbeddingTrainer
 
 cfg = MyVLMArtConfig(
     concept_name="dataset",
-    concept_identifier="painting",
+    concept_identifier="test",
     vlm_type=VLMType.LLAVA,
     personalization_task=PersonalizationTask.CAPTIONING,
     output_root=Path("./outputs"),
@@ -25,6 +25,12 @@ cfg = MyVLMArtConfig(
     max_tokens_per_concept=1,
     max_concepts_per_sample=1,
     backoff_delta=0.05,
+
+    train_subset_n=16,
+    train_subset_stride=1,
+    max_train_batches=2,
+    val_subset_n=5
+    max_reason_tokens=64,
 )
 
 vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)

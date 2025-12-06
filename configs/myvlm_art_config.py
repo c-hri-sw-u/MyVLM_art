@@ -45,6 +45,7 @@ class MyVLMArtConfig:
     save_interval: int = 1
     val_interval: int = 25
     val_subset_n: int = 5
+    max_reason_tokens: int = 64
     seed: int = 42
 
     def __post_init__(self):

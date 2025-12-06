@@ -24,6 +24,8 @@ import json
 import csv
 from torch.utils.data import DataLoader
 from tqdm import tqdm
+import hashlib
+import gc
 
 from concept_graph.concept_embeddings.datasets.llava_concept_graph_dataset import (
     LLaVAConceptGraphDataset,
@@ -68,6 +70,8 @@ class MultiTokenEmbeddingTrainer:
             dl_a = self._train_loaders["A"]
             pbar_batches_a = tqdm(dl_a, total=len(dl_a), leave=False, desc=f"Train A {i+1}/{self.stage_a_steps}")
             for batch_idx, batch in enumerate(pbar_batches_a):
+                if int(getattr(self.cfg, "max_train_batches", 0)) > 0 and batch_idx >= int(getattr(self.cfg, "max_train_batches", 0)):
+                    break
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
                 outputs = self.myvlm.vlm.model(**batch)
                 if optimizer is None:
@@ -91,7 +95,7 @@ class MultiTokenEmbeddingTrainer:
                     torch.nn.utils.clip_grad_norm_(layer_module.values, 0.05, norm_type=2)
                 optimizer.step()
                 scheduler.step()
-                optimizer.zero_grad()
+                optimizer.zero_grad(set_to_none=True)
                 pbar_batches_a.set_description(f"Train A {i+1}/{self.stage_a_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 if self.myvlm._should_validate(i, batch_idx):
                     tqdm.write(f"Validating A step {i+1}")
@@ -112,12 +116,18 @@ class MultiTokenEmbeddingTrainer:
             pbar_a.update(1)
 
         pbar_b = tqdm(total=self.stage_b_steps, desc="Stage B")
+        try:
+            torch.cuda.empty_cache()
+        except Exception:
+            pass
         for j in range(self.stage_b_steps):
             step = self.stage_a_steps + j
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", step)
             dl_b = self._train_loaders["B"]
             pbar_batches_b = tqdm(dl_b, total=len(dl_b), leave=False, desc=f"Train B {j+1}/{self.stage_b_steps}")
             for batch_idx, batch in enumerate(pbar_batches_b):
+                if int(getattr(self.cfg, "max_train_batches", 0)) > 0 and batch_idx >= int(getattr(self.cfg, "max_train_batches", 0)):
+                    break
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
                 outputs = self.myvlm.vlm.model(**batch)
                 loss = outputs.loss
@@ -138,7 +148,7 @@ class MultiTokenEmbeddingTrainer:
                     torch.nn.utils.clip_grad_norm_(layer_module.values, 0.05, norm_type=2)
                 optimizer.step()
                 scheduler.step()
-                optimizer.zero_grad()
+                optimizer.zero_grad(set_to_none=True)
                 pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 if self.myvlm._should_validate(step, batch_idx):
                     tqdm.write(f"Validating B step {step}")
@@ -162,15 +172,28 @@ class MultiTokenEmbeddingTrainer:
         return checkpoints
 
     def _build_stage_loaders(self) -> None:
+        # Stage-specific structured configs for prompts
+        self._structured_cfg_a: Dict[str, Any] = {}
+        self._structured_cfg_b: Dict[str, Any] = {
+            "variants": [
+                "Identify the artist, style, and genre. First give three lines 'artist: ...', 'style: ...', 'genre: ...'. Then write 2-3 short sentences explaining the attribution.",
+                "Return three key-value lines for artist, style, genre, followed by 2-3 brief sentences of visual reasoning about brushwork, color, and composition.",
+                "Give the keys (artist/style/genre) as three lines, then add 2-3 concise sentences describing evidence for the attribution and style.",
+            ],
+            "weights": [0.5, 0.3, 0.2],
+            "seed": int(getattr(self.cfg, "seed", 0)),
+            "max_reason_tokens": int(getattr(self.cfg, "max_reason_tokens", 64)),
+        }
         ds_a = LLaVAConceptGraphDataset.from_csv(
             csv_path=self.targets_csv,
             images_root=self.images_root,
             processor=self.processor,
-            prompt_builder=self._prompt_builder,
+            prompt_builder=self._prompt_builder_a,
             target_builder=self._target_builder,
             stage_mode="A",
             w_keys=1.0,
             w_reason=0.0,
+            structured_cfg=self._structured_cfg_a,
             device=self.device,
             torch_dtype=self.myvlm.vlm.torch_dtype,
         )
@@ -178,11 +201,12 @@ class MultiTokenEmbeddingTrainer:
             csv_path=self.targets_csv,
             images_root=self.images_root,
             processor=self.processor,
-            prompt_builder=self._prompt_builder,
+            prompt_builder=self._prompt_builder_b,
             target_builder=self._target_builder,
             stage_mode="B",
             w_keys=1.0,
             w_reason=0.2,
+            structured_cfg=self._structured_cfg_b,
             device=self.device,
             torch_dtype=self.myvlm.vlm.torch_dtype,
         )
@@ -192,19 +216,43 @@ class MultiTokenEmbeddingTrainer:
                 p = ds.samples[k]["image_path"]
                 if p in signals_map:
                     ds.samples[k]["concept_signals"] = signals_map[p]
+        subset_n = int(getattr(self.cfg, "train_subset_n", 0))
+        subset_stride = max(1, int(getattr(self.cfg, "train_subset_stride", 1)))
+        if subset_n > 0:
+            for ds in [ds_a, ds_b]:
+                ds.samples = ds.samples[0:subset_n:subset_stride]
         self._ensure_multi_token_layer_init(signals_map)
         self._train_loaders["A"] = DataLoader(ds_a, batch_size=self.cfg.batch_size, shuffle=True, num_workers=0, collate_fn=ds_a.collate_fn)
         self._val_loaders["A"] = DataLoader(ds_a, batch_size=1, shuffle=False, num_workers=0, collate_fn=ds_a.collate_fn)
         self._train_loaders["B"] = DataLoader(ds_b, batch_size=self.cfg.batch_size, shuffle=True, num_workers=0, collate_fn=ds_b.collate_fn)
         self._val_loaders["B"] = DataLoader(ds_b, batch_size=1, shuffle=False, num_workers=0, collate_fn=ds_b.collate_fn)
 
-    def _prompt_builder(self, labels: Dict[str, str], concept_signals: Any, mode: str = "train_semi_structured", structured_cfg: Optional[Dict[str, Any]] = None) -> str:
-        artist = labels.get("artist", "").replace("_", " ")
-        style = labels.get("style", "").replace("_", " ")
-        genre = labels.get("genre", "").replace("_", " ")
-        if mode == "train_semi_structured":
-            return f"Identify the artist, style, and genre of this painting, then provide a brief reasoning."
-        return f"Describe the painting including artist, style, and genre."
+    def _prompt_builder_a(self, labels: Dict[str, str], concept_signals: Any, mode: str = "train_semi_structured", structured_cfg: Optional[Dict[str, Any]] = None) -> str:
+        return "You are an art expert. Output exactly three lines: 'artist: ...', 'style: ...', 'genre: ...'. No additional text. If uncertain, use 'Unknown'."
+
+    def _prompt_builder_b(self, labels: Dict[str, str], concept_signals: Any, mode: str = "train_semi_structured", structured_cfg: Optional[Dict[str, Any]] = None) -> str:
+        variants = (structured_cfg or {}).get("variants", [])
+        weights = (structured_cfg or {}).get("weights", [])
+        seed = int((structured_cfg or {}).get("seed", 0))
+        if not variants or not weights or len(variants) != len(weights):
+            return "Identify the artist, style, and genre by first giving three lines 'artist: ...', 'style: ...', 'genre: ...', then provide 2-3 short sentences of reasoning."
+        total = sum(float(w) for w in weights)
+        if total <= 0:
+            return variants[0]
+        cum = []
+        s = 0.0
+        for w in weights:
+            s += float(w) / total
+            cum.append(s)
+        key = f"{labels.get('artist','')}|{labels.get('style','')}|{labels.get('genre','')}|{seed}"
+        h = int(hashlib.md5(key.encode()).hexdigest(), 16)
+        u = (h % 10**8) / float(10**8)
+        idx = 0
+        for i, c in enumerate(cum):
+            if u <= c:
+                idx = i
+                break
+        return variants[idx]
 
     def _target_builder(self, labels: Dict[str, str], concept_signals: Any, mode: str = "train_semi_structured") -> str:
         artist = labels.get("artist", "")

@@ -25,6 +25,8 @@ cfg = MyVLMArtConfig(
     max_tokens_per_concept=4,
     max_concepts_per_sample=3,
     backoff_delta=0.05,
+    val_subset_n=5,
+    max_reason_tokens=64,
 )
 
 vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)

@@ -69,6 +69,15 @@ class LLaVAConceptGraphDataset(Dataset):
         if self.stage_mode != "A":
             if img_path in self.precomputed_reasons:
                 reason = self.precomputed_reasons[img_path] or ""
+                max_r = int(self.structured_cfg.get("max_reason_tokens", 0))
+                if max_r > 0 and len(reason) > 0:
+                    try:
+                        r_ids = tokenizer_image_token(reason, self.processor.tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt')
+                        if r_ids.shape[0] > max_r:
+                            r_ids = r_ids[:max_r]
+                            reason = self.processor.tokenizer.decode(r_ids, skip_special_tokens=True)
+                    except Exception:
+                        pass
         target_text = keys if self.stage_mode == "A" else (keys + ("\n" + reason if reason else ""))
         batch = {
             "images": inputs,

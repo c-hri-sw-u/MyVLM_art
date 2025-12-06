@@ -16,9 +16,9 @@ head = PrototypeHead(device="cuda")
 head.load_prototypes(ckpt)
 
 import json
-with open("/home/ubuntu/MyVLM_art/data/wikiart_5artists_dataset.json","r") as f:
+with open(str(PROJECT_ROOT / "data" / "dataset" / "wikiart_5artists_dataset.json"), "r") as f:
     records = json.load(f)
-images_root = Path("/home/ubuntu/MyVLM_art/data")
+images_root = PROJECT_ROOT / "data" / "dataset"
 
 dim = "genre"
 proto = head.prototypes[dim].to(head.device)  # [C, D]
