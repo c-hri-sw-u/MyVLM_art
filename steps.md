@@ -16,39 +16,39 @@ Step 2: Precompute Concept Signals and Integration
 - Evidence:
   - Batch export to JSON/CSV in `concept_graph/prototypes/export_signals.py:91–103` (JSON) and `concept_graph/prototypes/export_signals.py:113–150` (CSV)
   - Dataset injection of precomputed signals in `concept_graph/datasets/concept_graph_dataset.py:63–79`
+  - Normalization to z‑score / zero‑one / clamp via `scripts/normalize_signals.py:59–91`（已完成并生成 JSON）
 - Next: Standardize artifacts path naming and JSON schema across runs
 
 Step 3: Concept Embedding Layer and Gating
-- Status: Partially Completed
+- Status: Completed
 - Evidence:
-  - Multi-token injection and gating in `concept_graph/concept_embeddings/multi_embed_layer.py:49–130`
-  - mm_projector accepts `concept_signals` in `vlms/llava/model/llava_arch.py:140–146`
-- Gaps:
-  - Attention regularization hook not yet wired in `MultiTokenConceptLayer`
-  - Key/value mapping lifecycle (init/persist/load) needs consolidation
-  - Optional Top‑K gating and minimum-token guarantee are not exposed via config
+  - Dynamic multi‑token injection与阈值/回退/预算在 `concept_graph/concept_embeddings/multi_embed_layer.py:92–134,135–181`
+  - mm_projector 透传 `concept_signals` 于注入层 `vlms/llava/model/llava_arch.py:140–146` 与 `vlms/llava/model/multimodal_projector/builder.py:45–52`
+  - 概念 token 位置在 LLaVA 编码阶段被记录，用于正则 `vlms/llava/model/language_model/llava_llama.py:243–343`
+- Notes:
+  - Gating 配置（`threshold/backoff_delta/max_tokens_per_concept/max_concepts_per_sample`）通过训练配置传入 `concept_graph/concept_embeddings/trainer.py:234–251`
 
 Step 4: LLaVA Encoding and Weighted Losses
-- Status: Implemented at dataset/collate level; Trainer not implemented
+- Status: Completed
 - Evidence:
-  - Stage A/B collate and token weighting in `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:88–144`
-  - CSV loader with precomputed keys/reasons in `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:146–193`
-- Gap:
-  - `MultiTokenEmbeddingTrainer` is a stub in `concept_graph/concept_embeddings/trainer.py:35–44`
+  - A/B collate 与 token 加权在 `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:110–137`
+  - 预计算 keys/reasons 的 CSV 加载在 `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:146–160`
+  - 加权 CE 集成在 `vlms/llava/model/language_model/llava_llama.py:123–146`
+  - 训练循环、正则、checkpointing 在 `concept_graph/concept_embeddings/trainer.py:68–154`
 
 Step 5: Phased Training Schedule
-- Status: Partially Completed
+- Status: Completed
 - Evidence:
-  - Stage A/B data flow and weights in `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:88–144`
-- Gaps:
-  - Training loop, optimizer/scheduler, checkpointing to be implemented in `concept_graph/concept_embeddings/trainer.py`
+  - 阶段化 A/B 数据流与权重在 `concept_graph/concept_embeddings/datasets/llava_concept_graph_dataset.py:110–137`
+  - A/B 训练与验证、优化器与调度、checkpointing 在 `concept_graph/concept_embeddings/trainer.py:68–154,156–191,234–259`
 
 Step 6: Evaluation and Alignment
-- Status: Not Started
+- Status: In Progress
 - Evidence:
-  - `evaluation/metrics.py` referenced in plan but not present
+  - 概念激活/预算与 Top‑1 精度验证脚本 `concept_graph/validation/validate_signals.py:110–210,229–279`
+  - 指标函数集合（准确率、宏/加权 F1、覆盖分）在 `myvlm_art/evaluation/metrics.py:1–111`
 - Next:
-  - Implement metrics for Top‑1/Top‑K per dimension; macro F1; coverage and coherence for explanations
+  - 将评估脚本与训练产物联动，输出 per‑dimension PRF、macro/weighted F1、覆盖/连贯汇总 JSON/CSV；在验证集周期性运行
 
 原始中文计划如下：
 建议步骤

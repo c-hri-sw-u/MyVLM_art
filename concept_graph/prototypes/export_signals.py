@@ -137,10 +137,9 @@ def main():
                     items = normed
                 sig_out: Dict[int, torch.Tensor] = {}
                 for k_idx, s in items:
-                    vec = sig.get(k_idx)
-                    d0 = float(vec[0].item()) if hasattr(vec[0], "item") else float(vec[0])
-                    t = torch.tensor([d0, s], dtype=torch.float32)
-                    sig_out[int(k_idx) if not isinstance(k_idx, int) else k_idx] = t.unsqueeze(0)
+                    d_norm = float(1.0 - s)
+                    t = torch.tensor([d_norm, s], dtype=torch.float32)
+                    sig_out[int(k_idx) if not isinstance(k_idx, int) else k_idx] = t
                 results[i][dim] = to_jsonable(sig_out)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         with out_path.open("w") as f:
@@ -203,7 +202,7 @@ def main():
                 if k < len(items):
                     name, s = items[k]
                     row.append(name)
-                    row.append(f"{norm_s(s):.6f}")
+                    row.append(f"{s:.6f}")
                 else:
                     row.append("")
                     row.append("")

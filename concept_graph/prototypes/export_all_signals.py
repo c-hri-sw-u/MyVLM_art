@@ -65,8 +65,8 @@ def main():
     parser.add_argument("--ckpt_style", type=str, required=False)
     parser.add_argument("--ckpt_genre", type=str, required=False)
     parser.add_argument("--output_dir", type=str, default="artifacts")
-    parser.add_argument("--normalize", type=str, default="none")
-    parser.add_argument("--temperature", type=float, default=1.0)
+    parser.add_argument("--normalize", type=str, default="zscore")
+    parser.add_argument("--temperature", type=float, default=0.8)
     parser.add_argument("--csv", type=str, default="false")
     parser.add_argument("--topk", type=int, default=3)
     args = parser.parse_args()
@@ -123,4 +123,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
