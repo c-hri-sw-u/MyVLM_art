@@ -76,7 +76,7 @@ class MultiTokenEmbeddingTrainer:
         for i in pbar_a:
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", i)
             for batch_idx, batch in enumerate(self._train_loaders["A"]):
-                batch["output_attentions"] = True
+                batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
                 outputs = self.myvlm.vlm.model(**batch)
                 if optimizer is None:
                     optimizer = torch.optim.AdamW(self.myvlm.vlm.model.parameters(), lr=self.cfg.learning_rate, weight_decay=1e-4)
@@ -111,13 +111,14 @@ class MultiTokenEmbeddingTrainer:
                         state["values"] = layer_module.values.clone().detach().requires_grad_(False).cpu()
                     if state:
                         checkpoints[i] = state
+                        torch.save(checkpoints, self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt")
 
         pbar_b = tqdm(range(self.stage_b_steps))
         for j in pbar_b:
             step = self.stage_a_steps + j
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", step)
             for batch_idx, batch in enumerate(self._train_loaders["B"]):
-                batch["output_attentions"] = True
+                batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
                 outputs = self.myvlm.vlm.model(**batch)
                 loss = outputs.loss
                 reg_loss = 0.0
@@ -149,6 +150,7 @@ class MultiTokenEmbeddingTrainer:
                         state["values"] = layer_module.values.clone().detach().requires_grad_(False).cpu()
                     if state:
                         checkpoints[step] = state
+                        torch.save(checkpoints, self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt")
 
         setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "mode", MyVLMLayerMode.INFERENCE)
         return checkpoints
@@ -284,11 +286,13 @@ class MultiTokenEmbeddingTrainer:
         edit_module = parent_module(self.myvlm.vlm, brackets_to_periods(self.myvlm.layer))
         layer_name = self.myvlm.layer.rsplit(".", 1)[-1]
         original = getattr(edit_module, layer_name)
+        # If original is MyVLMLayer wrapper, unwrap to the base layer for multi-token injection
+        base_layer = getattr(original, "layer", original)
         if isinstance(original, MultiTokenConceptLayer):
             layer = original
         else:
             layer = MultiTokenConceptLayer(
-                layer=original,
+                layer=base_layer,
                 embedding_dim=VLM_TO_EMBEDDING_DIM[self.myvlm.cfg.vlm_type],
                 max_tokens_per_concept=getattr(self.cfg, "max_tokens_per_concept", 4),
                 threshold=self.cfg.threshold,
