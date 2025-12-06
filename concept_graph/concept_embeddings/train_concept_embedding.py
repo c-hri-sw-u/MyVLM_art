@@ -17,7 +17,7 @@ cfg = MyVLMArtConfig(
     data_root=Path("./data"),
     optimization_steps=100,
     learning_rate=1.0,
-    batch_size=1,
+    batch_size=4,
     reg_lambda=0.0075,
     device='cuda',
     torch_dtype=torch.float16,
@@ -27,8 +27,8 @@ cfg = MyVLMArtConfig(
     backoff_delta=0.05,
     val_subset_n=3,
     max_reason_tokens=64,
-    grad_accum_steps=8,
-    attn_reg_interval=8,
+    grad_accum_steps=4,
+    attn_reg_interval=4,
 )
 
 vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)
