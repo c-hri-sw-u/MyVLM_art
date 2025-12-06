@@ -72,11 +72,13 @@ class MultiTokenEmbeddingTrainer:
             for batch_idx, batch in enumerate(pbar_batches_a):
                 if int(getattr(self.cfg, "max_train_batches", 0)) > 0 and batch_idx >= int(getattr(self.cfg, "max_train_batches", 0)):
                     break
-                batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
-                outputs = self.myvlm.vlm.model(**batch)
+                attn_interval = int(getattr(self.cfg, "attn_reg_interval", 1))
+                batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0) and (batch_idx % attn_interval == 0)
                 if optimizer is None:
                     optimizer = torch.optim.AdamW(self.myvlm.vlm.model.parameters(), lr=self.cfg.learning_rate, weight_decay=1e-4)
                     scheduler = torch.optim.lr_scheduler.ConstantLR(optimizer, self.cfg.learning_rate)
+                with torch.cuda.amp.autocast():
+                    outputs = self.myvlm.vlm.model(**batch)
                 loss = outputs.loss
                 reg_loss = 0.0
                 if getattr(self.cfg, "reg_lambda", 0.0) > 0 and hasattr(outputs, "attentions") and hasattr(outputs, "concept_token_idxs") and outputs.concept_token_idxs is not None:
@@ -93,9 +95,11 @@ class MultiTokenEmbeddingTrainer:
                 layer_module = eval(f"self.myvlm.vlm.{self.myvlm.layer}")
                 if hasattr(layer_module, "values") and layer_module.values is not None:
                     torch.nn.utils.clip_grad_norm_(layer_module.values, 0.05, norm_type=2)
-                optimizer.step()
-                scheduler.step()
-                optimizer.zero_grad(set_to_none=True)
+                do_step = ((batch_idx + 1) % int(getattr(self.cfg, "grad_accum_steps", 1)) == 0) or (batch_idx == len(dl_a) - 1)
+                if do_step:
+                    optimizer.step()
+                    scheduler.step()
+                    optimizer.zero_grad(set_to_none=True)
                 pbar_batches_a.set_description(f"Train A {i+1}/{self.stage_a_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 if self.myvlm._should_validate(i, batch_idx):
                     tqdm.write(f"Validating A step {i+1}")
@@ -131,8 +135,10 @@ class MultiTokenEmbeddingTrainer:
             for batch_idx, batch in enumerate(pbar_batches_b):
                 if int(getattr(self.cfg, "max_train_batches", 0)) > 0 and batch_idx >= int(getattr(self.cfg, "max_train_batches", 0)):
                     break
-                batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0)
-                outputs = self.myvlm.vlm.model(**batch)
+                attn_interval = int(getattr(self.cfg, "attn_reg_interval", 1))
+                batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0) and (batch_idx % attn_interval == 0)
+                with torch.cuda.amp.autocast():
+                    outputs = self.myvlm.vlm.model(**batch)
                 loss = outputs.loss
                 reg_loss = 0.0
                 if getattr(self.cfg, "reg_lambda", 0.0) > 0 and hasattr(outputs, "attentions") and hasattr(outputs, "concept_token_idxs") and outputs.concept_token_idxs is not None:
@@ -149,9 +155,11 @@ class MultiTokenEmbeddingTrainer:
                 layer_module = eval(f"self.myvlm.vlm.{self.myvlm.layer}")
                 if hasattr(layer_module, "values") and layer_module.values is not None:
                     torch.nn.utils.clip_grad_norm_(layer_module.values, 0.05, norm_type=2)
-                optimizer.step()
-                scheduler.step()
-                optimizer.zero_grad(set_to_none=True)
+                do_step = ((batch_idx + 1) % int(getattr(self.cfg, "grad_accum_steps", 1)) == 0) or (batch_idx == len(dl_b) - 1)
+                if do_step:
+                    optimizer.step()
+                    scheduler.step()
+                    optimizer.zero_grad(set_to_none=True)
                 pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 if self.myvlm._should_validate(step, batch_idx):
                     tqdm.write(f"Validating B step {step}")

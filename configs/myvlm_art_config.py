@@ -47,6 +47,8 @@ class MyVLMArtConfig:
     val_subset_n: int = 5
     max_reason_tokens: int = 64
     seed: int = 42
+    grad_accum_steps: int = 4
+    attn_reg_interval: int = 4
 
     def __post_init__(self):
         # 目录派生与存在性校验（保持与当前项目结构兼容）

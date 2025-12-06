@@ -17,19 +17,27 @@ cfg = MyVLMArtConfig(
     data_root=Path("./data"),
     optimization_steps=100,
     learning_rate=1.0,
-    batch_size=4,
+    batch_size=1,
     reg_lambda=0.0075,
     device='cuda',
-    torch_dtype=torch.bfloat16,
+    torch_dtype=torch.float16,
     threshold=0.75,
-    max_tokens_per_concept=4,
+    max_tokens_per_concept=6,
     max_concepts_per_sample=3,
     backoff_delta=0.05,
-    val_subset_n=5,
+    val_subset_n=3,
     max_reason_tokens=64,
+    grad_accum_steps=8,
+    attn_reg_interval=8,
 )
 
 vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)
 myvlm = MyLLaVA(vlm, layer=VLM_TO_LAYER[cfg.vlm_type], concept_name=cfg.concept_name, cfg=cfg)
 trainer = MultiTokenEmbeddingTrainer(cfg=cfg, myvlm=myvlm, dataset_builder=None)
 checkpoints = trainer.train()
+from datetime import datetime
+from zoneinfo import ZoneInfo
+out_dir = cfg.output_root / cfg.concept_name / f"seed_{cfg.seed}"
+out_dir.mkdir(parents=True, exist_ok=True)
+ts = datetime.now(ZoneInfo('America/New_York')).strftime("%Y%m%d_%H%M%S")
+torch.save(checkpoints, out_dir / f"checkpoints_{cfg.concept_name}_seed_{cfg.seed}_{ts}.pt")
