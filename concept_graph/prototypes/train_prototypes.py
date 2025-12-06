@@ -7,6 +7,24 @@ Overview (EN):
   with basic hyperparameter configuration.
 """
 
+'''
+python /home/ubuntu/MyVLM_art/concept_graph/prototypes/train_prototypes.py \
+  --dataset_json /home/ubuntu/MyVLM_art/data/dataset/wikiart_5artists_dataset.json \
+  --images_root /home/ubuntu/MyVLM_art/data/dataset \
+  --dimension artist \
+  --epochs 5 \
+  --batch_size 8 \
+  --lr 5e-3 \
+  --temperature 0.07 \
+  --negatives_k max \
+  --hard_negatives true \
+  --margin 0.0 \
+  --lambda_margin 0.0 \
+  --debug_log true \
+  --log_interval 50 \
+  --save_path /home/ubuntu/MyVLM_art/artifacts/prototypes_artist_trained.pt
+'''
+
 import argparse
 import json
 from pathlib import Path
@@ -29,14 +47,33 @@ def build_concept_to_paths(dataset_json: Path, images_root: Path, dimension: str
     mapping = {}
     for r in records:
         c = r.get("concepts", {})
-        label = c.get(dimension)
+        label = c.get(dimension) or r.get(dimension)
         rel = r.get("image", "")
         if label is None or rel == "":
             continue
-        p = images_root / Path(rel)
-        if not p.exists():
-            continue
-        mapping.setdefault(label, []).append(str(p.resolve()))
+        rel_path = Path(rel)
+        base_root = images_root if images_root is not None else dataset_json.parent
+        cand = (base_root / rel_path).resolve()
+        p = cand
+        if not cand.exists():
+            parts = rel_path.parts
+            if len(parts) > 0 and parts[0] == "dataset":
+                cand2 = (base_root / Path(*parts[1:])).resolve()
+                if cand2.exists():
+                    p = cand2
+                else:
+                    cand3 = (base_root.parent / rel_path).resolve()
+                    if cand3.exists():
+                        p = cand3
+                    else:
+                        continue
+            else:
+                cand3 = (base_root.parent / rel_path).resolve()
+                if cand3.exists():
+                    p = cand3
+                else:
+                    continue
+        mapping.setdefault(label, []).append(str(p))
     return {dimension: mapping}
 
 
@@ -69,9 +106,11 @@ def main():
     head = PrototypeHead(clip_model_name=args.clip_model_name, device=device, batch_size=16)
 
     mapping = build_concept_to_paths(dataset_json, images_root, args.dimension)
+    if len(mapping.get(args.dimension, {})) == 0:
+        raise ValueError(f"No concepts found for dimension '{args.dimension}'. Check dataset_json and images_root.")
     head.build_prototypes(mapping, save_path=Path(args.save_path))
 
-    base = build_base_samples(dataset_json, dimensions=[args.dimension])
+    base = build_base_samples(dataset_json, dimensions=[args.dimension], images_root=images_root)
     ds = PrototypeDataset(base_samples=base, clip_preprocess=head.preprocess, dimension=args.dimension)
 
     # 预解析 negatives_k，支持 "max" 语义（类别数-1）
@@ -105,4 +144,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

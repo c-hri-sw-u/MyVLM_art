@@ -108,7 +108,10 @@ class MultiTokenEmbeddingTrainer:
                         state["values"] = layer_module.values.clone().detach().requires_grad_(False).cpu()
                     if state:
                         checkpoints[i] = state
-                        path = self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt"
+                        from datetime import datetime
+                        from zoneinfo import ZoneInfo
+                        ts = datetime.now(ZoneInfo('America/New_York')).strftime("%Y%m%d_%H%M%S")
+                        path = self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}_{ts}.pt"
                         torch.save(checkpoints, path)
                         pbar_batches_a.set_postfix(save="ok")
                         tqdm.write(f"Checkpoint saved: {path} (step {i})")
@@ -161,7 +164,10 @@ class MultiTokenEmbeddingTrainer:
                         state["values"] = layer_module.values.clone().detach().requires_grad_(False).cpu()
                     if state:
                         checkpoints[step] = state
-                        path = self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}.pt"
+                        from datetime import datetime
+                        from zoneinfo import ZoneInfo
+                        ts = datetime.now(ZoneInfo('America/New_York')).strftime("%Y%m%d_%H%M%S")
+                        path = self.cfg.output_path / f"checkpoints_{self.cfg.concept_name}_seed_{self.cfg.seed}_{ts}.pt"
                         torch.save(checkpoints, path)
                         pbar_batches_b.set_postfix(save="ok")
                         tqdm.write(f"Checkpoint saved: {path} (step {step})")

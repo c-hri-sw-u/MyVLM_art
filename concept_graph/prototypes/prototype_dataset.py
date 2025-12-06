@@ -16,7 +16,8 @@ from torch.utils.data import Dataset
 
 
 def build_base_samples(dataset_json: Path,
-                       dimensions: Optional[List[str]] = None) -> List[Dict[str, Any]]:
+                       dimensions: Optional[List[str]] = None,
+                       images_root: Optional[Path] = None) -> List[Dict[str, Any]]:
     """
     解析 WikiArt 数据集 JSON，构建包含图像与多维标签的 base_samples。
     """
@@ -34,8 +35,7 @@ def build_base_samples(dataset_json: Path,
         relative_path = entry.get("image")
         if relative_path is None:
             continue
-        # 用 data 目录作为基准，使 dataset/van_gogh/... -> data/dataset/van_gogh/...
-        data_root = dataset_json.parent
+        data_root = Path(images_root) if images_root is not None else dataset_json.parent
         image_path = (data_root / relative_path).resolve()
         
         if not image_path.exists():
@@ -81,4 +81,3 @@ class PrototypeDataset(Dataset):
             "labels_per_dim": labels,
             "image_path": str(s["image_path"]),
         }
-

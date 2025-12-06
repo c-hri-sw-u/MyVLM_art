@@ -2,9 +2,10 @@ import argparse
 import subprocess
 import sys
 from pathlib import Path
+from typing import Optional
 
 
-def run_export(dim: str, dataset_json: Path, images_root: Path | None, ckpt: Path, out_dir: Path, normalize: str, temperature: float, csv: bool, topk: int) -> None:
+def run_export(dim: str, dataset_json: Path, images_root: Optional[Path], ckpt: Path, out_dir: Path, normalize: str, temperature: float, csv: bool, topk: int) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     script = Path(__file__).resolve().parent / "export_signals.py"
     json_out = out_dir / f"concept_signals_{dim}.json"

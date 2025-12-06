@@ -25,11 +25,7 @@ cfg = MyVLMArtConfig(
     max_tokens_per_concept=1,
     max_concepts_per_sample=1,
     backoff_delta=0.05,
-
-    train_subset_n=16,
-    train_subset_stride=1,
-    max_train_batches=2,
-    val_subset_n=5
+    val_subset_n=3,
     max_reason_tokens=64,
 )
 
@@ -37,7 +33,10 @@ vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)
 myvlm = MyLLaVA(vlm, layer=VLM_TO_LAYER[cfg.vlm_type], concept_name=cfg.concept_name, cfg=cfg)
 trainer = MultiTokenEmbeddingTrainer(cfg=cfg, myvlm=myvlm, dataset_builder=None)
 checkpoints = trainer.train()
+from datetime import datetime
+from zoneinfo import ZoneInfo
 # persist checkpoints to disk for inference
 out_dir = cfg.output_root / cfg.concept_name / f"seed_{cfg.seed}"
 out_dir.mkdir(parents=True, exist_ok=True)
-torch.save(checkpoints, out_dir / f"checkpoints_{cfg.concept_name}_seed_{cfg.seed}.pt")
+ts = datetime.now(ZoneInfo('America/New_York')).strftime("%Y%m%d_%H%M%S")
+torch.save(checkpoints, out_dir / f"checkpoints_{cfg.concept_name}_seed_{cfg.seed}_{ts}.pt")

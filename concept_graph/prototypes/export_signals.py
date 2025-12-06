@@ -10,7 +10,7 @@ Overview (EN):
 import argparse
 import json
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 import sys
 import csv
 
@@ -28,7 +28,7 @@ def load_ckpt_meta(ckpt: Path) -> Dict:
     return payload
 
 
-def read_image_paths(dataset_json: Path, images_root: Path | None) -> List[Path]:
+def read_image_paths(dataset_json: Path, images_root: Optional[Path]) -> List[Path]:
     with dataset_json.open("r") as f:
         records = json.load(f)
     paths: List[Path] = []

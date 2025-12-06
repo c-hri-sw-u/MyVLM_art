@@ -1,0 +1,176 @@
+image_path,artist,style,genre,artist_top1_name,artist_top1_score,artist_top2_name,artist_top2_score,artist_top3_name,artist_top3_score,artist_top4_name,artist_top4_score
+van_gogh/van_gogh_0.jpg,vincent-van-gogh,Post_Impressionism,still_life,vincent-van-gogh,0.844268,claude-monet,0.371396,pablo-picasso,0.367577,rembrandt,0.254593
+van_gogh/van_gogh_1.jpg,vincent-van-gogh,Realism,genre_painting,vincent-van-gogh,0.843913,rembrandt,0.373895,pablo-picasso,0.361669,claude-monet,0.269943
+van_gogh/van_gogh_2.jpg,vincent-van-gogh,Realism,landscape,vincent-van-gogh,0.838555,claude-monet,0.431970,rembrandt,0.303898,pablo-picasso,0.302745
+van_gogh/van_gogh_3.jpg,vincent-van-gogh,Post_Impressionism,landscape,vincent-van-gogh,0.811865,claude-monet,0.550193,pablo-picasso,0.325686,leonardo-da-vinci,0.239549
+van_gogh/van_gogh_4.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.852431,rembrandt,0.331698,pablo-picasso,0.296312,claude-monet,0.280203
+van_gogh/van_gogh_5.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.849229,claude-monet,0.345973,rembrandt,0.319247,pablo-picasso,0.305569
+van_gogh/van_gogh_6.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.843287,pablo-picasso,0.407623,rembrandt,0.330947,claude-monet,0.257053
+van_gogh/van_gogh_7.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,vincent-van-gogh,0.849734,pablo-picasso,0.370247,claude-monet,0.290393,rembrandt,0.283888
+van_gogh/van_gogh_8.jpg,vincent-van-gogh,Post_Impressionism,landscape,vincent-van-gogh,0.829578,claude-monet,0.459086,pablo-picasso,0.342392,leonardo-da-vinci,0.286063
+van_gogh/van_gogh_9.jpg,vincent-van-gogh,Post_Impressionism,landscape,vincent-van-gogh,0.811082,claude-monet,0.506678,pablo-picasso,0.372732,leonardo-da-vinci,0.283314
+van_gogh/van_gogh_10.jpg,vincent-van-gogh,Realism,genre_painting,vincent-van-gogh,0.843827,pablo-picasso,0.401447,rembrandt,0.336676,leonardo-da-vinci,0.250591
+van_gogh/van_gogh_11.jpg,vincent-van-gogh,Post_Impressionism,portrait,vincent-van-gogh,0.828925,pablo-picasso,0.445175,claude-monet,0.395826,leonardo-da-vinci,0.225191
+van_gogh/van_gogh_12.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,vincent-van-gogh,0.801840,pablo-picasso,0.589981,leonardo-da-vinci,0.305093,claude-monet,0.214963
+van_gogh/van_gogh_13.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,vincent-van-gogh,0.853124,claude-monet,0.311146,leonardo-da-vinci,0.296041,pablo-picasso,0.288915
+van_gogh/van_gogh_14.jpg,vincent-van-gogh,Post_Impressionism,landscape,vincent-van-gogh,0.801109,claude-monet,0.577423,pablo-picasso,0.330252,leonardo-da-vinci,0.240240
+van_gogh/van_gogh_15.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.850861,pablo-picasso,0.358764,leonardo-da-vinci,0.289414,rembrandt,0.280497
+van_gogh/van_gogh_16.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,vincent-van-gogh,0.849708,leonardo-da-vinci,0.371095,claude-monet,0.296319,pablo-picasso,0.272332
+van_gogh/van_gogh_17.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,vincent-van-gogh,0.829427,claude-monet,0.463477,pablo-picasso,0.370682,leonardo-da-vinci,0.215122
+van_gogh/van_gogh_18.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.846716,rembrandt,0.366547,leonardo-da-vinci,0.343723,claude-monet,0.273425
+van_gogh/van_gogh_19.jpg,vincent-van-gogh,Post_Impressionism,landscape,vincent-van-gogh,0.821892,claude-monet,0.469012,pablo-picasso,0.385496,leonardo-da-vinci,0.264817
+van_gogh/van_gogh_20.jpg,vincent-van-gogh,Realism,still_life,vincent-van-gogh,0.848380,claude-monet,0.372395,pablo-picasso,0.319294,rembrandt,0.269094
+van_gogh/van_gogh_21.jpg,vincent-van-gogh,Realism,genre_painting,vincent-van-gogh,0.834275,pablo-picasso,0.410426,claude-monet,0.380945,rembrandt,0.278651
+van_gogh/van_gogh_22.jpg,vincent-van-gogh,Realism,genre_painting,vincent-van-gogh,0.850321,pablo-picasso,0.358081,leonardo-da-vinci,0.310549,rembrandt,0.266192
+van_gogh/van_gogh_23.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.831634,pablo-picasso,0.463856,rembrandt,0.354167,leonardo-da-vinci,0.219308
+van_gogh/van_gogh_24.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,vincent-van-gogh,0.839931,leonardo-da-vinci,0.415582,pablo-picasso,0.344562,rembrandt,0.266821
+van_gogh/van_gogh_25.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,vincent-van-gogh,0.838622,claude-monet,0.406935,pablo-picasso,0.346424,leonardo-da-vinci,0.294896
+van_gogh/van_gogh_26.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,vincent-van-gogh,0.845819,pablo-picasso,0.404325,leonardo-da-vinci,0.306050,claude-monet,0.250408
+van_gogh/van_gogh_27.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,vincent-van-gogh,0.832842,pablo-picasso,0.437978,rembrandt,0.378496,leonardo-da-vinci,0.235564
+van_gogh/van_gogh_28.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.847516,leonardo-da-vinci,0.393261,rembrandt,0.295854,claude-monet,0.265450
+van_gogh/van_gogh_29.jpg,vincent-van-gogh,Realism,portrait,vincent-van-gogh,0.843544,pablo-picasso,0.428302,rembrandt,0.275376,leonardo-da-vinci,0.272265
+van_gogh/van_gogh_30.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,vincent-van-gogh,0.805932,pablo-picasso,0.477428,claude-monet,0.466120,leonardo-da-vinci,0.208098
+van_gogh/van_gogh_31.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,vincent-van-gogh,0.840171,pablo-picasso,0.453752,leonardo-da-vinci,0.262096,rembrandt,0.261979
+van_gogh/van_gogh_32.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,vincent-van-gogh,0.834418,pablo-picasso,0.466364,rembrandt,0.316404,claude-monet,0.255335
+van_gogh/van_gogh_33.jpg,vincent-van-gogh,Realism,sketch_and_study,vincent-van-gogh,0.851612,rembrandt,0.337216,pablo-picasso,0.314403,leonardo-da-vinci,0.271560
+van_gogh/van_gogh_34.jpg,vincent-van-gogh,Realism,genre_painting,vincent-van-gogh,0.838980,claude-monet,0.414738,pablo-picasso,0.358473,rembrandt,0.255614
+monet/monet_0.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.843717,pablo-picasso,0.385604,vincent-van-gogh,0.345615,leonardo-da-vinci,0.278034
+monet/monet_1.jpg,claude-monet,Impressionism,landscape,claude-monet,0.836986,vincent-van-gogh,0.419084,leonardo-da-vinci,0.325203,pablo-picasso,0.314508
+monet/monet_2.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.843144,vincent-van-gogh,0.374783,leonardo-da-vinci,0.333126,pablo-picasso,0.317236
+monet/monet_3.jpg,claude-monet,Impressionism,landscape,claude-monet,0.827009,vincent-van-gogh,0.503298,pablo-picasso,0.286160,leonardo-da-vinci,0.281053
+monet/monet_4.jpg,claude-monet,Impressionism,landscape,claude-monet,0.821415,vincent-van-gogh,0.515521,pablo-picasso,0.307139,leonardo-da-vinci,0.277878
+monet/monet_5.jpg,claude-monet,Impressionism,landscape,claude-monet,0.842553,vincent-van-gogh,0.392885,leonardo-da-vinci,0.320723,pablo-picasso,0.310877
+monet/monet_6.jpg,claude-monet,Impressionism,landscape,claude-monet,0.812698,vincent-van-gogh,0.524116,pablo-picasso,0.379442,leonardo-da-vinci,0.199108
+monet/monet_7.jpg,claude-monet,Impressionism,landscape,claude-monet,0.849709,vincent-van-gogh,0.362450,leonardo-da-vinci,0.307934,pablo-picasso,0.281951
+monet/monet_8.jpg,claude-monet,Impressionism,landscape,claude-monet,0.818384,vincent-van-gogh,0.497222,pablo-picasso,0.385073,leonardo-da-vinci,0.225025
+monet/monet_9.jpg,claude-monet,Impressionism,landscape,claude-monet,0.824478,vincent-van-gogh,0.427099,pablo-picasso,0.374322,leonardo-da-vinci,0.329386
+monet/monet_10.jpg,claude-monet,Impressionism,landscape,claude-monet,0.838230,vincent-van-gogh,0.414012,pablo-picasso,0.372656,rembrandt,0.225788
+monet/monet_11.jpg,claude-monet,Impressionism,landscape,claude-monet,0.801453,vincent-van-gogh,0.547985,rembrandt,0.358656,pablo-picasso,0.275194
+monet/monet_12.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.844977,pablo-picasso,0.371202,vincent-van-gogh,0.363222,leonardo-da-vinci,0.248783
+monet/monet_13.jpg,claude-monet,Impressionism,landscape,claude-monet,0.806239,vincent-van-gogh,0.565479,pablo-picasso,0.337202,leonardo-da-vinci,0.215128
+monet/monet_14.jpg,claude-monet,Impressionism,landscape,claude-monet,0.805908,vincent-van-gogh,0.547361,pablo-picasso,0.352177,leonardo-da-vinci,0.257460
+monet/monet_15.jpg,claude-monet,Impressionism,landscape,claude-monet,0.817989,vincent-van-gogh,0.513828,pablo-picasso,0.364336,leonardo-da-vinci,0.217308
+monet/monet_16.jpg,claude-monet,Impressionism,Unknown Genre,claude-monet,0.827323,vincent-van-gogh,0.434160,leonardo-da-vinci,0.350661,pablo-picasso,0.330165
+monet/monet_17.jpg,claude-monet,Impressionism,landscape,claude-monet,0.849694,vincent-van-gogh,0.365088,pablo-picasso,0.311092,rembrandt,0.265337
+monet/monet_18.jpg,claude-monet,Impressionism,landscape,claude-monet,0.834038,vincent-van-gogh,0.413384,pablo-picasso,0.400771,leonardo-da-vinci,0.229553
+monet/monet_19.jpg,claude-monet,Impressionism,Unknown Genre,claude-monet,0.833964,vincent-van-gogh,0.421700,leonardo-da-vinci,0.349471,pablo-picasso,0.306082
+monet/monet_20.jpg,claude-monet,Impressionism,landscape,claude-monet,0.830375,vincent-van-gogh,0.462651,pablo-picasso,0.333552,leonardo-da-vinci,0.284116
+monet/monet_21.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.841372,vincent-van-gogh,0.409198,pablo-picasso,0.348614,leonardo-da-vinci,0.251082
+monet/monet_22.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.832364,pablo-picasso,0.421731,vincent-van-gogh,0.370078,leonardo-da-vinci,0.291742
+monet/monet_23.jpg,claude-monet,Realism,portrait,claude-monet,0.744100,pablo-picasso,0.555896,vincent-van-gogh,0.481666,rembrandt,0.320450
+monet/monet_24.jpg,claude-monet,Impressionism,portrait,claude-monet,0.837797,vincent-van-gogh,0.397084,pablo-picasso,0.391563,rembrandt,0.241515
+monet/monet_25.jpg,claude-monet,Impressionism,landscape,claude-monet,0.811555,pablo-picasso,0.449537,vincent-van-gogh,0.412274,leonardo-da-vinci,0.320112
+monet/monet_26.jpg,claude-monet,Impressionism,landscape,claude-monet,0.830455,vincent-van-gogh,0.487370,pablo-picasso,0.297157,leonardo-da-vinci,0.273794
+monet/monet_27.jpg,claude-monet,Impressionism,Unknown Genre,claude-monet,0.816570,vincent-van-gogh,0.485067,pablo-picasso,0.415120,leonardo-da-vinci,0.198617
+monet/monet_28.jpg,claude-monet,Impressionism,Unknown Genre,claude-monet,0.828300,vincent-van-gogh,0.420484,pablo-picasso,0.361605,leonardo-da-vinci,0.330674
+monet/monet_29.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.846078,vincent-van-gogh,0.389194,pablo-picasso,0.313121,leonardo-da-vinci,0.285014
+monet/monet_30.jpg,claude-monet,Impressionism,landscape,claude-monet,0.824921,vincent-van-gogh,0.483739,pablo-picasso,0.362211,leonardo-da-vinci,0.241501
+monet/monet_31.jpg,claude-monet,Impressionism,landscape,claude-monet,0.834767,vincent-van-gogh,0.473093,pablo-picasso,0.299495,leonardo-da-vinci,0.254134
+monet/monet_32.jpg,claude-monet,Impressionism,portrait,claude-monet,0.767399,pablo-picasso,0.537274,vincent-van-gogh,0.520383,rembrandt,0.189050
+monet/monet_33.jpg,claude-monet,Impressionism,cityscape,claude-monet,0.839938,vincent-van-gogh,0.417897,pablo-picasso,0.347184,leonardo-da-vinci,0.255189
+monet/monet_34.jpg,claude-monet,Impressionism,landscape,claude-monet,0.830428,vincent-van-gogh,0.428119,pablo-picasso,0.405154,rembrandt,0.231460
+picasso/picasso_0.jpg,pablo-picasso,Cubism,still_life,pablo-picasso,0.815930,vincent-van-gogh,0.459119,claude-monet,0.447596,rembrandt,0.197124
+picasso/picasso_1.jpg,pablo-picasso,Cubism,still_life,pablo-picasso,0.849443,leonardo-da-vinci,0.342679,vincent-van-gogh,0.331471,claude-monet,0.291243
+picasso/picasso_2.jpg,pablo-picasso,Expressionism,genre_painting,pablo-picasso,0.842652,rembrandt,0.389577,vincent-van-gogh,0.346560,leonardo-da-vinci,0.282676
+picasso/picasso_3.jpg,pablo-picasso,Synthetic_Cubism,still_life,pablo-picasso,0.807190,leonardo-da-vinci,0.487492,vincent-van-gogh,0.401035,rembrandt,0.299983
+picasso/picasso_4.jpg,pablo-picasso,Cubism,Unknown Genre,pablo-picasso,0.852323,leonardo-da-vinci,0.323891,claude-monet,0.313679,rembrandt,0.277640
+picasso/picasso_5.jpg,pablo-picasso,Symbolism,nude_painting,pablo-picasso,0.838973,vincent-van-gogh,0.445818,leonardo-da-vinci,0.299235,claude-monet,0.274189
+picasso/picasso_6.jpg,pablo-picasso,Cubism,still_life,pablo-picasso,0.828828,vincent-van-gogh,0.512330,rembrandt,0.255046,leonardo-da-vinci,0.251321
+picasso/picasso_7.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,pablo-picasso,0.825111,vincent-van-gogh,0.457682,leonardo-da-vinci,0.387243,rembrandt,0.258585
+picasso/picasso_8.jpg,pablo-picasso,Expressionism,sketch_and_study,pablo-picasso,0.843526,vincent-van-gogh,0.424411,leonardo-da-vinci,0.292965,rembrandt,0.264804
+picasso/picasso_9.jpg,pablo-picasso,Post_Impressionism,nude_painting,pablo-picasso,0.841562,claude-monet,0.386267,vincent-van-gogh,0.377513,leonardo-da-vinci,0.236397
+picasso/picasso_10.jpg,pablo-picasso,Synthetic_Cubism,still_life,pablo-picasso,0.846221,vincent-van-gogh,0.389776,claude-monet,0.314214,rembrandt,0.279783
+picasso/picasso_11.jpg,pablo-picasso,Synthetic_Cubism,still_life,pablo-picasso,0.835426,claude-monet,0.420243,vincent-van-gogh,0.346072,leonardo-da-vinci,0.301236
+picasso/picasso_12.jpg,pablo-picasso,Symbolism,genre_painting,pablo-picasso,0.833016,vincent-van-gogh,0.430316,claude-monet,0.388595,leonardo-da-vinci,0.227809
+picasso/picasso_13.jpg,pablo-picasso,Symbolism,genre_painting,pablo-picasso,0.835859,vincent-van-gogh,0.451962,claude-monet,0.336935,rembrandt,0.235132
+picasso/picasso_14.jpg,pablo-picasso,Cubism,Unknown Genre,pablo-picasso,0.831605,vincent-van-gogh,0.439515,leonardo-da-vinci,0.382323,rembrandt,0.240932
+picasso/picasso_15.jpg,pablo-picasso,Expressionism,portrait,pablo-picasso,0.838410,vincent-van-gogh,0.385568,claude-monet,0.349067,leonardo-da-vinci,0.323742
+picasso/picasso_16.jpg,pablo-picasso,Symbolism,genre_painting,pablo-picasso,0.844452,vincent-van-gogh,0.406038,leonardo-da-vinci,0.295416,claude-monet,0.294616
+picasso/picasso_17.jpg,pablo-picasso,Expressionism,portrait,pablo-picasso,0.833971,vincent-van-gogh,0.418975,claude-monet,0.340382,leonardo-da-vinci,0.320288
+picasso/picasso_18.jpg,pablo-picasso,Realism,sketch_and_study,pablo-picasso,0.833683,vincent-van-gogh,0.427258,leonardo-da-vinci,0.384934,claude-monet,0.239379
+picasso/picasso_19.jpg,pablo-picasso,Cubism,portrait,pablo-picasso,0.840241,vincent-van-gogh,0.367961,claude-monet,0.367232,leonardo-da-vinci,0.310306
+picasso/picasso_20.jpg,pablo-picasso,Expressionism,genre_painting,pablo-picasso,0.833292,claude-monet,0.416944,vincent-van-gogh,0.399908,leonardo-da-vinci,0.235518
+picasso/picasso_21.jpg,pablo-picasso,Expressionism,cityscape,pablo-picasso,0.810019,vincent-van-gogh,0.508526,claude-monet,0.411139,leonardo-da-vinci,0.218254
+picasso/picasso_22.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,pablo-picasso,0.828391,vincent-van-gogh,0.406908,leonardo-da-vinci,0.387599,rembrandt,0.317381
+picasso/picasso_23.jpg,pablo-picasso,Expressionism,portrait,pablo-picasso,0.813525,vincent-van-gogh,0.556334,claude-monet,0.305722,leonardo-da-vinci,0.224717
+picasso/picasso_24.jpg,pablo-picasso,Symbolism,genre_painting,pablo-picasso,0.827830,vincent-van-gogh,0.461379,claude-monet,0.379112,rembrandt,0.234674
+picasso/picasso_25.jpg,pablo-picasso,Expressionism,nude_painting,pablo-picasso,0.844182,vincent-van-gogh,0.399560,claude-monet,0.323825,leonardo-da-vinci,0.276426
+picasso/picasso_26.jpg,pablo-picasso,Expressionism,portrait,pablo-picasso,0.824855,vincent-van-gogh,0.482909,claude-monet,0.326536,leonardo-da-vinci,0.296636
+picasso/picasso_27.jpg,pablo-picasso,Cubism,genre_painting,pablo-picasso,0.845415,vincent-van-gogh,0.379689,leonardo-da-vinci,0.349226,rembrandt,0.250941
+picasso/picasso_28.jpg,pablo-picasso,Impressionism,Unknown Genre,pablo-picasso,0.813381,vincent-van-gogh,0.548170,claude-monet,0.321445,leonardo-da-vinci,0.237200
+picasso/picasso_29.jpg,pablo-picasso,Cubism,still_life,pablo-picasso,0.838560,vincent-van-gogh,0.415720,leonardo-da-vinci,0.360605,claude-monet,0.254921
+picasso/picasso_30.jpg,pablo-picasso,Impressionism,genre_painting,pablo-picasso,0.800588,claude-monet,0.527683,vincent-van-gogh,0.429271,rembrandt,0.198971
+picasso/picasso_31.jpg,pablo-picasso,Post_Impressionism,nude_painting,pablo-picasso,0.848440,claude-monet,0.349823,vincent-van-gogh,0.345616,leonardo-da-vinci,0.270995
+picasso/picasso_32.jpg,pablo-picasso,Cubism,genre_painting,pablo-picasso,0.845529,vincent-van-gogh,0.407601,claude-monet,0.299249,rembrandt,0.265638
+picasso/picasso_33.jpg,pablo-picasso,Expressionism,genre_painting,pablo-picasso,0.791240,vincent-van-gogh,0.536490,claude-monet,0.437298,rembrandt,0.236779
+picasso/picasso_34.jpg,pablo-picasso,Realism,nude_painting,pablo-picasso,0.846956,vincent-van-gogh,0.386087,claude-monet,0.321099,rembrandt,0.259085
+rembrandt/rembrandt_0.jpg,rembrandt,Baroque,religious_painting,rembrandt,0.848175,leonardo-da-vinci,0.386765,pablo-picasso,0.298615,vincent-van-gogh,0.260831
+rembrandt/rembrandt_1.jpg,rembrandt,Baroque,religious_painting,rembrandt,0.852548,vincent-van-gogh,0.316142,leonardo-da-vinci,0.311892,pablo-picasso,0.291105
+rembrandt/rembrandt_2.jpg,rembrandt,Baroque,religious_painting,rembrandt,0.847736,pablo-picasso,0.352593,leonardo-da-vinci,0.349156,vincent-van-gogh,0.272862
+rembrandt/rembrandt_3.jpg,rembrandt,Baroque,portrait,rembrandt,0.846967,pablo-picasso,0.362262,vincent-van-gogh,0.352097,leonardo-da-vinci,0.257346
+rembrandt/rembrandt_4.jpg,rembrandt,Baroque,Unknown Genre,rembrandt,0.831775,vincent-van-gogh,0.492224,leonardo-da-vinci,0.292565,pablo-picasso,0.237092
+rembrandt/rembrandt_5.jpg,rembrandt,Baroque,genre_painting,rembrandt,0.817942,vincent-van-gogh,0.526708,pablo-picasso,0.320885,leonardo-da-vinci,0.261603
+rembrandt/rembrandt_6.jpg,rembrandt,Baroque,Unknown Genre,rembrandt,0.847765,leonardo-da-vinci,0.385533,pablo-picasso,0.307737,claude-monet,0.266008
+rembrandt/rembrandt_7.jpg,rembrandt,Baroque,religious_painting,rembrandt,0.845803,leonardo-da-vinci,0.350299,pablo-picasso,0.341706,vincent-van-gogh,0.313711
+rembrandt/rembrandt_8.jpg,rembrandt,Baroque,genre_painting,rembrandt,0.841075,vincent-van-gogh,0.448054,leonardo-da-vinci,0.263388,pablo-picasso,0.262188
+rembrandt/rembrandt_9.jpg,rembrandt,Baroque,Unknown Genre,rembrandt,0.840390,vincent-van-gogh,0.440342,leonardo-da-vinci,0.306252,claude-monet,0.254267
+rembrandt/rembrandt_10.jpg,rembrandt,Baroque,genre_painting,rembrandt,0.828028,vincent-van-gogh,0.496221,pablo-picasso,0.292471,leonardo-da-vinci,0.281865
+rembrandt/rembrandt_11.jpg,rembrandt,Baroque,portrait,rembrandt,0.848809,vincent-van-gogh,0.381287,pablo-picasso,0.293765,leonardo-da-vinci,0.271685
+rembrandt/rembrandt_12.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.829334,vincent-van-gogh,0.452192,pablo-picasso,0.371138,leonardo-da-vinci,0.259062
+rembrandt/rembrandt_13.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.804645,vincent-van-gogh,0.529669,leonardo-da-vinci,0.364655,pablo-picasso,0.286719
+rembrandt/rembrandt_14.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.825172,pablo-picasso,0.446387,vincent-van-gogh,0.385948,leonardo-da-vinci,0.281841
+rembrandt/rembrandt_15.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.844539,vincent-van-gogh,0.362227,leonardo-da-vinci,0.360609,pablo-picasso,0.284886
+rembrandt/rembrandt_16.jpg,rembrandt,Baroque,religious_painting,rembrandt,0.843851,pablo-picasso,0.402749,leonardo-da-vinci,0.335164,claude-monet,0.248045
+rembrandt/rembrandt_17.jpg,rembrandt,Baroque,portrait,rembrandt,0.834793,pablo-picasso,0.477920,vincent-van-gogh,0.291400,claude-monet,0.242483
+rembrandt/rembrandt_18.jpg,rembrandt,Baroque,portrait,rembrandt,0.851238,leonardo-da-vinci,0.355526,vincent-van-gogh,0.281414,claude-monet,0.279884
+rembrandt/rembrandt_19.jpg,rembrandt,Baroque,Unknown Genre,rembrandt,0.820859,vincent-van-gogh,0.422110,leonardo-da-vinci,0.375609,pablo-picasso,0.352705
+rembrandt/rembrandt_20.jpg,rembrandt,Baroque,genre_painting,rembrandt,0.805906,vincent-van-gogh,0.551811,leonardo-da-vinci,0.338723,pablo-picasso,0.265601
+rembrandt/rembrandt_21.jpg,rembrandt,Baroque,portrait,rembrandt,0.831142,leonardo-da-vinci,0.477568,vincent-van-gogh,0.307600,claude-monet,0.278052
+rembrandt/rembrandt_22.jpg,rembrandt,Baroque,portrait,rembrandt,0.847326,pablo-picasso,0.398787,leonardo-da-vinci,0.284811,vincent-van-gogh,0.261156
+rembrandt/rembrandt_23.jpg,rembrandt,Baroque,genre_painting,rembrandt,0.831607,vincent-van-gogh,0.422425,pablo-picasso,0.342274,leonardo-da-vinci,0.329025
+rembrandt/rembrandt_24.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.838043,leonardo-da-vinci,0.437968,vincent-van-gogh,0.340004,pablo-picasso,0.236759
+rembrandt/rembrandt_25.jpg,rembrandt,Baroque,portrait,rembrandt,0.847949,pablo-picasso,0.355830,leonardo-da-vinci,0.325174,vincent-van-gogh,0.301751
+rembrandt/rembrandt_26.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.775307,vincent-van-gogh,0.535291,leonardo-da-vinci,0.442794,pablo-picasso,0.304200
+rembrandt/rembrandt_27.jpg,rembrandt,Baroque,portrait,rembrandt,0.847144,vincent-van-gogh,0.389269,pablo-picasso,0.312892,claude-monet,0.259505
+rembrandt/rembrandt_28.jpg,rembrandt,Baroque,Unknown Genre,rembrandt,0.841371,leonardo-da-vinci,0.416171,pablo-picasso,0.342514,claude-monet,0.233539
+rembrandt/rembrandt_29.jpg,rembrandt,Baroque,portrait,rembrandt,0.850389,leonardo-da-vinci,0.348828,vincent-van-gogh,0.313448,pablo-picasso,0.288072
+rembrandt/rembrandt_30.jpg,rembrandt,Baroque,portrait,rembrandt,0.827136,leonardo-da-vinci,0.480697,pablo-picasso,0.360148,vincent-van-gogh,0.217881
+rembrandt/rembrandt_31.jpg,rembrandt,Baroque,landscape,rembrandt,0.753452,vincent-van-gogh,0.614469,claude-monet,0.446203,leonardo-da-vinci,0.220636
+rembrandt/rembrandt_32.jpg,rembrandt,Baroque,Unknown Genre,rembrandt,0.838457,vincent-van-gogh,0.446654,leonardo-da-vinci,0.303252,pablo-picasso,0.274017
+rembrandt/rembrandt_33.jpg,rembrandt,Baroque,religious_painting,rembrandt,0.852290,pablo-picasso,0.329905,leonardo-da-vinci,0.305258,claude-monet,0.281603
+rembrandt/rembrandt_34.jpg,rembrandt,Baroque,sketch_and_study,rembrandt,0.828621,leonardo-da-vinci,0.457019,vincent-van-gogh,0.321989,pablo-picasso,0.319444
+da_vinci/da_vinci_0.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.838456,pablo-picasso,0.393795,vincent-van-gogh,0.389593,rembrandt,0.245214
+da_vinci/da_vinci_1.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,leonardo-da-vinci,0.840739,vincent-van-gogh,0.398530,pablo-picasso,0.363545,rembrandt,0.259074
+da_vinci/da_vinci_2.jpg,leonardo-da-vinci,High_Renaissance,portrait,leonardo-da-vinci,0.838248,rembrandt,0.394067,vincent-van-gogh,0.379420,pablo-picasso,0.270848
+da_vinci/da_vinci_3.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,leonardo-da-vinci,0.848470,pablo-picasso,0.386280,claude-monet,0.284014,rembrandt,0.278484
+da_vinci/da_vinci_4.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,leonardo-da-vinci,0.834811,vincent-van-gogh,0.389653,rembrandt,0.357658,pablo-picasso,0.333865
+da_vinci/da_vinci_5.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.849975,rembrandt,0.336196,vincent-van-gogh,0.331660,pablo-picasso,0.291872
+da_vinci/da_vinci_6.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.848701,vincent-van-gogh,0.365536,pablo-picasso,0.324487,rembrandt,0.269842
+da_vinci/da_vinci_7.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,leonardo-da-vinci,0.840434,vincent-van-gogh,0.397353,pablo-picasso,0.369146,rembrandt,0.254211
+da_vinci/da_vinci_8.jpg,leonardo-da-vinci,Early_Renaissance,portrait,leonardo-da-vinci,0.848857,claude-monet,0.375089,pablo-picasso,0.309477,rembrandt,0.261949
+da_vinci/da_vinci_9.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.841219,rembrandt,0.395166,vincent-van-gogh,0.352264,pablo-picasso,0.280521
+da_vinci/da_vinci_10.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.800852,rembrandt,0.509460,vincent-van-gogh,0.428320,pablo-picasso,0.254775
+da_vinci/da_vinci_11.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.848318,vincent-van-gogh,0.354743,pablo-picasso,0.340633,rembrandt,0.273472
+da_vinci/da_vinci_12.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.836499,rembrandt,0.401524,vincent-van-gogh,0.395486,pablo-picasso,0.240400
+da_vinci/da_vinci_13.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.850335,vincent-van-gogh,0.356450,pablo-picasso,0.298549,rembrandt,0.292839
+da_vinci/da_vinci_14.jpg,leonardo-da-vinci,High_Renaissance,portrait,leonardo-da-vinci,0.851251,claude-monet,0.342983,pablo-picasso,0.314374,vincent-van-gogh,0.269956
+da_vinci/da_vinci_15.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.844285,rembrandt,0.393694,vincent-van-gogh,0.343985,pablo-picasso,0.244587
+da_vinci/da_vinci_16.jpg,leonardo-da-vinci,High_Renaissance,landscape,leonardo-da-vinci,0.829149,pablo-picasso,0.480966,vincent-van-gogh,0.307495,claude-monet,0.289045
+da_vinci/da_vinci_17.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,leonardo-da-vinci,0.849500,rembrandt,0.348392,pablo-picasso,0.316270,vincent-van-gogh,0.301557
+da_vinci/da_vinci_18.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.840112,vincent-van-gogh,0.392163,rembrandt,0.357899,pablo-picasso,0.289161
+da_vinci/da_vinci_19.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.828134,vincent-van-gogh,0.451476,pablo-picasso,0.377051,rembrandt,0.262049
+da_vinci/da_vinci_20.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.834220,vincent-van-gogh,0.408312,pablo-picasso,0.378428,rembrandt,0.286532
+da_vinci/da_vinci_21.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.827557,pablo-picasso,0.467501,vincent-van-gogh,0.363968,rembrandt,0.253588
+da_vinci/da_vinci_22.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,leonardo-da-vinci,0.851260,pablo-picasso,0.341834,rembrandt,0.316093,claude-monet,0.266902
+da_vinci/da_vinci_23.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,leonardo-da-vinci,0.833541,pablo-picasso,0.435730,vincent-van-gogh,0.328508,rembrandt,0.311682
+da_vinci/da_vinci_24.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.849968,vincent-van-gogh,0.364660,pablo-picasso,0.305926,claude-monet,0.266724
+da_vinci/da_vinci_25.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.840120,vincent-van-gogh,0.445645,pablo-picasso,0.300993,rembrandt,0.242681
+da_vinci/da_vinci_26.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,leonardo-da-vinci,0.825303,vincent-van-gogh,0.427888,rembrandt,0.369591,pablo-picasso,0.329149
+da_vinci/da_vinci_27.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.837452,vincent-van-gogh,0.443601,rembrandt,0.337316,pablo-picasso,0.227442
+da_vinci/da_vinci_28.jpg,leonardo-da-vinci,High_Renaissance,portrait,leonardo-da-vinci,0.842161,vincent-van-gogh,0.413228,rembrandt,0.320140,pablo-picasso,0.280440
+da_vinci/da_vinci_29.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,leonardo-da-vinci,0.845363,pablo-picasso,0.405435,rembrandt,0.304751,claude-monet,0.268599
+da_vinci/da_vinci_30.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,leonardo-da-vinci,0.834846,pablo-picasso,0.462934,rembrandt,0.327412,claude-monet,0.231516
+da_vinci/da_vinci_31.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.846483,vincent-van-gogh,0.358330,pablo-picasso,0.354637,rembrandt,0.273612
+da_vinci/da_vinci_32.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,leonardo-da-vinci,0.850233,vincent-van-gogh,0.357303,pablo-picasso,0.306211,rembrandt,0.283516
+da_vinci/da_vinci_33.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,leonardo-da-vinci,0.850200,vincent-van-gogh,0.366133,pablo-picasso,0.296246,rembrandt,0.267058
+da_vinci/da_vinci_34.jpg,leonardo-da-vinci,High_Renaissance,portrait,leonardo-da-vinci,0.847565,pablo-picasso,0.393918,rembrandt,0.293337,claude-monet,0.264446

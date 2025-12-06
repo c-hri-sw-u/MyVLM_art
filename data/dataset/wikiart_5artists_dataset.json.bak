@@ -1,2277 +1,1120 @@
 [
   {
-    "image": "dataset/van_gogh/van_gogh_0.jpg",
+    "image": "van_gogh/van_gogh_8.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
-      "genre": "still_life",
+      "genre": "landscape",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 0",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_1.jpg",
+    "image": "van_gogh/van_gogh_9.jpg",
+    "artist": "vincent-van-gogh",
+    "concepts": {
+      "artist": "vincent-van-gogh",
+      "genre": "landscape",
+      "style": "Post_Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "van_gogh/van_gogh_10.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "genre_painting",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 1",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_2.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "landscape",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 2",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_3.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "landscape",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 3",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_4.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 4",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_5.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 5",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_6.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 6",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_7.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 7",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_8.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "landscape",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 8",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_9.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "landscape",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 9",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_10.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "genre_painting",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 10",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_11.jpg",
+    "image": "van_gogh/van_gogh_11.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "portrait",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 11",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_12.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 12",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_13.jpg",
+    "image": "van_gogh/van_gogh_13.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "genre_painting",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 13",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_14.jpg",
+    "image": "van_gogh/van_gogh_14.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "landscape",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 14",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_15.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 15",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_16.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 16",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_17.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "Unknown Genre",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 17",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_18.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 18",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_19.jpg",
+    "image": "van_gogh/van_gogh_19.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "landscape",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 19",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_20.jpg",
+    "image": "van_gogh/van_gogh_20.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "still_life",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 20",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_21.jpg",
+    "image": "van_gogh/van_gogh_21.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "genre_painting",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 21",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_22.jpg",
+    "image": "van_gogh/van_gogh_22.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "genre_painting",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 22",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_23.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 23",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_24.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "Unknown Genre",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 24",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_25.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "Unknown Genre",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 25",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_26.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "Unknown Genre",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 26",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_27.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 27",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_28.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Van Gogh 28",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_29.jpg",
+    "image": "van_gogh/van_gogh_29.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "portrait",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 29",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_30.jpg",
+    "image": "van_gogh/van_gogh_30.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "genre_painting",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 30",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_31.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 31",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_32.jpg",
-    "artist": "vincent-van-gogh",
-    "concepts": {
-      "artist": "vincent-van-gogh",
-      "genre": "sketch_and_study",
-      "style": "Post_Impressionism",
-      "media": [],
-      "art_movement": "Post_Impressionism"
-    },
-    "title": "Van Gogh 32",
-    "date": ""
-  },
-  {
-    "image": "dataset/van_gogh/van_gogh_33.jpg",
+    "image": "van_gogh/van_gogh_33.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "sketch_and_study",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 33",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/van_gogh/van_gogh_34.jpg",
+    "image": "van_gogh/van_gogh_34.jpg",
     "artist": "vincent-van-gogh",
     "concepts": {
       "artist": "vincent-van-gogh",
       "genre": "genre_painting",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Van Gogh 34",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_0.jpg",
+    "image": "monet/monet_13.jpg",
+    "artist": "claude-monet",
+    "concepts": {
+      "artist": "claude-monet",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "monet/monet_14.jpg",
+    "artist": "claude-monet",
+    "concepts": {
+      "artist": "claude-monet",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "monet/monet_15.jpg",
+    "artist": "claude-monet",
+    "concepts": {
+      "artist": "claude-monet",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "monet/monet_17.jpg",
+    "artist": "claude-monet",
+    "concepts": {
+      "artist": "claude-monet",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "monet/monet_18.jpg",
+    "artist": "claude-monet",
+    "concepts": {
+      "artist": "claude-monet",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "monet/monet_20.jpg",
+    "artist": "claude-monet",
+    "concepts": {
+      "artist": "claude-monet",
+      "genre": "landscape",
+      "style": "Impressionism",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "monet/monet_21.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "cityscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 0",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_1.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 1",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_2.jpg",
+    "image": "monet/monet_22.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "cityscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 2",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_3.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 3",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_4.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 4",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_5.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 5",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_6.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 6",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_7.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 7",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_8.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 8",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_9.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 9",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_10.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 10",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_11.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 11",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_12.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "cityscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 12",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_13.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 13",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_14.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 14",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_15.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 15",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_16.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "Unknown Genre",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 16",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_17.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 17",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_18.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 18",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_19.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "Unknown Genre",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 19",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_20.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "landscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 20",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_21.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "cityscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 21",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_22.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "cityscape",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 22",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_23.jpg",
+    "image": "monet/monet_23.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "portrait",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Monet 23",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_24.jpg",
+    "image": "monet/monet_24.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "portrait",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 24",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_25.jpg",
+    "image": "monet/monet_25.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "landscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 25",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_26.jpg",
+    "image": "monet/monet_26.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "landscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 26",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_27.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "Unknown Genre",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 27",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_28.jpg",
-    "artist": "claude-monet",
-    "concepts": {
-      "artist": "claude-monet",
-      "genre": "Unknown Genre",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Monet 28",
-    "date": ""
-  },
-  {
-    "image": "dataset/monet/monet_29.jpg",
+    "image": "monet/monet_29.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "cityscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 29",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_30.jpg",
+    "image": "monet/monet_30.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "landscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 30",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_31.jpg",
+    "image": "monet/monet_31.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "landscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 31",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_32.jpg",
+    "image": "monet/monet_32.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "portrait",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 32",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_33.jpg",
+    "image": "monet/monet_33.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "cityscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 33",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/monet/monet_34.jpg",
+    "image": "monet/monet_34.jpg",
     "artist": "claude-monet",
     "concepts": {
       "artist": "claude-monet",
       "genre": "landscape",
       "style": "Impressionism",
       "media": [],
-      "art_movement": "Impressionism"
+      "art_movement": ""
     },
-    "title": "Monet 34",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_0.jpg",
+    "image": "picasso/picasso_0.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "still_life",
       "style": "Cubism",
       "media": [],
-      "art_movement": "Cubism"
+      "art_movement": ""
     },
-    "title": "Picasso 0",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_1.jpg",
+    "image": "picasso/picasso_1.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "still_life",
       "style": "Cubism",
       "media": [],
-      "art_movement": "Cubism"
+      "art_movement": ""
     },
-    "title": "Picasso 1",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_2.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "genre_painting",
-      "style": "Expressionism",
-      "media": [],
-      "art_movement": "Expressionism"
-    },
-    "title": "Picasso 2",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_3.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "still_life",
-      "style": "Synthetic_Cubism",
-      "media": [],
-      "art_movement": "Synthetic_Cubism"
-    },
-    "title": "Picasso 3",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_4.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "Unknown Genre",
-      "style": "Cubism",
-      "media": [],
-      "art_movement": "Cubism"
-    },
-    "title": "Picasso 4",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_5.jpg",
+    "image": "picasso/picasso_5.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "nude_painting",
       "style": "Symbolism",
       "media": [],
-      "art_movement": "Symbolism"
+      "art_movement": ""
     },
-    "title": "Picasso 5",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_6.jpg",
+    "image": "picasso/picasso_6.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "still_life",
       "style": "Cubism",
       "media": [],
-      "art_movement": "Cubism"
+      "art_movement": ""
     },
-    "title": "Picasso 6",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_7.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "Unknown Genre",
-      "style": "Art_Nouveau",
-      "media": [],
-      "art_movement": "Art_Nouveau"
-    },
-    "title": "Picasso 7",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_8.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "sketch_and_study",
-      "style": "Expressionism",
-      "media": [],
-      "art_movement": "Expressionism"
-    },
-    "title": "Picasso 8",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_9.jpg",
+    "image": "picasso/picasso_9.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "nude_painting",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 9",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_10.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "still_life",
-      "style": "Synthetic_Cubism",
-      "media": [],
-      "art_movement": "Synthetic_Cubism"
-    },
-    "title": "Picasso 10",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_11.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "still_life",
-      "style": "Synthetic_Cubism",
-      "media": [],
-      "art_movement": "Synthetic_Cubism"
-    },
-    "title": "Picasso 11",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_12.jpg",
+    "image": "picasso/picasso_12.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "genre_painting",
       "style": "Symbolism",
       "media": [],
-      "art_movement": "Symbolism"
+      "art_movement": ""
     },
-    "title": "Picasso 12",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_13.jpg",
+    "image": "picasso/picasso_13.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "genre_painting",
       "style": "Symbolism",
       "media": [],
-      "art_movement": "Symbolism"
+      "art_movement": ""
     },
-    "title": "Picasso 13",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_14.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "Unknown Genre",
-      "style": "Cubism",
-      "media": [],
-      "art_movement": "Cubism"
-    },
-    "title": "Picasso 14",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_15.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "portrait",
-      "style": "Expressionism",
-      "media": [],
-      "art_movement": "Expressionism"
-    },
-    "title": "Picasso 15",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_16.jpg",
+    "image": "picasso/picasso_16.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "genre_painting",
       "style": "Symbolism",
       "media": [],
-      "art_movement": "Symbolism"
+      "art_movement": ""
     },
-    "title": "Picasso 16",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_17.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "portrait",
-      "style": "Expressionism",
-      "media": [],
-      "art_movement": "Expressionism"
-    },
-    "title": "Picasso 17",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_18.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "sketch_and_study",
-      "style": "Realism",
-      "media": [],
-      "art_movement": "Realism"
-    },
-    "title": "Picasso 18",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_19.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "portrait",
-      "style": "Cubism",
-      "media": [],
-      "art_movement": "Cubism"
-    },
-    "title": "Picasso 19",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_20.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "genre_painting",
-      "style": "Expressionism",
-      "media": [],
-      "art_movement": "Expressionism"
-    },
-    "title": "Picasso 20",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_21.jpg",
+    "image": "picasso/picasso_21.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "cityscape",
       "style": "Expressionism",
       "media": [],
-      "art_movement": "Expressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 21",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_22.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "Unknown Genre",
-      "style": "Art_Nouveau",
-      "media": [],
-      "art_movement": "Art_Nouveau"
-    },
-    "title": "Picasso 22",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_23.jpg",
+    "image": "picasso/picasso_23.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "portrait",
       "style": "Expressionism",
       "media": [],
-      "art_movement": "Expressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 23",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_24.jpg",
+    "image": "picasso/picasso_24.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "genre_painting",
       "style": "Symbolism",
       "media": [],
-      "art_movement": "Symbolism"
+      "art_movement": ""
     },
-    "title": "Picasso 24",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_25.jpg",
+    "image": "picasso/picasso_25.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "nude_painting",
       "style": "Expressionism",
       "media": [],
-      "art_movement": "Expressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 25",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_26.jpg",
+    "image": "picasso/picasso_26.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "portrait",
       "style": "Expressionism",
       "media": [],
-      "art_movement": "Expressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 26",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_27.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "genre_painting",
-      "style": "Cubism",
-      "media": [],
-      "art_movement": "Cubism"
-    },
-    "title": "Picasso 27",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_28.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "Unknown Genre",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Picasso 28",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_29.jpg",
+    "image": "picasso/picasso_29.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "still_life",
       "style": "Cubism",
       "media": [],
-      "art_movement": "Cubism"
+      "art_movement": ""
     },
-    "title": "Picasso 29",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_30.jpg",
-    "artist": "pablo-picasso",
-    "concepts": {
-      "artist": "pablo-picasso",
-      "genre": "genre_painting",
-      "style": "Impressionism",
-      "media": [],
-      "art_movement": "Impressionism"
-    },
-    "title": "Picasso 30",
-    "date": ""
-  },
-  {
-    "image": "dataset/picasso/picasso_31.jpg",
+    "image": "picasso/picasso_31.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "nude_painting",
       "style": "Post_Impressionism",
       "media": [],
-      "art_movement": "Post_Impressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 31",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_32.jpg",
+    "image": "picasso/picasso_32.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "genre_painting",
       "style": "Cubism",
       "media": [],
-      "art_movement": "Cubism"
+      "art_movement": ""
     },
-    "title": "Picasso 32",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_33.jpg",
+    "image": "picasso/picasso_33.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "genre_painting",
       "style": "Expressionism",
       "media": [],
-      "art_movement": "Expressionism"
+      "art_movement": ""
     },
-    "title": "Picasso 33",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/picasso/picasso_34.jpg",
+    "image": "picasso/picasso_34.jpg",
     "artist": "pablo-picasso",
     "concepts": {
       "artist": "pablo-picasso",
       "genre": "nude_painting",
       "style": "Realism",
       "media": [],
-      "art_movement": "Realism"
+      "art_movement": ""
     },
-    "title": "Picasso 34",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_0.jpg",
+    "image": "rembrandt/rembrandt_14.jpg",
+    "artist": "rembrandt",
+    "concepts": {
+      "artist": "rembrandt",
+      "genre": "sketch_and_study",
+      "style": "Baroque",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "rembrandt/rembrandt_15.jpg",
+    "artist": "rembrandt",
+    "concepts": {
+      "artist": "rembrandt",
+      "genre": "sketch_and_study",
+      "style": "Baroque",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "rembrandt/rembrandt_16.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "religious_painting",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 0",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_1.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "religious_painting",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 1",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_2.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "religious_painting",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 2",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_3.jpg",
+    "image": "rembrandt/rembrandt_17.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 3",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_4.jpg",
+    "image": "rembrandt/rembrandt_18.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
-      "genre": "Unknown Genre",
+      "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 4",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_5.jpg",
+    "image": "rembrandt/rembrandt_20.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "genre_painting",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 5",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_6.jpg",
+    "image": "rembrandt/rembrandt_21.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
-      "genre": "Unknown Genre",
+      "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 6",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_7.jpg",
+    "image": "rembrandt/rembrandt_22.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
-      "genre": "religious_painting",
+      "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 7",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_8.jpg",
+    "image": "rembrandt/rembrandt_23.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "genre_painting",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 8",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_9.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "Unknown Genre",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 9",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_10.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "genre_painting",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 10",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_11.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "portrait",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 11",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_12.jpg",
+    "image": "rembrandt/rembrandt_24.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "sketch_and_study",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 12",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_13.jpg",
+    "image": "rembrandt/rembrandt_25.jpg",
+    "artist": "rembrandt",
+    "concepts": {
+      "artist": "rembrandt",
+      "genre": "portrait",
+      "style": "Baroque",
+      "media": [],
+      "art_movement": ""
+    },
+    "title": "",
+    "date": ""
+  },
+  {
+    "image": "rembrandt/rembrandt_26.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "sketch_and_study",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 13",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_14.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "sketch_and_study",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 14",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_15.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "sketch_and_study",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 15",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_16.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "religious_painting",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 16",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_17.jpg",
+    "image": "rembrandt/rembrandt_27.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 17",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_18.jpg",
+    "image": "rembrandt/rembrandt_29.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 18",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_19.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "Unknown Genre",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 19",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_20.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "genre_painting",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 20",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_21.jpg",
+    "image": "rembrandt/rembrandt_30.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "portrait",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 21",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_22.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "portrait",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 22",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_23.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "genre_painting",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 23",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_24.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "sketch_and_study",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 24",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_25.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "portrait",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 25",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_26.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "sketch_and_study",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 26",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_27.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "portrait",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 27",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_28.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "Unknown Genre",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 28",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_29.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "portrait",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 29",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_30.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "portrait",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 30",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_31.jpg",
+    "image": "rembrandt/rembrandt_31.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "landscape",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 31",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_32.jpg",
-    "artist": "rembrandt",
-    "concepts": {
-      "artist": "rembrandt",
-      "genre": "Unknown Genre",
-      "style": "Baroque",
-      "media": [],
-      "art_movement": "Baroque"
-    },
-    "title": "Rembrandt 32",
-    "date": ""
-  },
-  {
-    "image": "dataset/rembrandt/rembrandt_33.jpg",
+    "image": "rembrandt/rembrandt_33.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "religious_painting",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 33",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/rembrandt/rembrandt_34.jpg",
+    "image": "rembrandt/rembrandt_34.jpg",
     "artist": "rembrandt",
     "concepts": {
       "artist": "rembrandt",
       "genre": "sketch_and_study",
       "style": "Baroque",
       "media": [],
-      "art_movement": "Baroque"
+      "art_movement": ""
     },
-    "title": "Rembrandt 34",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_0.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 0",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_1.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "religious_painting",
-      "style": "Early_Renaissance",
-      "media": [],
-      "art_movement": "Early_Renaissance"
-    },
-    "title": "Da Vinci 1",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_2.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "portrait",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 2",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_3.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "religious_painting",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 3",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_4.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "religious_painting",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 4",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_5.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 5",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_6.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 6",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_7.jpg",
+    "image": "da_vinci/da_vinci_7.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "Early_Renaissance",
       "media": [],
-      "art_movement": "Early_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 7",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_8.jpg",
+    "image": "da_vinci/da_vinci_8.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "portrait",
       "style": "Early_Renaissance",
       "media": [],
-      "art_movement": "Early_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 8",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_9.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 9",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_10.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 10",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_11.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 11",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_12.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 12",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_13.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 13",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_14.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "portrait",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 14",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_15.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 15",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_16.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "landscape",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 16",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_17.jpg",
+    "image": "da_vinci/da_vinci_17.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "religious_painting",
       "style": "Early_Renaissance",
       "media": [],
-      "art_movement": "Early_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 17",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_18.jpg",
+    "image": "da_vinci/da_vinci_20.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 18",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_19.jpg",
+    "image": "da_vinci/da_vinci_21.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 19",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_20.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 20",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_21.jpg",
-    "artist": "leonardo-da-vinci",
-    "concepts": {
-      "artist": "leonardo-da-vinci",
-      "genre": "sketch_and_study",
-      "style": "High_Renaissance",
-      "media": [],
-      "art_movement": "High_Renaissance"
-    },
-    "title": "Da Vinci 21",
-    "date": ""
-  },
-  {
-    "image": "dataset/da_vinci/da_vinci_22.jpg",
+    "image": "da_vinci/da_vinci_22.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "religious_painting",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 22",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_23.jpg",
+    "image": "da_vinci/da_vinci_23.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "religious_painting",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 23",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_24.jpg",
+    "image": "da_vinci/da_vinci_24.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 24",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_25.jpg",
+    "image": "da_vinci/da_vinci_25.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 25",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_26.jpg",
+    "image": "da_vinci/da_vinci_26.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "Early_Renaissance",
       "media": [],
-      "art_movement": "Early_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 26",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_27.jpg",
+    "image": "da_vinci/da_vinci_27.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 27",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_28.jpg",
+    "image": "da_vinci/da_vinci_28.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "portrait",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 28",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_29.jpg",
+    "image": "da_vinci/da_vinci_29.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "religious_painting",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 29",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_30.jpg",
+    "image": "da_vinci/da_vinci_30.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "religious_painting",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 30",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_31.jpg",
+    "image": "da_vinci/da_vinci_31.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 31",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_32.jpg",
+    "image": "da_vinci/da_vinci_32.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "Early_Renaissance",
       "media": [],
-      "art_movement": "Early_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 32",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_33.jpg",
+    "image": "da_vinci/da_vinci_33.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "sketch_and_study",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 33",
+    "title": "",
     "date": ""
   },
   {
-    "image": "dataset/da_vinci/da_vinci_34.jpg",
+    "image": "da_vinci/da_vinci_34.jpg",
     "artist": "leonardo-da-vinci",
     "concepts": {
       "artist": "leonardo-da-vinci",
       "genre": "portrait",
       "style": "High_Renaissance",
       "media": [],
-      "art_movement": "High_Renaissance"
+      "art_movement": ""
     },
-    "title": "Da Vinci 34",
+    "title": "",
     "date": ""
   }
 ]
