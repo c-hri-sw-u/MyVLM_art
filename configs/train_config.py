@@ -54,16 +54,7 @@ class EmbeddingTrainingConfig:
     device: str = 'cuda'
     # Torch dtype to use
     torch_dtype: torch.dtype = torch.bfloat16
-    # Max tokens per concept
-    max_tokens_per_concept: int = 4
-    # Global budget per sample
-    max_concepts_per_sample: int = 0
-    # Backoff tolerance delta
-    backoff_delta: float = 0.0
-    # Signal normalization mode
-    normalize_mode: str = 'none'
-    # Temperature for contrast scaling
-    temperature: float = 1.0
+    
 
     def __post_init__(self):
         self.concept_data_path = self.data_root / self.concept_name

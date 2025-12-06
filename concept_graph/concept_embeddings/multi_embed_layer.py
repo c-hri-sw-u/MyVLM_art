@@ -48,7 +48,7 @@ Remaining Work:
 import torch
 import torch.nn.functional as F
 from torch import nn
-from typing import Optional, Union, List, Dict
+from typing import Optional, Union, List, Dict, Tuple
 from concept_embedding_training.data_utils import cosine_distance
 
 
@@ -63,6 +63,9 @@ class MultiTokenConceptLayer(nn.Module):
         device: str = "cuda",
         max_concepts_per_sample: int = 0,
         backoff_delta: float = 0.0,
+        topk_per_dim: int = 0,
+        fairness: bool = False,
+        priority: Optional[List[str]] = None,
     ):
         super().__init__()
         self.layer = layer
@@ -73,10 +76,15 @@ class MultiTokenConceptLayer(nn.Module):
         self.device = device
         self.max_concepts_per_sample = int(max(0, max_concepts_per_sample))
         self.backoff_delta = float(max(0.0, backoff_delta))
+        self.topk_per_dim = int(max(0, topk_per_dim))
+        self.fairness = bool(fairness)
+        self.priority = [p.strip() for p in (priority or []) if p.strip()]
         self.keys = None
         self.values = None
         self.key_idx_to_value_idx: Dict[int, int] = {}
         self.training = True
+        # dimension ranges: {dim: (start_idx, end_idx)} end exclusive
+        self.dim_ranges: Dict[str, Tuple[int, int]] = {}
 
     def initialize_values(self, n_concepts: int) -> None:
         values = torch.randn(n_concepts, self.max_tokens_per_concept, self.embedding_dim, device=self.device)
@@ -88,6 +96,9 @@ class MultiTokenConceptLayer(nn.Module):
 
     def set_key_to_value_mapping(self, mapping: Dict[int, int]) -> None:
         self.key_idx_to_value_idx = dict(mapping)
+
+    def set_dim_ranges(self, ranges: Dict[str, Tuple[int, int]]) -> None:
+        self.dim_ranges = dict(ranges)
 
     def forward(self, *args) -> torch.Tensor:
         hidden_state = args[0]
@@ -101,26 +112,72 @@ class MultiTokenConceptLayer(nn.Module):
             extended = []
             for sample_idx, sample_sig in enumerate(concept_signal):
                 sample_out = layer_out[sample_idx]
-                candidates = []
-                for concept_idx, probas in sample_sig.items():
-                    s = float(probas[0][1].item()) if hasattr(probas[0][1], "item") else float(probas[0][1])
-                    dist = 1.0 - s
-                    if dist <= self.threshold:
-                        candidates.append((concept_idx, s))
-                if len(candidates) == 0 and self.backoff_delta > 0.0:
+                # group by dimension ranges
+                per_dim_sel: Dict[str, List[Tuple[int, float]]] = {}
+                dims = list(self.dim_ranges.keys())
+                for dim in dims:
+                    start, end = self.dim_ranges[dim]
+                    activated: List[Tuple[int, float]] = []
+                    # threshold selection
                     for concept_idx, probas in sample_sig.items():
+                        if concept_idx < start or concept_idx >= end:
+                            continue
                         s = float(probas[0][1].item()) if hasattr(probas[0][1], "item") else float(probas[0][1])
-                        if s >= max(0.0, self.threshold - self.backoff_delta):
-                            candidates.append((concept_idx, s))
-                    candidates.sort(key=lambda t: t[1], reverse=True)
-                    if len(candidates) > 1:
-                        candidates = candidates[:1]
+                        if s >= self.threshold:
+                            activated.append((concept_idx, s))
+                    activated.sort(key=lambda t: t[1], reverse=True)
+                    # backoff per dim if none
+                    if len(activated) == 0 and self.backoff_delta > 0.0:
+                        candidates: List[Tuple[int, float]] = []
+                        for concept_idx, probas in sample_sig.items():
+                            if concept_idx < start or concept_idx >= end:
+                                continue
+                            s = float(probas[0][1].item()) if hasattr(probas[0][1], "item") else float(probas[0][1])
+                            if s >= max(0.0, self.threshold - self.backoff_delta):
+                                candidates.append((concept_idx, s))
+                        candidates.sort(key=lambda t: t[1], reverse=True)
+                        if len(candidates) > 0:
+                            activated = [candidates[0]]
+                    # topk per dim
+                    if self.topk_per_dim > 0 and len(activated) > self.topk_per_dim:
+                        activated = activated[:self.topk_per_dim]
+                    per_dim_sel[dim] = activated
+                # fairness merge with global budget
+                selected: List[Tuple[str, int, float]] = []
+                budget = self.max_concepts_per_sample
+                if budget <= 0:
+                    # no budget: flatten all
+                    for dim in dims:
+                        for idx, s in per_dim_sel.get(dim, []):
+                            selected.append((dim, idx, s))
                 else:
-                    candidates.sort(key=lambda t: t[1], reverse=True)
-                if self.max_concepts_per_sample > 0 and len(candidates) > self.max_concepts_per_sample:
-                    candidates = candidates[:self.max_concepts_per_sample]
+                    # fairness: keep one per dim in priority order
+                    used_total = 0
+                    prio = self.priority if self.priority else dims
+                    out_per_dim: Dict[str, List[Tuple[int, float]]] = {d: [] for d in dims}
+                    for d in prio:
+                        opts = per_dim_sel.get(d, [])
+                        if len(opts) > 0 and used_total < budget:
+                            out_per_dim[d].append(opts[0])
+                            used_total += 1
+                    remaining: List[Tuple[str, int, float]] = []
+                    for d in dims:
+                        start_i = len(out_per_dim[d])
+                        for i in range(start_i, len(per_dim_sel.get(d, []))):
+                            idx, s = per_dim_sel[d][i]
+                            remaining.append((d, idx, s))
+                    remaining.sort(key=lambda t: t[2], reverse=True)
+                    for d, idx, s in remaining:
+                        if used_total >= budget:
+                            break
+                        out_per_dim[d].append((idx, s))
+                        used_total += 1
+                    for d in dims:
+                        for idx, s in out_per_dim[d]:
+                            selected.append((d, idx, s))
+                # append tokens for selected
                 used = set()
-                for concept_idx, s in candidates:
+                for _, concept_idx, s in selected:
                     if concept_idx in used:
                         continue
                     g = max(0.0, min(1.0, s))
@@ -145,7 +202,7 @@ class MultiTokenConceptLayer(nn.Module):
                         continue
                     dist_i = float(smallest_dist[i].item()) if hasattr(smallest_dist[i], "item") else float(smallest_dist[i])
                     s_i = 1.0 - dist_i
-                    if dist_i <= self.threshold:
+                    if s_i >= self.threshold:
                         pairs.append((concept_idx, s_i))
                 if len(pairs) == 0 and self.backoff_delta > 0.0:
                     ds = []

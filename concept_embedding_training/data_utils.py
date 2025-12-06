@@ -107,7 +107,7 @@ def filter_out_other_people_embeddings(face_embeds: List[torch.Tensor],
             for m in embed:
                 # Check if this person is close to at least one single person embedding
                 similarity = F.cosine_similarity(m.unsqueeze(0), single_person_embeds_cat, dim=1)
-                is_close = torch.any(similarity > (1 - cfg.threshold)).item()
+                is_close = torch.any(similarity > cfg.threshold).item()
                 is_person_close.append(is_close)
 
             is_person_close_tensor = torch.tensor(is_person_close, dtype=torch.bool)

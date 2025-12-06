@@ -91,20 +91,19 @@ class MyVLMLayer(torch.nn.Module):
             sample_out = layer_out[sample_idx]
             previously_added_concept_idxs = set()  # Store concepts that were added so we don't add them twice
             for concept_idx, dist in sample_dists.items():
-                if dist <= self.threshold:
+                s = 1.0 - dist
+                if s >= self.threshold:
                     if self.mode == MyVLMLayerMode.INFERENCE:
                         print(f"Adding concept: {concept_idx}. "
-                              f"Distance: {dist.item():0.3f} | "
+                              f"Similarity: {s.item():0.3f} | "
                               f"Threshold: {self.threshold}")
-                    # Normalize the concept embedding before we add it to the layer output
                     value_to_add = F.normalize(self.values[concept_idx], dim=-1, p=2)
-                    # Concatenate the concept embedding to the layer output
                     sample_out = torch.vstack([sample_out, value_to_add.unsqueeze(0)])
                     previously_added_concept_idxs.add(concept_idx)
                 else:
                     if self.mode == MyVLMLayerMode.INFERENCE:
                         print(f"Not adding concept: {concept_idx}. "
-                              f"Distance: {dist.item():0.3f} |"
+                              f"Similarity: {s.item():0.3f} |"
                               f"Threshold: {self.threshold}")
             extended_layer_out.append(sample_out)
         return torch.stack(extended_layer_out, dim=0).to(dtype=self.torch_dtype)
@@ -126,14 +125,13 @@ class MyVLMLayer(torch.nn.Module):
                 if value_idxs[concept_idx] in previously_added_concept_idxs:
                     print(f"Concept {value_idxs[concept_idx]} was already added to the layer output. Skipping.")
                     continue
-                if smallest_dist[concept_idx] <= self.threshold:
+                s = 1.0 - smallest_dist[concept_idx]
+                if s >= self.threshold:
                     if self.mode == MyVLMLayerMode.INFERENCE:
                         print(f"Adding concept: {concept_idx}. "
-                              f"Distance: {smallest_dist[concept_idx].item():0.2f} | "
+                              f"Similarity: {s.item():0.2f} | "
                               f"Threshold: {self.threshold}")
-                    # Normalize the concept embedding before we add it to the layer output
                     value_to_add = F.normalize(chosen_value[concept_idx], dim=-1, p=2)
-                    # Concatenate the concept embedding to the layer output
                     sample_out = torch.vstack([sample_out, value_to_add.unsqueeze(0)])
                     previously_added_concept_idxs.add(value_idxs[concept_idx])
             extended_layer_out.append(sample_out)
@@ -153,24 +151,23 @@ class MyVLMLayer(torch.nn.Module):
         # Map the chosen key to the index of the actual value (since we have multiple keys pointing to the same value)
         value_idxs = [self.key_idx_to_value_idx[k.item()] for k in chosen_key]
         chosen_value = self.values[value_idxs]
-        if any(smallest_dist <= self.threshold):
+        s_vals = 1.0 - smallest_dist
+        if torch.any(s_vals >= self.threshold):
             if self.mode == MyVLMLayerMode.INFERENCE:
-                for idx, dist in enumerate(smallest_dist):
-                    if dist <= self.threshold:
+                for idx, s in enumerate(s_vals):
+                    if s >= self.threshold:
                         print(f"Sample {idx}: adding concept {value_idxs[idx]}. "
-                              f"Distance: {dist.item():0.2f} | Threshold: {self.threshold}")
+                              f"Similarity: {s.item():0.2f} | Threshold: {self.threshold}")
                     else:
                         print(f"Sample {idx}: not adding concepts. "
-                              f"Distance: {dist.item():0.2f} | Threshold: {self.threshold}")
+                              f"Similarity: {s.item():0.2f} | Threshold: {self.threshold}")
 
-            # Normalize the concept embedding before we add it to the layer output
             value_to_add = F.normalize(chosen_value, dim=-1, p=2)
-            # Concatenate the concept embedding to the layer output
             return torch.cat([layer_out, value_to_add.unsqueeze(1)], dim=1).to(dtype=layer_out.dtype)
         else:
-            # No close concept was found for all images, return the original network output
+            max_sim = (1.0 - smallest_dist).max().item()
             print(f"No close concept found. "
-                  f"Min Distance: {min(smallest_dist).item():0.2f} | Threshold: {self.threshold}.")
+                  f"Max Similarity: {max_sim:0.2f} | Threshold: {self.threshold}.")
             return layer_out
 
     def _get_query(self, concept_signal: Union[torch.Tensor, List]) -> Union[torch.Tensor, List]:

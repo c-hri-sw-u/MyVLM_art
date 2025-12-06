@@ -1,176 +1,176 @@
 image_path,artist,style,genre,genre_top1_name,genre_top1_score,genre_top2_name,genre_top2_score,genre_top3_name,genre_top3_score,genre_top4_name,genre_top4_score
-dataset/van_gogh/van_gogh_0.jpg,vincent-van-gogh,Post_Impressionism,still_life,still_life,0.653879,genre_painting,0.556645,Unknown Genre,0.554657,landscape,0.532736
-dataset/van_gogh/van_gogh_1.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.628408,sketch_and_study,0.593116,portrait,0.521898,still_life,0.492071
-dataset/van_gogh/van_gogh_2.jpg,vincent-van-gogh,Realism,landscape,landscape,0.613929,genre_painting,0.544814,sketch_and_study,0.530790,portrait,0.522006
-dataset/van_gogh/van_gogh_3.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.679230,Unknown Genre,0.518466,portrait,0.517862,still_life,0.500942
-dataset/van_gogh/van_gogh_4.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.629549,genre_painting,0.599401,landscape,0.491001,portrait,0.486983
-dataset/van_gogh/van_gogh_5.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.646086,genre_painting,0.562759,landscape,0.558708,Unknown Genre,0.470914
-dataset/van_gogh/van_gogh_6.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.634779,genre_painting,0.561642,portrait,0.536884,Unknown Genre,0.522098
-dataset/van_gogh/van_gogh_7.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.629111,genre_painting,0.541055,portrait,0.532074,Unknown Genre,0.522622
-dataset/van_gogh/van_gogh_8.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.663178,sketch_and_study,0.540103,Unknown Genre,0.524556,genre_painting,0.507727
-dataset/van_gogh/van_gogh_9.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.673454,sketch_and_study,0.526331,Unknown Genre,0.521086,genre_painting,0.518616
-dataset/van_gogh/van_gogh_10.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.611586,sketch_and_study,0.582095,portrait,0.538344,Unknown Genre,0.492055
-dataset/van_gogh/van_gogh_11.jpg,vincent-van-gogh,Post_Impressionism,portrait,portrait,0.626400,genre_painting,0.562302,landscape,0.522493,Unknown Genre,0.517554
-dataset/van_gogh/van_gogh_12.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.614657,portrait,0.550912,Unknown Genre,0.540967,genre_painting,0.500795
-dataset/van_gogh/van_gogh_13.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,genre_painting,0.637604,landscape,0.546814,portrait,0.536834,sketch_and_study,0.521853
-dataset/van_gogh/van_gogh_14.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.698326,genre_painting,0.543655,portrait,0.524631,cityscape,0.516507
-dataset/van_gogh/van_gogh_15.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.640757,genre_painting,0.555859,portrait,0.530132,Unknown Genre,0.488291
-dataset/van_gogh/van_gogh_16.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.651988,landscape,0.569531,Unknown Genre,0.522159,still_life,0.478982
-dataset/van_gogh/van_gogh_17.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.592248,landscape,0.535679,still_life,0.533548,portrait,0.531287
-dataset/van_gogh/van_gogh_18.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.638519,genre_painting,0.566484,landscape,0.505366,Unknown Genre,0.490249
-dataset/van_gogh/van_gogh_19.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.674553,genre_painting,0.529040,still_life,0.526378,portrait,0.516505
-dataset/van_gogh/van_gogh_20.jpg,vincent-van-gogh,Realism,still_life,still_life,0.643883,landscape,0.544208,Unknown Genre,0.537089,sketch_and_study,0.524566
-dataset/van_gogh/van_gogh_21.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.652062,sketch_and_study,0.543007,landscape,0.536974,still_life,0.493458
-dataset/van_gogh/van_gogh_22.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.594977,sketch_and_study,0.579850,Unknown Genre,0.506355,still_life,0.498590
-dataset/van_gogh/van_gogh_23.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.624752,genre_painting,0.564328,portrait,0.514515,still_life,0.506946
-dataset/van_gogh/van_gogh_24.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.582338,sketch_and_study,0.579426,portrait,0.536479,genre_painting,0.512041
-dataset/van_gogh/van_gogh_25.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.620515,still_life,0.533232,landscape,0.531950,portrait,0.522022
-dataset/van_gogh/van_gogh_26.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.610072,portrait,0.583537,genre_painting,0.536315,landscape,0.504605
-dataset/van_gogh/van_gogh_27.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.659009,genre_painting,0.563139,nude_painting,0.519533,portrait,0.491422
-dataset/van_gogh/van_gogh_28.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.660053,landscape,0.546282,genre_painting,0.544462,Unknown Genre,0.509704
-dataset/van_gogh/van_gogh_29.jpg,vincent-van-gogh,Realism,portrait,portrait,0.626983,genre_painting,0.573311,Unknown Genre,0.530373,sketch_and_study,0.502346
-dataset/van_gogh/van_gogh_30.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,genre_painting,0.601387,landscape,0.535634,portrait,0.529116,still_life,0.525826
-dataset/van_gogh/van_gogh_31.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.687372,genre_painting,0.542409,landscape,0.494578,Unknown Genre,0.491995
-dataset/van_gogh/van_gogh_32.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.640954,genre_painting,0.563844,portrait,0.530174,landscape,0.490476
-dataset/van_gogh/van_gogh_33.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.628227,genre_painting,0.574086,Unknown Genre,0.517836,landscape,0.509487
-dataset/van_gogh/van_gogh_34.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.632446,landscape,0.547039,portrait,0.510578,still_life,0.508890
-dataset/monet/monet_0.jpg,claude-monet,Impressionism,cityscape,cityscape,0.662923,landscape,0.577865,genre_painting,0.527514,portrait,0.504309
-dataset/monet/monet_1.jpg,claude-monet,Impressionism,landscape,landscape,0.693822,cityscape,0.546899,Unknown Genre,0.526161,portrait,0.517357
-dataset/monet/monet_2.jpg,claude-monet,Impressionism,cityscape,cityscape,0.674298,landscape,0.592206,Unknown Genre,0.511575,sketch_and_study,0.510414
-dataset/monet/monet_3.jpg,claude-monet,Impressionism,landscape,landscape,0.700161,portrait,0.529697,cityscape,0.521893,sketch_and_study,0.517121
-dataset/monet/monet_4.jpg,claude-monet,Impressionism,landscape,landscape,0.711647,cityscape,0.515133,portrait,0.514336,Unknown Genre,0.507845
-dataset/monet/monet_5.jpg,claude-monet,Impressionism,landscape,landscape,0.679638,Unknown Genre,0.533488,genre_painting,0.504846,cityscape,0.504432
-dataset/monet/monet_6.jpg,claude-monet,Impressionism,landscape,landscape,0.715774,genre_painting,0.544764,cityscape,0.531905,sketch_and_study,0.505864
-dataset/monet/monet_7.jpg,claude-monet,Impressionism,landscape,landscape,0.686251,cityscape,0.543331,Unknown Genre,0.533797,portrait,0.509979
-dataset/monet/monet_8.jpg,claude-monet,Impressionism,landscape,landscape,0.689399,sketch_and_study,0.515317,still_life,0.503188,Unknown Genre,0.495256
-dataset/monet/monet_9.jpg,claude-monet,Impressionism,landscape,landscape,0.663731,Unknown Genre,0.528106,sketch_and_study,0.525608,portrait,0.517753
-dataset/monet/monet_10.jpg,claude-monet,Impressionism,landscape,landscape,0.710020,cityscape,0.539327,genre_painting,0.530398,portrait,0.494925
-dataset/monet/monet_11.jpg,claude-monet,Impressionism,landscape,landscape,0.658589,Unknown Genre,0.529304,genre_painting,0.525890,sketch_and_study,0.508740
-dataset/monet/monet_12.jpg,claude-monet,Impressionism,cityscape,cityscape,0.670728,landscape,0.572972,genre_painting,0.536854,Unknown Genre,0.494238
-dataset/monet/monet_13.jpg,claude-monet,Impressionism,landscape,landscape,0.719053,sketch_and_study,0.519244,cityscape,0.516072,genre_painting,0.510227
-dataset/monet/monet_14.jpg,claude-monet,Impressionism,landscape,landscape,0.715517,portrait,0.530116,cityscape,0.505398,sketch_and_study,0.502502
-dataset/monet/monet_15.jpg,claude-monet,Impressionism,landscape,landscape,0.696257,cityscape,0.537642,sketch_and_study,0.521174,genre_painting,0.519474
-dataset/monet/monet_16.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.614050,landscape,0.546476,portrait,0.520473,still_life,0.503234
-dataset/monet/monet_17.jpg,claude-monet,Impressionism,landscape,landscape,0.677762,cityscape,0.529677,genre_painting,0.511226,sketch_and_study,0.503122
-dataset/monet/monet_18.jpg,claude-monet,Impressionism,landscape,landscape,0.677320,genre_painting,0.524341,Unknown Genre,0.517273,cityscape,0.509776
-dataset/monet/monet_19.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.595586,landscape,0.586661,portrait,0.514927,sketch_and_study,0.512985
-dataset/monet/monet_20.jpg,claude-monet,Impressionism,landscape,landscape,0.681548,Unknown Genre,0.532614,cityscape,0.527719,portrait,0.519450
-dataset/monet/monet_21.jpg,claude-monet,Impressionism,cityscape,cityscape,0.649923,landscape,0.577087,portrait,0.518407,genre_painting,0.510179
-dataset/monet/monet_22.jpg,claude-monet,Impressionism,cityscape,cityscape,0.670557,landscape,0.560339,genre_painting,0.535636,still_life,0.519289
-dataset/monet/monet_23.jpg,claude-monet,Realism,portrait,portrait,0.642289,genre_painting,0.571359,landscape,0.506560,sketch_and_study,0.505598
-dataset/monet/monet_24.jpg,claude-monet,Impressionism,portrait,portrait,0.649439,landscape,0.535577,sketch_and_study,0.519986,genre_painting,0.505271
-dataset/monet/monet_25.jpg,claude-monet,Impressionism,landscape,landscape,0.632978,sketch_and_study,0.537078,portrait,0.517443,Unknown Genre,0.515154
-dataset/monet/monet_26.jpg,claude-monet,Impressionism,landscape,landscape,0.667474,genre_painting,0.520463,cityscape,0.518612,Unknown Genre,0.509666
-dataset/monet/monet_27.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.590262,landscape,0.565075,cityscape,0.523225,genre_painting,0.508494
-dataset/monet/monet_28.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.605956,landscape,0.563211,portrait,0.520868,sketch_and_study,0.518620
-dataset/monet/monet_29.jpg,claude-monet,Impressionism,cityscape,cityscape,0.657982,landscape,0.606731,Unknown Genre,0.539764,portrait,0.500722
-dataset/monet/monet_30.jpg,claude-monet,Impressionism,landscape,landscape,0.689558,sketch_and_study,0.517999,genre_painting,0.496936,still_life,0.496824
-dataset/monet/monet_31.jpg,claude-monet,Impressionism,landscape,landscape,0.717277,portrait,0.517455,sketch_and_study,0.513494,cityscape,0.497822
-dataset/monet/monet_32.jpg,claude-monet,Impressionism,portrait,portrait,0.613552,Unknown Genre,0.531813,genre_painting,0.518786,sketch_and_study,0.509682
-dataset/monet/monet_33.jpg,claude-monet,Impressionism,cityscape,cityscape,0.658896,landscape,0.581494,Unknown Genre,0.530245,sketch_and_study,0.516508
-dataset/monet/monet_34.jpg,claude-monet,Impressionism,landscape,landscape,0.666520,cityscape,0.557615,sketch_and_study,0.509069,genre_painting,0.498317
-dataset/picasso/picasso_0.jpg,pablo-picasso,Cubism,still_life,still_life,0.659024,Unknown Genre,0.542477,portrait,0.533070,genre_painting,0.526205
-dataset/picasso/picasso_1.jpg,pablo-picasso,Cubism,still_life,still_life,0.624535,genre_painting,0.563532,portrait,0.543104,Unknown Genre,0.510326
-dataset/picasso/picasso_2.jpg,pablo-picasso,Expressionism,genre_painting,genre_painting,0.602413,sketch_and_study,0.567275,portrait,0.541911,nude_painting,0.506617
-dataset/picasso/picasso_3.jpg,pablo-picasso,Synthetic_Cubism,still_life,still_life,0.662612,Unknown Genre,0.541275,sketch_and_study,0.537627,portrait,0.511120
-dataset/picasso/picasso_4.jpg,pablo-picasso,Cubism,Unknown Genre,Unknown Genre,0.599445,still_life,0.582517,sketch_and_study,0.526704,genre_painting,0.516080
-dataset/picasso/picasso_5.jpg,pablo-picasso,Symbolism,nude_painting,nude_painting,0.647867,portrait,0.550582,sketch_and_study,0.543575,genre_painting,0.526668
-dataset/picasso/picasso_6.jpg,pablo-picasso,Cubism,still_life,still_life,0.670907,genre_painting,0.527687,sketch_and_study,0.519376,Unknown Genre,0.517069
-dataset/picasso/picasso_7.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,Unknown Genre,0.583840,sketch_and_study,0.561777,genre_painting,0.532156,nude_painting,0.513366
-dataset/picasso/picasso_8.jpg,pablo-picasso,Expressionism,sketch_and_study,sketch_and_study,0.615627,genre_painting,0.559850,portrait,0.538068,nude_painting,0.501406
-dataset/picasso/picasso_9.jpg,pablo-picasso,Post_Impressionism,nude_painting,nude_painting,0.655924,genre_painting,0.547730,sketch_and_study,0.542686,landscape,0.515043
-dataset/picasso/picasso_10.jpg,pablo-picasso,Synthetic_Cubism,still_life,still_life,0.698677,genre_painting,0.552613,Unknown Genre,0.543766,portrait,0.504539
-dataset/picasso/picasso_11.jpg,pablo-picasso,Synthetic_Cubism,still_life,still_life,0.653772,Unknown Genre,0.564236,genre_painting,0.528114,landscape,0.495906
-dataset/picasso/picasso_12.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.626613,portrait,0.543655,nude_painting,0.522954,still_life,0.522237
-dataset/picasso/picasso_13.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.638195,portrait,0.548849,nude_painting,0.537777,religious_painting,0.533564
-dataset/picasso/picasso_14.jpg,pablo-picasso,Cubism,Unknown Genre,Unknown Genre,0.582832,sketch_and_study,0.562903,still_life,0.538922,genre_painting,0.528360
-dataset/picasso/picasso_15.jpg,pablo-picasso,Expressionism,portrait,portrait,0.616417,genre_painting,0.543142,nude_painting,0.537748,still_life,0.532577
-dataset/picasso/picasso_16.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.616099,nude_painting,0.549520,still_life,0.536695,portrait,0.522705
-dataset/picasso/picasso_17.jpg,pablo-picasso,Expressionism,portrait,portrait,0.630108,Unknown Genre,0.533707,still_life,0.533089,nude_painting,0.531021
-dataset/picasso/picasso_18.jpg,pablo-picasso,Realism,sketch_and_study,sketch_and_study,0.627059,nude_painting,0.559477,Unknown Genre,0.515813,still_life,0.505143
-dataset/picasso/picasso_19.jpg,pablo-picasso,Cubism,portrait,portrait,0.634289,still_life,0.539368,Unknown Genre,0.520085,nude_painting,0.517737
-dataset/picasso/picasso_20.jpg,pablo-picasso,Expressionism,genre_painting,genre_painting,0.595813,nude_painting,0.564209,sketch_and_study,0.547947,landscape,0.520931
-dataset/picasso/picasso_21.jpg,pablo-picasso,Expressionism,cityscape,cityscape,0.633999,landscape,0.565629,genre_painting,0.536855,Unknown Genre,0.529506
-dataset/picasso/picasso_22.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,Unknown Genre,0.601281,sketch_and_study,0.563643,portrait,0.536288,genre_painting,0.520353
-dataset/picasso/picasso_23.jpg,pablo-picasso,Expressionism,portrait,portrait,0.637233,genre_painting,0.560668,Unknown Genre,0.524531,still_life,0.511991
-dataset/picasso/picasso_24.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.634338,still_life,0.529469,portrait,0.526518,landscape,0.517243
-dataset/picasso/picasso_25.jpg,pablo-picasso,Expressionism,nude_painting,nude_painting,0.648763,portrait,0.555137,genre_painting,0.540476,still_life,0.535934
-dataset/picasso/picasso_26.jpg,pablo-picasso,Expressionism,portrait,portrait,0.618924,nude_painting,0.548796,Unknown Genre,0.528375,still_life,0.524769
-dataset/picasso/picasso_27.jpg,pablo-picasso,Cubism,genre_painting,genre_painting,0.584398,still_life,0.567070,portrait,0.560895,sketch_and_study,0.527101
-dataset/picasso/picasso_28.jpg,pablo-picasso,Impressionism,Unknown Genre,portrait,0.599915,Unknown Genre,0.580411,genre_painting,0.543761,still_life,0.503651
-dataset/picasso/picasso_29.jpg,pablo-picasso,Cubism,still_life,still_life,0.643988,genre_painting,0.558659,Unknown Genre,0.530818,portrait,0.528845
-dataset/picasso/picasso_30.jpg,pablo-picasso,Impressionism,genre_painting,genre_painting,0.616310,sketch_and_study,0.548312,portrait,0.535746,landscape,0.509293
-dataset/picasso/picasso_31.jpg,pablo-picasso,Post_Impressionism,nude_painting,nude_painting,0.654813,genre_painting,0.580128,sketch_and_study,0.546696,still_life,0.499729
-dataset/picasso/picasso_32.jpg,pablo-picasso,Cubism,genre_painting,genre_painting,0.616527,still_life,0.570611,portrait,0.536703,Unknown Genre,0.530078
-dataset/picasso/picasso_33.jpg,pablo-picasso,Expressionism,genre_painting,genre_painting,0.622325,portrait,0.569791,sketch_and_study,0.518110,still_life,0.503700
-dataset/picasso/picasso_34.jpg,pablo-picasso,Realism,nude_painting,nude_painting,0.666801,portrait,0.576077,genre_painting,0.556362,sketch_and_study,0.520139
-dataset/rembrandt/rembrandt_0.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.649586,sketch_and_study,0.544807,portrait,0.524156,genre_painting,0.520116
-dataset/rembrandt/rembrandt_1.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.605293,sketch_and_study,0.574735,genre_painting,0.555417,Unknown Genre,0.503242
-dataset/rembrandt/rembrandt_2.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.633291,sketch_and_study,0.552747,portrait,0.526617,genre_painting,0.524997
-dataset/rembrandt/rembrandt_3.jpg,rembrandt,Baroque,portrait,portrait,0.651282,Unknown Genre,0.519737,genre_painting,0.519656,sketch_and_study,0.512258
-dataset/rembrandt/rembrandt_4.jpg,rembrandt,Baroque,Unknown Genre,sketch_and_study,0.567535,portrait,0.556048,Unknown Genre,0.554126,genre_painting,0.531254
-dataset/rembrandt/rembrandt_5.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.614065,sketch_and_study,0.607649,portrait,0.529202,Unknown Genre,0.494209
-dataset/rembrandt/rembrandt_6.jpg,rembrandt,Baroque,Unknown Genre,Unknown Genre,0.598778,portrait,0.594269,religious_painting,0.541638,sketch_and_study,0.531132
-dataset/rembrandt/rembrandt_7.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.626296,portrait,0.551720,sketch_and_study,0.549321,genre_painting,0.536046
-dataset/rembrandt/rembrandt_8.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.614918,portrait,0.591856,sketch_and_study,0.516462,still_life,0.494300
-dataset/rembrandt/rembrandt_9.jpg,rembrandt,Baroque,Unknown Genre,Unknown Genre,0.604615,sketch_and_study,0.584165,genre_painting,0.495932,religious_painting,0.489186
-dataset/rembrandt/rembrandt_10.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.621544,sketch_and_study,0.591925,portrait,0.530523,Unknown Genre,0.487829
-dataset/rembrandt/rembrandt_11.jpg,rembrandt,Baroque,portrait,portrait,0.615361,religious_painting,0.559757,genre_painting,0.555926,sketch_and_study,0.517261
-dataset/rembrandt/rembrandt_12.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.633348,genre_painting,0.561795,Unknown Genre,0.514788,portrait,0.509819
-dataset/rembrandt/rembrandt_13.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.673965,genre_painting,0.528724,religious_painting,0.498540,landscape,0.489122
-dataset/rembrandt/rembrandt_14.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.636013,portrait,0.537455,genre_painting,0.526792,nude_painting,0.512820
-dataset/rembrandt/rembrandt_15.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.649025,genre_painting,0.556261,religious_painting,0.508172,portrait,0.490077
-dataset/rembrandt/rembrandt_16.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.627393,sketch_and_study,0.535892,portrait,0.514679,genre_painting,0.513254
-dataset/rembrandt/rembrandt_17.jpg,rembrandt,Baroque,portrait,portrait,0.650809,genre_painting,0.536433,Unknown Genre,0.529752,sketch_and_study,0.497220
-dataset/rembrandt/rembrandt_18.jpg,rembrandt,Baroque,portrait,portrait,0.665401,Unknown Genre,0.556863,religious_painting,0.551608,genre_painting,0.501484
-dataset/rembrandt/rembrandt_19.jpg,rembrandt,Baroque,Unknown Genre,portrait,0.615356,Unknown Genre,0.591111,religious_painting,0.547737,sketch_and_study,0.503832
-dataset/rembrandt/rembrandt_20.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.609913,sketch_and_study,0.605296,portrait,0.531284,Unknown Genre,0.487968
-dataset/rembrandt/rembrandt_21.jpg,rembrandt,Baroque,portrait,portrait,0.644625,sketch_and_study,0.539557,religious_painting,0.527925,landscape,0.494084
-dataset/rembrandt/rembrandt_22.jpg,rembrandt,Baroque,portrait,portrait,0.684379,Unknown Genre,0.525550,genre_painting,0.520804,sketch_and_study,0.503804
-dataset/rembrandt/rembrandt_23.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.610150,sketch_and_study,0.606649,portrait,0.520359,religious_painting,0.497651
-dataset/rembrandt/rembrandt_24.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.658588,religious_painting,0.549600,genre_painting,0.527372,landscape,0.480943
-dataset/rembrandt/rembrandt_25.jpg,rembrandt,Baroque,portrait,portrait,0.663099,religious_painting,0.544115,Unknown Genre,0.540946,genre_painting,0.516098
-dataset/rembrandt/rembrandt_26.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.664384,genre_painting,0.561011,portrait,0.528788,religious_painting,0.489457
-dataset/rembrandt/rembrandt_27.jpg,rembrandt,Baroque,portrait,portrait,0.677520,Unknown Genre,0.562450,sketch_and_study,0.503512,genre_painting,0.500123
-dataset/rembrandt/rembrandt_28.jpg,rembrandt,Baroque,Unknown Genre,portrait,0.635778,Unknown Genre,0.606207,sketch_and_study,0.525735,religious_painting,0.525314
-dataset/rembrandt/rembrandt_29.jpg,rembrandt,Baroque,portrait,portrait,0.668422,Unknown Genre,0.555107,sketch_and_study,0.535012,religious_painting,0.505241
-dataset/rembrandt/rembrandt_30.jpg,rembrandt,Baroque,portrait,portrait,0.650229,religious_painting,0.559526,sketch_and_study,0.529288,Unknown Genre,0.509197
-dataset/rembrandt/rembrandt_31.jpg,rembrandt,Baroque,landscape,landscape,0.649913,sketch_and_study,0.585035,genre_painting,0.536133,cityscape,0.491187
-dataset/rembrandt/rembrandt_32.jpg,rembrandt,Baroque,Unknown Genre,Unknown Genre,0.605853,sketch_and_study,0.567493,still_life,0.533995,portrait,0.489683
-dataset/rembrandt/rembrandt_33.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.625506,genre_painting,0.546924,sketch_and_study,0.543706,portrait,0.531424
-dataset/rembrandt/rembrandt_34.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.631347,portrait,0.568779,religious_painting,0.521675,genre_painting,0.515117
-dataset/da_vinci/da_vinci_0.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.667002,still_life,0.534175,Unknown Genre,0.515738,portrait,0.499063
-dataset/da_vinci/da_vinci_1.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,religious_painting,0.630489,sketch_and_study,0.567754,genre_painting,0.527387,portrait,0.519805
-dataset/da_vinci/da_vinci_2.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.632689,sketch_and_study,0.606096,religious_painting,0.536706,genre_painting,0.505155
-dataset/da_vinci/da_vinci_3.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.616263,portrait,0.595733,sketch_and_study,0.586223,still_life,0.502322
-dataset/da_vinci/da_vinci_4.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.606001,portrait,0.598812,sketch_and_study,0.577258,Unknown Genre,0.490899
-dataset/da_vinci/da_vinci_5.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.680605,religious_painting,0.508364,Unknown Genre,0.505256,portrait,0.496760
-dataset/da_vinci/da_vinci_6.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.667102,religious_painting,0.523845,portrait,0.511584,still_life,0.508881
-dataset/da_vinci/da_vinci_7.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,sketch_and_study,0.651056,portrait,0.559938,Unknown Genre,0.513719,still_life,0.500491
-dataset/da_vinci/da_vinci_8.jpg,leonardo-da-vinci,Early_Renaissance,portrait,portrait,0.665116,religious_painting,0.561853,sketch_and_study,0.529945,landscape,0.500746
-dataset/da_vinci/da_vinci_9.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.678393,religious_painting,0.541590,portrait,0.521435,genre_painting,0.513604
-dataset/da_vinci/da_vinci_10.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.686011,portrait,0.528536,religious_painting,0.521531,genre_painting,0.507998
-dataset/da_vinci/da_vinci_11.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.656626,religious_painting,0.514287,Unknown Genre,0.506005,portrait,0.502665
-dataset/da_vinci/da_vinci_12.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.687058,religious_painting,0.555128,genre_painting,0.513008,portrait,0.489236
-dataset/da_vinci/da_vinci_13.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.664436,Unknown Genre,0.515884,portrait,0.512280,religious_painting,0.510185
-dataset/da_vinci/da_vinci_14.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.662067,sketch_and_study,0.547891,religious_painting,0.546157,Unknown Genre,0.490477
-dataset/da_vinci/da_vinci_15.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.651796,portrait,0.581232,religious_painting,0.529403,nude_painting,0.475385
-dataset/da_vinci/da_vinci_16.jpg,leonardo-da-vinci,High_Renaissance,landscape,landscape,0.619416,sketch_and_study,0.554478,still_life,0.551219,Unknown Genre,0.517329
-dataset/da_vinci/da_vinci_17.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,religious_painting,0.657531,sketch_and_study,0.543004,portrait,0.529898,genre_painting,0.524349
-dataset/da_vinci/da_vinci_18.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.623463,portrait,0.609902,religious_painting,0.516712,Unknown Genre,0.509255
-dataset/da_vinci/da_vinci_19.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.661903,Unknown Genre,0.515929,still_life,0.501971,religious_painting,0.496320
-dataset/da_vinci/da_vinci_20.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.646193,portrait,0.522013,still_life,0.516805,religious_painting,0.513512
-dataset/da_vinci/da_vinci_21.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.641009,portrait,0.537339,nude_painting,0.524491,still_life,0.509048
-dataset/da_vinci/da_vinci_22.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.647669,portrait,0.611983,Unknown Genre,0.529473,sketch_and_study,0.515022
-dataset/da_vinci/da_vinci_23.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.623434,portrait,0.590142,sketch_and_study,0.553477,still_life,0.508277
-dataset/da_vinci/da_vinci_24.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.676012,Unknown Genre,0.514171,portrait,0.505683,landscape,0.492264
-dataset/da_vinci/da_vinci_25.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.655032,Unknown Genre,0.551288,portrait,0.500067,still_life,0.491445
-dataset/da_vinci/da_vinci_26.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,sketch_and_study,0.657889,portrait,0.558977,genre_painting,0.501682,religious_painting,0.492588
-dataset/da_vinci/da_vinci_27.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.647697,portrait,0.524122,Unknown Genre,0.511459,landscape,0.507282
-dataset/da_vinci/da_vinci_28.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.634520,sketch_and_study,0.589330,religious_painting,0.526453,Unknown Genre,0.521480
-dataset/da_vinci/da_vinci_29.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.634405,portrait,0.574993,genre_painting,0.532938,sketch_and_study,0.516414
-dataset/da_vinci/da_vinci_30.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.643455,portrait,0.591160,sketch_and_study,0.526286,nude_painting,0.516816
-dataset/da_vinci/da_vinci_31.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.671031,Unknown Genre,0.515172,religious_painting,0.498451,portrait,0.490785
-dataset/da_vinci/da_vinci_32.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,sketch_and_study,0.635417,portrait,0.611568,religious_painting,0.514149,Unknown Genre,0.495011
-dataset/da_vinci/da_vinci_33.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.647478,landscape,0.545841,still_life,0.501851,Unknown Genre,0.500655
-dataset/da_vinci/da_vinci_34.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.656086,religious_painting,0.568792,sketch_and_study,0.516445,genre_painting,0.497591
+van_gogh/van_gogh_0.jpg,vincent-van-gogh,Post_Impressionism,still_life,still_life,0.873801,genre_painting,0.579646,Unknown Genre,0.571458,landscape,0.478234
+van_gogh/van_gogh_1.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.855346,sketch_and_study,0.767387,portrait,0.498042,still_life,0.371041
+van_gogh/van_gogh_2.jpg,vincent-van-gogh,Realism,landscape,landscape,0.872284,genre_painting,0.621060,sketch_and_study,0.549573,portrait,0.502807
+van_gogh/van_gogh_3.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.916483,Unknown Genre,0.450670,portrait,0.448009,still_life,0.378915
+van_gogh/van_gogh_4.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.840860,genre_painting,0.774496,landscape,0.410790,portrait,0.395966
+van_gogh/van_gogh_5.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.864048,genre_painting,0.660080,landscape,0.646878,Unknown Genre,0.333165
+van_gogh/van_gogh_6.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.859114,genre_painting,0.660344,portrait,0.567539,Unknown Genre,0.508548
+van_gogh/van_gogh_7.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.864439,genre_painting,0.608282,portrait,0.572786,Unknown Genre,0.534364
+van_gogh/van_gogh_8.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.903472,sketch_and_study,0.542469,Unknown Genre,0.475144,genre_painting,0.402597
+van_gogh/van_gogh_9.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.907670,sketch_and_study,0.471777,Unknown Genre,0.450080,genre_painting,0.439672
+van_gogh/van_gogh_10.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.839500,sketch_and_study,0.752243,portrait,0.571587,Unknown Genre,0.352572
+van_gogh/van_gogh_11.jpg,vincent-van-gogh,Post_Impressionism,portrait,portrait,0.867642,genre_painting,0.666493,landscape,0.483786,Unknown Genre,0.459879
+van_gogh/van_gogh_12.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.866707,portrait,0.652681,Unknown Genre,0.606787,genre_painting,0.406534
+van_gogh/van_gogh_13.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,genre_painting,0.884109,landscape,0.601055,portrait,0.556328,sketch_and_study,0.487266
+van_gogh/van_gogh_14.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.897718,genre_painting,0.538532,portrait,0.474873,cityscape,0.447431
+van_gogh/van_gogh_15.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.887421,genre_painting,0.651924,portrait,0.545517,Unknown Genre,0.363155
+van_gogh/van_gogh_16.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.881228,landscape,0.685124,Unknown Genre,0.513653,still_life,0.349397
+van_gogh/van_gogh_17.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.814741,landscape,0.582973,still_life,0.572519,portrait,0.561070
+van_gogh/van_gogh_18.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.879418,genre_painting,0.697200,landscape,0.457267,Unknown Genre,0.394801
+van_gogh/van_gogh_19.jpg,vincent-van-gogh,Post_Impressionism,landscape,landscape,0.912484,genre_painting,0.470947,still_life,0.458959,portrait,0.415962
+van_gogh/van_gogh_20.jpg,vincent-van-gogh,Realism,still_life,still_life,0.870262,landscape,0.570906,Unknown Genre,0.541773,sketch_and_study,0.489428
+van_gogh/van_gogh_21.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.902346,sketch_and_study,0.578623,landscape,0.552170,still_life,0.357359
+van_gogh/van_gogh_22.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.807858,sketch_and_study,0.762338,Unknown Genre,0.457080,still_life,0.421464
+van_gogh/van_gogh_23.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.862104,genre_painting,0.696666,portrait,0.496253,still_life,0.463352
+van_gogh/van_gogh_24.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.772564,sketch_and_study,0.762584,portrait,0.580694,genre_painting,0.459705
+van_gogh/van_gogh_25.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.874145,still_life,0.561410,landscape,0.554538,portrait,0.506296
+van_gogh/van_gogh_26.jpg,vincent-van-gogh,Post_Impressionism,Unknown Genre,Unknown Genre,0.838777,portrait,0.754662,genre_painting,0.541773,landscape,0.379319
+van_gogh/van_gogh_27.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.879037,genre_painting,0.653419,nude_painting,0.501012,portrait,0.398535
+van_gogh/van_gogh_28.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.876978,landscape,0.588072,genre_painting,0.581829,Unknown Genre,0.456190
+van_gogh/van_gogh_29.jpg,vincent-van-gogh,Realism,portrait,portrait,0.849615,genre_painting,0.695588,Unknown Genre,0.521667,sketch_and_study,0.399661
+van_gogh/van_gogh_30.jpg,vincent-van-gogh,Post_Impressionism,genre_painting,genre_painting,0.850278,landscape,0.552655,portrait,0.514060,still_life,0.494572
+van_gogh/van_gogh_31.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.909798,genre_painting,0.578938,landscape,0.409631,Unknown Genre,0.400024
+van_gogh/van_gogh_32.jpg,vincent-van-gogh,Post_Impressionism,sketch_and_study,sketch_and_study,0.853430,genre_painting,0.668681,portrait,0.557113,landscape,0.415624
+van_gogh/van_gogh_33.jpg,vincent-van-gogh,Realism,sketch_and_study,sketch_and_study,0.850528,genre_painting,0.715361,Unknown Genre,0.513747,landscape,0.481048
+van_gogh/van_gogh_34.jpg,vincent-van-gogh,Realism,genre_painting,genre_painting,0.890425,landscape,0.612461,portrait,0.434389,still_life,0.425922
+monet/monet_0.jpg,claude-monet,Impressionism,cityscape,cityscape,0.896756,landscape,0.663990,genre_painting,0.444117,portrait,0.342558
+monet/monet_1.jpg,claude-monet,Impressionism,landscape,landscape,0.910810,cityscape,0.536921,Unknown Genre,0.458107,portrait,0.424174
+monet/monet_2.jpg,claude-monet,Impressionism,cityscape,cityscape,0.894529,landscape,0.695131,Unknown Genre,0.374170,sketch_and_study,0.369553
+monet/monet_3.jpg,claude-monet,Impressionism,landscape,landscape,0.913085,portrait,0.480036,cityscape,0.451227,sketch_and_study,0.433550
+monet/monet_4.jpg,claude-monet,Impressionism,landscape,landscape,0.921651,cityscape,0.427523,portrait,0.424918,Unknown Genre,0.401636
+monet/monet_5.jpg,claude-monet,Impressionism,landscape,landscape,0.920422,Unknown Genre,0.514294,genre_painting,0.393677,cityscape,0.391987
+monet/monet_6.jpg,claude-monet,Impressionism,landscape,landscape,0.911733,genre_painting,0.527582,cityscape,0.484395,sketch_and_study,0.397508
+monet/monet_7.jpg,claude-monet,Impressionism,landscape,landscape,0.904476,cityscape,0.537572,Unknown Genre,0.501410,portrait,0.411310
+monet/monet_8.jpg,claude-monet,Impressionism,landscape,landscape,0.921099,sketch_and_study,0.448472,still_life,0.401294,Unknown Genre,0.370842
+monet/monet_9.jpg,claude-monet,Impressionism,landscape,landscape,0.910826,Unknown Genre,0.477536,sketch_and_study,0.466208,portrait,0.430057
+monet/monet_10.jpg,claude-monet,Impressionism,landscape,landscape,0.919372,cityscape,0.496521,genre_painting,0.463408,portrait,0.335742
+monet/monet_11.jpg,claude-monet,Impressionism,landscape,landscape,0.900890,Unknown Genre,0.511843,genre_painting,0.497271,sketch_and_study,0.423665
+monet/monet_12.jpg,claude-monet,Impressionism,cityscape,cityscape,0.901650,landscape,0.636917,genre_painting,0.483657,Unknown Genre,0.303483
+monet/monet_13.jpg,claude-monet,Impressionism,landscape,landscape,0.913090,sketch_and_study,0.453797,cityscape,0.443196,genre_painting,0.424315
+monet/monet_14.jpg,claude-monet,Impressionism,landscape,landscape,0.919804,portrait,0.477200,cityscape,0.390379,sketch_and_study,0.380925
+monet/monet_15.jpg,claude-monet,Impressionism,landscape,landscape,0.911082,cityscape,0.509561,sketch_and_study,0.448298,genre_painting,0.441941
+monet/monet_16.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.902040,landscape,0.628963,portrait,0.464037,still_life,0.354308
+monet/monet_17.jpg,claude-monet,Impressionism,landscape,landscape,0.915677,cityscape,0.500983,genre_painting,0.424633,sketch_and_study,0.391491
+monet/monet_18.jpg,claude-monet,Impressionism,landscape,landscape,0.916764,genre_painting,0.461540,Unknown Genre,0.431461,cityscape,0.399435
+monet/monet_19.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.835441,landscape,0.804535,portrait,0.421856,sketch_and_study,0.410193
+monet/monet_20.jpg,claude-monet,Impressionism,landscape,landscape,0.905512,Unknown Genre,0.492854,cityscape,0.473357,portrait,0.440595
+monet/monet_21.jpg,claude-monet,Impressionism,cityscape,cityscape,0.876852,landscape,0.681422,portrait,0.440616,genre_painting,0.405638
+monet/monet_22.jpg,claude-monet,Impressionism,cityscape,cityscape,0.905547,landscape,0.576180,genre_painting,0.463476,still_life,0.389446
+monet/monet_23.jpg,claude-monet,Realism,portrait,portrait,0.882555,genre_painting,0.688318,landscape,0.409961,sketch_and_study,0.405708
+monet/monet_24.jpg,claude-monet,Impressionism,portrait,portrait,0.901011,landscape,0.560359,sketch_and_study,0.491575,genre_painting,0.425986
+monet/monet_25.jpg,claude-monet,Impressionism,landscape,landscape,0.905378,sketch_and_study,0.536316,portrait,0.424371,Unknown Genre,0.411327
+monet/monet_26.jpg,claude-monet,Impressionism,landscape,landscape,0.914568,genre_painting,0.462352,cityscape,0.454185,Unknown Genre,0.414915
+monet/monet_27.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.844225,landscape,0.744758,cityscape,0.504649,genre_painting,0.410621
+monet/monet_28.jpg,claude-monet,Impressionism,Unknown Genre,Unknown Genre,0.871173,landscape,0.702303,portrait,0.446232,sketch_and_study,0.432437
+monet/monet_29.jpg,claude-monet,Impressionism,cityscape,cityscape,0.869198,landscape,0.745354,Unknown Genre,0.494367,portrait,0.335769
+monet/monet_30.jpg,claude-monet,Impressionism,landscape,landscape,0.922627,sketch_and_study,0.457864,genre_painting,0.375768,still_life,0.375186
+monet/monet_31.jpg,claude-monet,Impressionism,landscape,landscape,0.921828,portrait,0.438244,sketch_and_study,0.424769,cityscape,0.371170
+monet/monet_32.jpg,claude-monet,Impressionism,portrait,portrait,0.883778,Unknown Genre,0.575000,genre_painting,0.504651,sketch_and_study,0.454854
+monet/monet_33.jpg,claude-monet,Impressionism,cityscape,cityscape,0.885849,landscape,0.680740,Unknown Genre,0.469156,sketch_and_study,0.409640
+monet/monet_34.jpg,claude-monet,Impressionism,landscape,landscape,0.906299,cityscape,0.611246,sketch_and_study,0.404125,genre_painting,0.359519
+picasso/picasso_0.jpg,pablo-picasso,Cubism,still_life,still_life,0.892398,Unknown Genre,0.528425,portrait,0.486782,genre_painting,0.456480
+picasso/picasso_1.jpg,pablo-picasso,Cubism,still_life,still_life,0.890570,genre_painting,0.654782,portrait,0.535009,Unknown Genre,0.335319
+picasso/picasso_2.jpg,pablo-picasso,Expressionism,genre_painting,genre_painting,0.839472,sketch_and_study,0.718224,portrait,0.600279,nude_painting,0.415095
+picasso/picasso_3.jpg,pablo-picasso,Synthetic_Cubism,still_life,still_life,0.912283,Unknown Genre,0.514977,sketch_and_study,0.497161,portrait,0.369910
+picasso/picasso_4.jpg,pablo-picasso,Cubism,Unknown Genre,Unknown Genre,0.844882,still_life,0.782179,sketch_and_study,0.467518,genre_painting,0.400001
+picasso/picasso_5.jpg,pablo-picasso,Symbolism,nude_painting,nude_painting,0.884469,portrait,0.570711,sketch_and_study,0.538816,genre_painting,0.460128
+picasso/picasso_6.jpg,pablo-picasso,Cubism,still_life,still_life,0.906512,genre_painting,0.470709,sketch_and_study,0.434294,Unknown Genre,0.425501
+picasso/picasso_7.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,Unknown Genre,0.817040,sketch_and_study,0.722641,genre_painting,0.553671,nude_painting,0.434667
+picasso/picasso_8.jpg,pablo-picasso,Expressionism,sketch_and_study,sketch_and_study,0.862961,genre_painting,0.684221,portrait,0.586289,nude_painting,0.405853
+picasso/picasso_9.jpg,pablo-picasso,Post_Impressionism,nude_painting,nude_painting,0.891714,genre_painting,0.552368,sketch_and_study,0.530168,landscape,0.405175
+picasso/picasso_10.jpg,pablo-picasso,Synthetic_Cubism,still_life,still_life,0.912308,genre_painting,0.530453,Unknown Genre,0.495790,portrait,0.344840
+picasso/picasso_11.jpg,pablo-picasso,Synthetic_Cubism,still_life,still_life,0.905186,Unknown Genre,0.635375,genre_painting,0.462077,landscape,0.309866
+picasso/picasso_12.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.894112,portrait,0.580671,nude_painting,0.465353,still_life,0.461286
+picasso/picasso_13.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.880626,portrait,0.566463,nude_painting,0.511727,religious_painting,0.490672
+picasso/picasso_14.jpg,pablo-picasso,Cubism,Unknown Genre,Unknown Genre,0.792902,sketch_and_study,0.705540,still_life,0.573957,genre_painting,0.510745
+picasso/picasso_15.jpg,pablo-picasso,Expressionism,portrait,portrait,0.869767,genre_painting,0.573860,nude_painting,0.544047,still_life,0.515273
+picasso/picasso_16.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.878835,nude_painting,0.593528,still_life,0.515572,portrait,0.428521
+picasso/picasso_17.jpg,pablo-picasso,Expressionism,portrait,portrait,0.893564,Unknown Genre,0.518559,still_life,0.515028,nude_painting,0.503573
+picasso/picasso_18.jpg,pablo-picasso,Realism,sketch_and_study,sketch_and_study,0.879726,nude_painting,0.670024,Unknown Genre,0.463517,still_life,0.411303
+picasso/picasso_19.jpg,pablo-picasso,Cubism,portrait,portrait,0.904341,still_life,0.546674,Unknown Genre,0.438612,nude_painting,0.425613
+picasso/picasso_20.jpg,pablo-picasso,Expressionism,genre_painting,genre_painting,0.833664,nude_painting,0.701428,sketch_and_study,0.613034,landscape,0.448191
+picasso/picasso_21.jpg,pablo-picasso,Expressionism,cityscape,cityscape,0.865507,landscape,0.625957,genre_painting,0.483487,Unknown Genre,0.445921
+picasso/picasso_22.jpg,pablo-picasso,Art_Nouveau,Unknown Genre,Unknown Genre,0.842543,sketch_and_study,0.702425,portrait,0.563166,genre_painting,0.473987
+picasso/picasso_23.jpg,pablo-picasso,Expressionism,portrait,portrait,0.886207,genre_painting,0.648380,Unknown Genre,0.476963,still_life,0.416608
+picasso/picasso_24.jpg,pablo-picasso,Symbolism,genre_painting,genre_painting,0.908632,still_life,0.507251,portrait,0.490746,landscape,0.438985
+picasso/picasso_25.jpg,pablo-picasso,Expressionism,nude_painting,nude_painting,0.875809,portrait,0.573540,genre_painting,0.507530,still_life,0.486788
+picasso/picasso_26.jpg,pablo-picasso,Expressionism,portrait,portrait,0.885006,nude_painting,0.596466,Unknown Genre,0.473908,still_life,0.452091
+picasso/picasso_27.jpg,pablo-picasso,Cubism,genre_painting,genre_painting,0.782480,still_life,0.706668,portrait,0.676109,sketch_and_study,0.485040
+picasso/picasso_28.jpg,pablo-picasso,Impressionism,Unknown Genre,portrait,0.817655,Unknown Genre,0.752762,genre_painting,0.591802,still_life,0.387236
+picasso/picasso_29.jpg,pablo-picasso,Cubism,still_life,still_life,0.897271,genre_painting,0.605983,Unknown Genre,0.461276,portrait,0.451054
+picasso/picasso_30.jpg,pablo-picasso,Impressionism,genre_painting,genre_painting,0.882290,sketch_and_study,0.626713,portrait,0.558771,landscape,0.408489
+picasso/picasso_31.jpg,pablo-picasso,Post_Impressionism,nude_painting,nude_painting,0.883338,genre_painting,0.679662,sketch_and_study,0.542449,still_life,0.338013
+picasso/picasso_32.jpg,pablo-picasso,Cubism,genre_painting,genre_painting,0.850327,still_life,0.691410,portrait,0.525544,Unknown Genre,0.490765
+picasso/picasso_33.jpg,pablo-picasso,Expressionism,genre_painting,genre_painting,0.861667,portrait,0.700867,sketch_and_study,0.466280,still_life,0.397451
+picasso/picasso_34.jpg,pablo-picasso,Realism,nude_painting,nude_painting,0.873117,portrait,0.642317,genre_painting,0.570906,sketch_and_study,0.432150
+rembrandt/rembrandt_0.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.882163,sketch_and_study,0.582668,portrait,0.497687,genre_painting,0.480117
+rembrandt/rembrandt_1.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.822520,sketch_and_study,0.727328,genre_painting,0.652043,Unknown Genre,0.414118
+rembrandt/rembrandt_2.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.879395,sketch_and_study,0.623900,portrait,0.503361,genre_painting,0.495465
+rembrandt/rembrandt_3.jpg,rembrandt,Baroque,portrait,portrait,0.908346,Unknown Genre,0.474863,genre_painting,0.474443,sketch_and_study,0.439348
+rembrandt/rembrandt_4.jpg,rembrandt,Baroque,Unknown Genre,sketch_and_study,0.731719,portrait,0.690573,Unknown Genre,0.683329,genre_painting,0.590227
+rembrandt/rembrandt_5.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.810728,sketch_and_study,0.795936,portrait,0.548685,Unknown Genre,0.415736
+rembrandt/rembrandt_6.jpg,rembrandt,Baroque,Unknown Genre,Unknown Genre,0.783787,portrait,0.771085,religious_painting,0.586607,sketch_and_study,0.543713
+rembrandt/rembrandt_7.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.848824,portrait,0.606484,sketch_and_study,0.596616,genre_painting,0.538694
+rembrandt/rembrandt_8.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.829281,portrait,0.768105,sketch_and_study,0.480859,still_life,0.386451
+rembrandt/rembrandt_9.jpg,rembrandt,Baroque,Unknown Genre,Unknown Genre,0.850911,sketch_and_study,0.793419,genre_painting,0.397837,religious_painting,0.364791
+rembrandt/rembrandt_10.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.841197,sketch_and_study,0.767413,portrait,0.547750,Unknown Genre,0.371579
+rembrandt/rembrandt_11.jpg,rembrandt,Baroque,portrait,portrait,0.838526,religious_painting,0.654728,genre_painting,0.638807,sketch_and_study,0.462923
+rembrandt/rembrandt_12.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.866021,genre_painting,0.685285,Unknown Genre,0.511485,portrait,0.492100
+rembrandt/rembrandt_13.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.916690,genre_painting,0.531290,religious_painting,0.409523,landscape,0.372238
+rembrandt/rembrandt_14.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.871463,portrait,0.579956,genre_painting,0.536152,nude_painting,0.477953
+rembrandt/rembrandt_15.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.887878,genre_painting,0.654333,religious_painting,0.468189,portrait,0.396273
+rembrandt/rembrandt_16.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.889848,sketch_and_study,0.548092,portrait,0.434770,genre_painting,0.427445
+rembrandt/rembrandt_17.jpg,rembrandt,Baroque,portrait,portrait,0.887780,genre_painting,0.556328,Unknown Genre,0.528934,sketch_and_study,0.394206
+rembrandt/rembrandt_18.jpg,rembrandt,Baroque,portrait,portrait,0.880441,Unknown Genre,0.604792,religious_painting,0.586112,genre_painting,0.400021
+rembrandt/rembrandt_19.jpg,rembrandt,Baroque,Unknown Genre,portrait,0.815243,Unknown Genre,0.745076,religious_painting,0.580454,sketch_and_study,0.388624
+rembrandt/rembrandt_20.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.805726,sketch_and_study,0.795282,portrait,0.571962,Unknown Genre,0.412636
+rembrandt/rembrandt_21.jpg,rembrandt,Baroque,portrait,portrait,0.883557,sketch_and_study,0.583404,religious_painting,0.536346,landscape,0.396139
+rembrandt/rembrandt_22.jpg,rembrandt,Baroque,portrait,portrait,0.908622,Unknown Genre,0.497079,genre_painting,0.478945,sketch_and_study,0.415537
+rembrandt/rembrandt_23.jpg,rembrandt,Baroque,genre_painting,genre_painting,0.809703,sketch_and_study,0.801315,portrait,0.512933,religious_painting,0.423099
+rembrandt/rembrandt_24.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.888663,religious_painting,0.619978,genre_painting,0.539758,landscape,0.366194
+rembrandt/rembrandt_25.jpg,rembrandt,Baroque,portrait,portrait,0.884570,religious_painting,0.564762,Unknown Genre,0.552750,genre_painting,0.457067
+rembrandt/rembrandt_26.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.883776,genre_painting,0.652594,portrait,0.546096,religious_painting,0.408678
+rembrandt/rembrandt_27.jpg,rembrandt,Baroque,portrait,portrait,0.898748,Unknown Genre,0.628835,sketch_and_study,0.412801,genre_painting,0.400681
+rembrandt/rembrandt_28.jpg,rembrandt,Baroque,Unknown Genre,portrait,0.828813,Unknown Genre,0.761498,sketch_and_study,0.500738,religious_painting,0.499302
+rembrandt/rembrandt_29.jpg,rembrandt,Baroque,portrait,portrait,0.894142,Unknown Genre,0.608672,sketch_and_study,0.533353,religious_painting,0.418347
+rembrandt/rembrandt_30.jpg,rembrandt,Baroque,portrait,portrait,0.873901,religious_painting,0.629762,sketch_and_study,0.512053,Unknown Genre,0.431369
+rembrandt/rembrandt_31.jpg,rembrandt,Baroque,landscape,landscape,0.861567,sketch_and_study,0.716992,genre_painting,0.559047,cityscape,0.398058
+rembrandt/rembrandt_32.jpg,rembrandt,Baroque,Unknown Genre,Unknown Genre,0.849658,sketch_and_study,0.725819,still_life,0.574077,portrait,0.349716
+rembrandt/rembrandt_33.jpg,rembrandt,Baroque,religious_painting,religious_painting,0.859731,genre_painting,0.596584,sketch_and_study,0.582159,portrait,0.525660
+rembrandt/rembrandt_34.jpg,rembrandt,Baroque,sketch_and_study,sketch_and_study,0.859395,portrait,0.693485,religious_painting,0.512493,genre_painting,0.485041
+da_vinci/da_vinci_0.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.905894,still_life,0.545941,Unknown Genre,0.471103,portrait,0.403789
+da_vinci/da_vinci_1.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,religious_painting,0.872868,sketch_and_study,0.687072,genre_painting,0.508888,portrait,0.473530
+da_vinci/da_vinci_2.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.828684,sketch_and_study,0.770162,religious_painting,0.558379,genre_painting,0.445753
+da_vinci/da_vinci_3.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.793855,portrait,0.738355,sketch_and_study,0.709655,still_life,0.399396
+da_vinci/da_vinci_4.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.769937,portrait,0.751149,sketch_and_study,0.687948,Unknown Genre,0.377109
+da_vinci/da_vinci_5.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.914899,religious_painting,0.458398,Unknown Genre,0.446425,portrait,0.414258
+da_vinci/da_vinci_6.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.901714,religious_painting,0.510486,portrait,0.461969,still_life,0.451626
+da_vinci/da_vinci_7.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,sketch_and_study,0.882914,portrait,0.656397,Unknown Genre,0.482637,still_life,0.431067
+da_vinci/da_vinci_8.jpg,leonardo-da-vinci,Early_Renaissance,portrait,portrait,0.895490,religious_painting,0.633208,sketch_and_study,0.509488,landscape,0.392475
+da_vinci/da_vinci_9.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.895572,religious_painting,0.578261,portrait,0.509501,genre_painting,0.482222
+da_vinci/da_vinci_10.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.900159,portrait,0.543073,religious_painting,0.520057,genre_painting,0.474608
+da_vinci/da_vinci_11.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.911498,religious_painting,0.472456,Unknown Genre,0.435891,portrait,0.421424
+da_vinci/da_vinci_12.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.898008,religious_painting,0.618764,genre_painting,0.481891,portrait,0.403157
+da_vinci/da_vinci_13.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.903644,Unknown Genre,0.500440,portrait,0.486126,religious_painting,0.478448
+da_vinci/da_vinci_14.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.889853,sketch_and_study,0.590746,religious_painting,0.584640,Unknown Genre,0.370298
+da_vinci/da_vinci_15.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.871288,portrait,0.713552,religious_painting,0.540382,nude_painting,0.344743
+da_vinci/da_vinci_16.jpg,leonardo-da-vinci,High_Renaissance,landscape,landscape,0.876851,sketch_and_study,0.630319,still_life,0.613818,Unknown Genre,0.423785
+da_vinci/da_vinci_17.jpg,leonardo-da-vinci,Early_Renaissance,religious_painting,religious_painting,0.895809,sketch_and_study,0.556676,portrait,0.500095,genre_painting,0.475812
+da_vinci/da_vinci_18.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.819834,portrait,0.789978,religious_painting,0.499531,Unknown Genre,0.472080
+da_vinci/da_vinci_19.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.918323,Unknown Genre,0.469268,still_life,0.407274,religious_painting,0.382390
+da_vinci/da_vinci_20.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.905591,portrait,0.489865,still_life,0.464704,religious_painting,0.449156
+da_vinci/da_vinci_21.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.891112,portrait,0.561402,nude_painting,0.502452,still_life,0.430844
+da_vinci/da_vinci_22.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.846622,portrait,0.764362,Unknown Genre,0.479979,sketch_and_study,0.424158
+da_vinci/da_vinci_23.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.828365,portrait,0.736268,sketch_and_study,0.602311,still_life,0.411678
+da_vinci/da_vinci_24.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.916409,Unknown Genre,0.483372,portrait,0.450132,landscape,0.398024
+da_vinci/da_vinci_25.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.902127,Unknown Genre,0.629828,portrait,0.417286,still_life,0.381764
+da_vinci/da_vinci_26.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,sketch_and_study,0.892644,portrait,0.650905,genre_painting,0.431828,religious_painting,0.396251
+da_vinci/da_vinci_27.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.897301,portrait,0.527910,Unknown Genre,0.473569,landscape,0.455741
+da_vinci/da_vinci_28.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.841594,sketch_and_study,0.735491,religious_painting,0.525549,Unknown Genre,0.507034
+da_vinci/da_vinci_29.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.867753,portrait,0.692181,genre_painting,0.509260,sketch_and_study,0.431824
+da_vinci/da_vinci_30.jpg,leonardo-da-vinci,High_Renaissance,religious_painting,religious_painting,0.861652,portrait,0.728048,sketch_and_study,0.477615,nude_painting,0.437839
+da_vinci/da_vinci_31.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.916652,Unknown Genre,0.496270,religious_painting,0.428578,portrait,0.398956
+da_vinci/da_vinci_32.jpg,leonardo-da-vinci,Early_Renaissance,sketch_and_study,sketch_and_study,0.838103,portrait,0.787302,religious_painting,0.476917,Unknown Genre,0.406800
+da_vinci/da_vinci_33.jpg,leonardo-da-vinci,High_Renaissance,sketch_and_study,sketch_and_study,0.909405,landscape,0.599491,still_life,0.388638,Unknown Genre,0.383161
+da_vinci/da_vinci_34.jpg,leonardo-da-vinci,High_Renaissance,portrait,portrait,0.891306,religious_painting,0.666650,sketch_and_study,0.455157,genre_painting,0.377121

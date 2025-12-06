@@ -28,7 +28,7 @@ def load_ckpt_meta(ckpt: Path) -> Dict:
     return payload
 
 
-def read_image_paths(dataset_json: Path, images_root: Path) -> List[Path]:
+def read_image_paths(dataset_json: Path, images_root: Path | None) -> List[Path]:
     with dataset_json.open("r") as f:
         records = json.load(f)
     paths: List[Path] = []
@@ -37,6 +37,9 @@ def read_image_paths(dataset_json: Path, images_root: Path) -> List[Path]:
         p = Path(rel)
         if p.is_absolute():
             ip = p
+        elif images_root is None:
+            # 不再强制添加 "dataset/" 前缀；保留相对路径形如 "van_gogh/..."
+            ip = dataset_json.parent / p
         else:
             ip = images_root / p
         paths.append(ip.resolve())
@@ -65,7 +68,7 @@ def main():
     args = parser.parse_args()
 
     dataset_json = Path(args.dataset_json)
-    images_root = Path(args.images_root) if args.images_root else dataset_json.parent
+    images_root = Path(args.images_root) if args.images_root else None
     ckpt_path = Path(args.ckpt)
     out_path = Path(args.output)
     fmt = args.format.strip().lower() if args.format else (out_path.suffix.lstrip(".") or "json")
@@ -156,7 +159,11 @@ def main():
 
     for p in paths:
         try:
-            rel_path = str(p.resolve().relative_to(images_root.resolve()))
+            rel_path = (
+                str(p.resolve().relative_to(images_root.resolve()))
+                if images_root is not None
+                else str(p.resolve().relative_to(dataset_json.parent.resolve()))
+            )
         except Exception:
             rel_path = p.name
         i = idx_of.get(p)

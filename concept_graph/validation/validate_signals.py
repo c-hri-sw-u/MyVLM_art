@@ -1,3 +1,19 @@
+'''
+python concept_graph/validation/validate_signals.py \
+  --dataset_json data/dataset/wikiart_5artists_dataset.json \
+  --signals_artist_json artifacts/concept_signals_artist.json \
+  --signals_style_json artifacts/concept_signals_style.json \
+  --signals_genre_json artifacts/concept_signals_genre.json \
+  --ckpt_artist artifacts/prototypes_artist_trained.pt \
+  --ckpt_style artifacts/prototypes_style_trained.pt \
+  --ckpt_genre artifacts/prototypes_genre_trained.pt \
+  --threshold_mode similarity --threshold 0.75 \
+  --backoff_delta 0.05 --topk_per_dim 2 \
+  --budget 3 --fairness true \
+  --output artifacts/validation_metrics.json
+'''
+
+
 import argparse
 import json
 from pathlib import Path

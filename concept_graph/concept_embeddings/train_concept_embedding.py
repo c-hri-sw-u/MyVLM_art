@@ -1,15 +1,14 @@
 from pathlib import Path
 import torch
-from myvlm.common import VLMType, ConceptType, PersonalizationTask, VLM_TO_LAYER
-from configs.train_config import EmbeddingTrainingConfig
+from myvlm.common import VLMType, PersonalizationTask, VLM_TO_LAYER
+from configs.myvlm_art_config import MyVLMArtConfig
 from vlms.llava_wrapper import LLaVAWrapper
 from myvlm.myllava import MyLLaVA
 from concept_graph.concept_embeddings.trainer import MultiTokenEmbeddingTrainer
 
-cfg = EmbeddingTrainingConfig(
+cfg = MyVLMArtConfig(
     concept_name="wikiart_5artists",
     concept_identifier="artist",
-    concept_type=ConceptType.OBJECT,
     vlm_type=VLMType.LLAVA,
     personalization_task=PersonalizationTask.CAPTIONING,
     output_root=Path("./outputs"),
@@ -20,6 +19,10 @@ cfg = EmbeddingTrainingConfig(
     reg_lambda=0.0075,
     device='cuda',
     torch_dtype=torch.bfloat16,
+    threshold=0.75,
+    max_tokens_per_concept=4,
+    max_concepts_per_sample=3,
+    backoff_delta=0.05,
 )
 
 vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)

@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 
-def run_export(dim: str, dataset_json: Path, images_root: Path, ckpt: Path, out_dir: Path, normalize: str, temperature: float, csv: bool, topk: int) -> None:
+def run_export(dim: str, dataset_json: Path, images_root: Path | None, ckpt: Path, out_dir: Path, normalize: str, temperature: float, csv: bool, topk: int) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     script = Path(__file__).resolve().parent / "export_signals.py"
     json_out = out_dir / f"concept_signals_{dim}.json"
@@ -13,8 +13,6 @@ def run_export(dim: str, dataset_json: Path, images_root: Path, ckpt: Path, out_
         str(script),
         "--dataset_json",
         str(dataset_json),
-        "--images_root",
-        str(images_root) if images_root else "",
         "--ckpt",
         str(ckpt),
         "--dimensions",
@@ -28,7 +26,9 @@ def run_export(dim: str, dataset_json: Path, images_root: Path, ckpt: Path, out_
         "--temperature",
         str(temperature),
     ]
-    subprocess.run([c for c in cmd_json if c != ""], check=True)
+    if images_root is not None:
+        cmd_json.extend(["--images_root", str(images_root)])
+    subprocess.run(cmd_json, check=True)
     if csv:
         csv_out = out_dir / f"concept_signals_{dim}.csv"
         cmd_csv = [
@@ -36,8 +36,6 @@ def run_export(dim: str, dataset_json: Path, images_root: Path, ckpt: Path, out_
             str(script),
             "--dataset_json",
             str(dataset_json),
-            "--images_root",
-            str(images_root) if images_root else "",
             "--ckpt",
             str(ckpt),
             "--dimensions",
@@ -53,7 +51,9 @@ def run_export(dim: str, dataset_json: Path, images_root: Path, ckpt: Path, out_
             "--topk",
             str(topk),
         ]
-        subprocess.run([c for c in cmd_csv if c != ""], check=True)
+        if images_root is not None:
+            cmd_csv.extend(["--images_root", str(images_root)])
+        subprocess.run(cmd_csv, check=True)
 
 
 def main():
@@ -72,7 +72,7 @@ def main():
     args = parser.parse_args()
 
     dataset_json = Path(args.dataset_json)
-    images_root = Path(args.images_root) if args.images_root else dataset_json.parent
+    images_root = Path(args.images_root) if args.images_root else None
     out_dir = Path(args.output_dir)
     normalize = args.normalize.strip().lower()
     temperature = float(args.temperature)

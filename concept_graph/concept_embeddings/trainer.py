@@ -212,22 +212,71 @@ class MultiTokenEmbeddingTrainer:
                 rel = r.get("image", "")
                 if rel:
                     img_list.append(str((self.images_root / rel).resolve()))
-        signals_artist = []
+        signals_artist, signals_style, signals_genre = [], [], []
         if self.signals_jsons["artist"].exists():
             with self.signals_jsons["artist"].open("r") as f:
                 signals_artist = json.load(f)
+        if self.signals_jsons["style"].exists():
+            with self.signals_jsons["style"].open("r") as f:
+                signals_style = json.load(f)
+        if self.signals_jsons["genre"].exists():
+            with self.signals_jsons["genre"].open("r") as f:
+                signals_genre = json.load(f)
+        def _count_dim(items: List[Dict[str, Any]], key: str) -> int:
+            n = 0
+            for rec in items:
+                sig = rec.get(key, {})
+                for k in sig.keys():
+                    try:
+                        idx = int(k)
+                    except Exception:
+                        continue
+                    if idx + 1 > n:
+                        n = idx + 1
+            return n
+        n_artist = _count_dim(signals_artist, "artist")
+        n_style = _count_dim(signals_style, "style")
+        n_genre = _count_dim(signals_genre, "genre")
+        offset_artist = 0
+        offset_style = n_artist
+        offset_genre = n_artist + n_style
+        # store dimension ranges for downstream layer
+        self._dim_ranges = {
+            "artist": (offset_artist, offset_style),
+            "style": (offset_style, offset_genre),
+            "genre": (offset_genre, offset_genre + n_genre),
+        }
         mapping: Dict[str, Dict[int, torch.Tensor]] = {}
         for i, abs_path in enumerate(img_list):
+            out: Dict[int, torch.Tensor] = {}
             if i < len(signals_artist) and "artist" in signals_artist[i]:
                 sig = signals_artist[i]["artist"]
-                out: Dict[int, torch.Tensor] = {}
                 for k_str, vec in sig.items():
                     try:
-                        k = int(k_str)
+                        k = int(k_str) + offset_artist
                     except Exception:
                         continue
                     t = torch.tensor(vec, dtype=torch.float32).unsqueeze(0)
                     out[k] = t
+            if i < len(signals_style) and "style" in signals_style[i]:
+                sig = signals_style[i]["style"]
+                for k_str, vec in sig.items():
+                    try:
+                        k = int(k_str) + offset_style
+                    except Exception:
+                        continue
+                    t = torch.tensor(vec, dtype=torch.float32).unsqueeze(0)
+                    out[k] = t
+            if i < len(signals_genre) and "genre" in signals_genre[i]:
+                sig = signals_genre[i]["genre"]
+                for k_str, vec in sig.items():
+                    try:
+                        k = int(k_str) + offset_genre
+                    except Exception:
+                        continue
+                    t = torch.tensor(vec, dtype=torch.float32).unsqueeze(0)
+                    out[k] = t
+            if len(out) > 0:
                 mapping[abs_path] = out
         return mapping
 
@@ -247,6 +296,9 @@ class MultiTokenEmbeddingTrainer:
                 device=self.device,
                 max_concepts_per_sample=getattr(self.cfg, "max_concepts_per_sample", 0),
                 backoff_delta=getattr(self.cfg, "backoff_delta", 0.0),
+                topk_per_dim=getattr(self.cfg, "topk_per_dim", 0),
+                fairness=getattr(self.cfg, "fairness", False),
+                priority=[s.strip() for s in getattr(self.cfg, "priority", "artist,style,genre").split(",") if s.strip()],
             )
             setattr(edit_module, layer_name, layer)
         concept_idxs = set()
@@ -256,4 +308,7 @@ class MultiTokenEmbeddingTrainer:
         n_concepts = max(concept_idxs) + 1 if len(concept_idxs) > 0 else 1
         if getattr(layer, "values", None) is None:
             layer.initialize_values(n_concepts)
+        # set dimension ranges for fairness merge
+        if hasattr(self, "_dim_ranges") and isinstance(self._dim_ranges, dict):
+            layer.set_dim_ranges(self._dim_ranges)
         self._injected_layer = layer
