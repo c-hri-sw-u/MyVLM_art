@@ -34,7 +34,7 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
     if load_8bit:
         kwargs['load_in_8bit'] = True
     elif load_4bit:
-        kwargs['load_in_4bit'] = True
+        # 只使用 quantization_config，不要同时传 load_in_4bit（新版 transformers 不兼容）
         kwargs['quantization_config'] = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.float16,
