@@ -14,8 +14,28 @@ from vlms.llava_wrapper import LLaVAWrapper
 from concept_graph.reasoning.inference_prompt_templates import get_prompts, build_prompt_structured
 
 
-def _load_images(images_root: Path, dataset_json: str = "wikiart_5artists_dataset.json") -> List[str]:
-    records = json.load((images_root / dataset_json).open())
+def _resolve_dataset_json(images_root: Path, preferred: str = "") -> Path:
+    if preferred:
+        cand = images_root / preferred
+        if cand.exists():
+            return cand
+    pats = ["*wikiart*5artists*.json", "*dataset*.json", "*test*.json", "*.json"]
+    seen = set()
+    cands: List[Path] = []
+    for pat in pats:
+        for p in sorted(images_root.glob(pat), key=lambda x: x.stat().st_mtime, reverse=True):
+            if str(p) in seen:
+                continue
+            seen.add(str(p))
+            cands.append(p)
+    if not cands:
+        raise FileNotFoundError(f"No dataset JSON found under {images_root}")
+    return cands[0]
+
+
+def _load_images(images_root: Path, dataset_json: str = "") -> List[str]:
+    p = _resolve_dataset_json(images_root, preferred=dataset_json)
+    records = json.load(p.open())
     images = []
     for r in records:
         rel = r.get("image", "")
@@ -89,7 +109,7 @@ def main(cfg: MyVLMArtConfig, images: Optional[List[str]] = None, prompt: Option
     vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)
     images_root = Path(cfg.data_root)
     if images is None or len(images) == 0:
-        images = _load_images(images_root, dataset_json=str(getattr(cfg, "dataset_json", "wikiart_5artists_dataset.json")))
+        images = _load_images(images_root, dataset_json=str(getattr(cfg, "dataset_json", "")))
     cfg_prompt = getattr(cfg, "prompt", None)
     prompt_mode = (prompt if prompt is not None else (cfg_prompt if cfg_prompt is not None else "natural")).strip().lower()
     lim = int(getattr(cfg, "limit", 0))

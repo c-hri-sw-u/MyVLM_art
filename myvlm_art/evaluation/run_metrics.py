@@ -28,8 +28,28 @@ def _load_reasoning(out_dir: Path, override_path: str = "") -> Dict[str, Dict[st
     return json.load(p.open()) if p.exists() else {}
 
 
-def _load_dataset_labels(images_root: Path, dataset_json: str = "wikiart_5artists_dataset.json") -> Dict[str, Dict[str, str]]:
-    records = json.load((images_root / dataset_json).open())
+def _resolve_dataset_json(images_root: Path, preferred: str = "") -> Path:
+    if preferred:
+        cand = images_root / preferred
+        if cand.exists():
+            return cand
+    pats = ["*wikiart*5artists*.json", "*dataset*.json", "*test*.json", "*.json"]
+    seen = set()
+    cands: List[Path] = []
+    for pat in pats:
+        for p in sorted(images_root.glob(pat), key=lambda x: x.stat().st_mtime, reverse=True):
+            if str(p) in seen:
+                continue
+            seen.add(str(p))
+            cands.append(p)
+    if not cands:
+        raise FileNotFoundError(f"No dataset JSON found under {images_root}")
+    return cands[0]
+
+
+def _load_dataset_labels(images_root: Path, dataset_json: str = "") -> Dict[str, Dict[str, str]]:
+    p = _resolve_dataset_json(images_root, preferred=dataset_json)
+    records = json.load(p.open())
     labels: Dict[str, Dict[str, str]] = {}
     for r in records:
         abs = str((images_root / r["image"]).resolve())
@@ -51,9 +71,17 @@ def _split_modes(reasoning: Dict[str, Dict[str, Any]]) -> Dict[str, Dict[str, st
         items = {k: v for k, v in entry.items() if k != "__meta__"}
         for k, v in items.items():
             key_l = (k or "").lower()
-            is_struct_prompt = key_l.startswith("return a json object") or ("<begin_json>" in key_l) or ("<end_json>" in key_l)
+            # 结构化提示的更稳健识别：优先依据内容解析，其次依据显式标记
+            is_struct_prompt = (
+                key_l.startswith("return a json object")
+                or key_l.startswith("between <begin_json>")
+                or ("<begin_json>" in key_l)
+                or ("<end_json>" in key_l)
+            )
+            # 如果提示明确写了“不使用 JSON/不使用键值行”，则视为自然提示
+            is_explicit_natural = ("no json" in key_l) or ("no key-value" in key_l)
             parsed = _try_parse_structured(v)
-            if is_struct_prompt or parsed:
+            if parsed or (is_struct_prompt and not is_explicit_natural):
                 structured[img] = v
             else:
                 if img not in natural or len(v) > len(natural[img]):
@@ -119,7 +147,7 @@ def main(cfg: MyVLMArtConfig):
     out_dir = cfg.output_root / cfg.concept_name / f"seed_{cfg.seed}" / "reasoning_outputs"
     images_root = Path(cfg.data_root)
     reasoning = _load_reasoning(out_dir, override_path=str(getattr(cfg, "input_json", "")))
-    labels = _load_dataset_labels(images_root, dataset_json=str(getattr(cfg, "dataset_json", "wikiart_5artists_dataset.json")))
+    labels = _load_dataset_labels(images_root, dataset_json=str(getattr(cfg, "dataset_json", "")))
 
     modes = _split_modes(reasoning)
     natural_texts = list(modes["natural"].values())

@@ -12,6 +12,25 @@ from vlms.llava_wrapper import LLaVAWrapper
 from concept_graph.concept_embeddings.multi_embed_layer import MultiTokenConceptLayer
 
 
+def _resolve_dataset_json(images_root: Path, preferred: str = "") -> Path:
+    if preferred:
+        cand = images_root / preferred
+        if cand.exists():
+            return cand
+    pats = ["*wikiart*5artists*.json", "*dataset*.json", "*test*.json", "*.json"]
+    seen = set()
+    cands: List[Path] = []
+    for pat in pats:
+        for p in sorted(images_root.glob(pat), key=lambda x: x.stat().st_mtime, reverse=True):
+            if str(p) in seen:
+                continue
+            seen.add(str(p))
+            cands.append(p)
+    if not cands:
+        raise FileNotFoundError(f"No dataset JSON found under {images_root}")
+    return cands[0]
+
+
 def _count_dim(items: List[Dict[str, Any]], key: str) -> int:
     n = 0
     for rec in items:
@@ -26,8 +45,8 @@ def _count_dim(items: List[Dict[str, Any]], key: str) -> int:
     return n
 
 
-def load_concept_signals(images_root: Path) -> Tuple[Dict[str, Dict[int, torch.Tensor]], Dict[str, Tuple[int, int]]]:
-    dataset_json = images_root / "wikiart_5artists_dataset.json"
+def load_concept_signals(images_root: Path, dataset_json: str = "") -> Tuple[Dict[str, Dict[int, torch.Tensor]], Dict[str, Tuple[int, int]]]:
+    dataset_json = _resolve_dataset_json(images_root, preferred=dataset_json)
     img_list: List[str] = []
     with dataset_json.open("r") as f:
         records = json.load(f)
@@ -140,8 +159,8 @@ def ensure_multi_token_layer(vlm: LLaVAWrapper,
     return layer
 
 
-def _collect_image_paths(images_root: Path) -> List[Path]:
-    dataset_json = images_root / "wikiart_5artists_dataset.json"
+def _collect_image_paths(images_root: Path, dataset_json: str = "") -> List[Path]:
+    dataset_json = _resolve_dataset_json(images_root, preferred=dataset_json)
     with dataset_json.open("r") as f:
         records = json.load(f)
     paths: List[Path] = []
@@ -157,7 +176,7 @@ def main(cfg: MyVLMArtConfig):
     assert cfg.vlm_type == VLMType.LLAVA, "This script currently targets LLaVA for captioning."
     assert cfg.personalization_task == PersonalizationTask.CAPTIONING, "Use captioning task for personalized captions."
     vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)
-    images_root = Path(cfg.data_root) / "dataset"
+    images_root = Path(cfg.data_root)
     signals_map, dim_ranges = load_concept_signals(images_root=images_root)
     concept_idxs = set()
     for v in signals_map.values():
@@ -167,7 +186,7 @@ def main(cfg: MyVLMArtConfig):
     ensure_multi_token_layer(vlm=vlm, cfg=cfg, dim_ranges=dim_ranges, n_concepts=n_concepts)
     prompt_template = VLM_TO_PROMPTS[cfg.vlm_type][cfg.personalization_task][0]
     outputs: Dict[str, Dict[str, str]] = {}
-    for img_path in _collect_image_paths(images_root):
+    for img_path in _collect_image_paths(images_root, dataset_json=getattr(cfg, "dataset_json", "")):
         prompt = prompt_template.format(concept=cfg.concept_identifier)
         inputs = vlm.preprocess(image_path=img_path, prompt=prompt)
         signal = signals_map.get(str(img_path), None)

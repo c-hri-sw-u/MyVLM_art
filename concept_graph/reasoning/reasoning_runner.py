@@ -202,7 +202,7 @@ def run_reasoning(vlm_wrapper, activated_concepts: Optional[Dict[str, Dict[str, 
     assert cfg.vlm_type == VLMType.LLAVA
     assert cfg.personalization_task == PersonalizationTask.CAPTIONING
     images_root = Path(cfg.data_root)
-    signals_map, dim_ranges = load_concept_signals(images_root=images_root)
+    signals_map, dim_ranges = load_concept_signals(images_root=images_root, dataset_json=str(getattr(cfg, "dataset_json", "")))
     concept_idxs: List[int] = []
     for v in signals_map.values():
         for k in v.keys():

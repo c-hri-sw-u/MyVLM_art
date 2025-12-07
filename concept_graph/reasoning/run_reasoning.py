@@ -12,9 +12,28 @@ from myvlm.common import VLMType, PersonalizationTask
 from vlms.llava_wrapper import LLaVAWrapper
 from concept_graph.reasoning.reasoning_runner import run_reasoning
 
+def _resolve_dataset_json(images_root: Path, preferred: str = "") -> Path:
+    if preferred:
+        cand = images_root / preferred
+        if cand.exists():
+            return cand
+    pats = ["*wikiart*5artists*.json", "*dataset*.json", "*test*.json", "*.json"]
+    seen = set()
+    cands: List[Path] = []
+    for pat in pats:
+        for p in sorted(images_root.glob(pat), key=lambda x: x.stat().st_mtime, reverse=True):
+            if str(p) in seen:
+                continue
+            seen.add(str(p))
+            cands.append(p)
+    if not cands:
+        raise FileNotFoundError(f"No dataset JSON found under {images_root}")
+    return cands[0]
 
-def _load_images(images_root: Path, dataset_json: str = "wikiart_5artists_dataset.json") -> List[str]:
-    records = json.load((images_root / dataset_json).open())
+
+def _load_images(images_root: Path, dataset_json: str = "") -> List[str]:
+    p = _resolve_dataset_json(images_root, preferred=dataset_json)
+    records = json.load(p.open())
     images = []
     for r in records:
         rel = r.get("image", "")
@@ -31,7 +50,7 @@ def main(cfg: MyVLMArtConfig, images: Optional[List[str]] = None, checkpoints_pa
     vlm = LLaVAWrapper(device=cfg.device, torch_dtype=cfg.torch_dtype)
     images_root = Path(cfg.data_root)
     if images is None or len(images) == 0:
-        images = _load_images(images_root)
+        images = _load_images(images_root, dataset_json=str(getattr(cfg, "dataset_json", "")))
     if checkpoints_path:
         ckpt_path = checkpoints_path
     else:
