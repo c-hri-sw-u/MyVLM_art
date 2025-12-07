@@ -44,29 +44,21 @@ def build_prompt_structured(activated_concepts: Dict[str, Any], structured_cfg: 
     start = (structured_cfg or {}).get("sentinel_start", "<BEGIN_JSON>")
     end = (structured_cfg or {}).get("sentinel_end", "<END_JSON>")
     return (
-        "Return a JSON object with exactly these keys: artist, style, genre, medium, evidence, summary. "
-        "Wrap the JSON between "
+        "Between "
         + start
         + " and "
         + end
-        + ". "
-        "Use concise English. Set evidence to a list of three short clauses describing brushwork, color palette, and composition. "
-        "Prefer the following activated concepts when assigning values. If uncertain, use 'Unknown'. "
-        f"Activated: artist='{dims['artist']}', style='{dims['style']}', genre='{dims['genre']}', medium='{dims['media']}'. "
-        "Do not include any text before or after the JSON."
+        + ", return only a compact JSON with keys artist, style, genre, evidence. "
+        "Use 'Unknown' if uncertain. In 'evidence', write 2–3 concise sentences explaining your reasoning. Do not include any text outside the JSON."
     )
 
 
 def build_prompt_natural(activated_concepts: Dict[str, Any]) -> str:
     dims = _get_dims(activated_concepts)
-    summary = (
-        f"ConceptSummary: Artist={dims['artist']}; Style={dims['style']}; Genre={dims['genre']}; Medium={dims['media']}"
-    )
     return (
-        "Explain the attribution and stylistic reasoning of this painting in clear English. "
-        "Discuss brushwork, color palette, and composition, and relate them to the likely artist, style, genre, and medium. "
-        "Write 120–180 words in two coherent paragraphs. "
-        + summary
+        "Describe this painting in one cohesive paragraph. "
+        "Naturally mention the artist, style, and genre in the prose (no JSON, no key-value lines). "
+        "Then briefly justify your identification by referring to brushwork, palette, and composition."
     )
 
 

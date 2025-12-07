@@ -3,7 +3,21 @@ import random
 from enum import Enum, auto
 
 import numpy as np
-import torch
+try:
+    import torch
+except Exception:
+    class _TorchStub:
+        class backends:
+            class cudnn:
+                deterministic = False
+                benchmark = False
+        def manual_seed(self, s):
+            pass
+        class cuda:
+            @staticmethod
+            def manual_seed(s):
+                pass
+    torch = _TorchStub()
 
 
 class ConceptType(Enum):

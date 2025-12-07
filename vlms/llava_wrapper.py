@@ -80,7 +80,7 @@ class LLaVAWrapper(VLMWrapper):
                                          temperature=self.temperature,
                                          top_p=self.top_p,
                                          stopping_criteria=[inputs['stopping_criteria']],
-                                         max_new_tokens=512,
+                                         max_new_tokens=128,
                                          output_attentions=False,
                                          return_dict_in_generate=True)
         output = self.processor.tokenizer.batch_decode(output.sequences, skip_special_tokens=True)

@@ -1,27 +1,10 @@
-"""
-简要介绍 (ZH):
-  评估指标集合。包含艺术家识别准确率、分艺术家 Precision/Recall/F1、概念激活指标、
-  解释性评估（覆盖度、连贯性、扎根性、流畅度），以及多维度联合指标（多标签正确率）。
-
-Overview (EN):
-  Evaluation metrics for artist identification and explainability. Includes accuracy, per-artist PRF,
-  concept activation metrics, and reasoning coverage/coherence/grounding/fluency, plus multi-label correctness.
-
-TODOs (详细):
-  1) 分类指标：top‑1/top‑k、macro/weighted F1，分艺术家表格
-  2) 概念激活：每维度 Precision/Recall/F1、多标签一致性（4 维同时正确）
-  3) 解释评估：
-     - 概念覆盖分：生成解释是否覆盖所有激活概念
-     - 连贯性/扎根性/流畅度：人评接口 + 规则基评分（可选）
-  4) 汇总：将评估结果写入 JSON/CSV，供对比与绘图
-"""
-
+from pathlib import Path
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Any
+import json
 
 
 def accuracy_topk(preds: List[str], labels: List[str], k: int = 1) -> float:
-    """计算 top‑k 准确率；preds 为按置信度排序的候选列表或单一预测。"""
     correct = 0
     for i, p in enumerate(preds):
         if isinstance(p, list):
@@ -32,7 +15,6 @@ def accuracy_topk(preds: List[str], labels: List[str], k: int = 1) -> float:
 
 
 def per_class_prf(preds: List[str], labels: List[str]) -> Dict[str, Dict[str, float]]:
-    """按类别统计 Precision/Recall/F1（宏观）。"""
     classes = sorted(set(labels))
     cm = {c: {"tp": 0, "fp": 0, "fn": 0} for c in classes}
     for p, y in zip(preds, labels):
@@ -53,8 +35,28 @@ def per_class_prf(preds: List[str], labels: List[str]) -> Dict[str, Dict[str, fl
     return out
 
 
+def per_concept_breakdown(preds: List[str], labels: List[str]) -> Dict[str, Dict[str, float]]:
+    classes = sorted(set(labels))
+    cm = {c: {"tp": 0, "fp": 0, "fn": 0} for c in classes}
+    for p, y in zip(preds, labels):
+        for c in classes:
+            if p == c and y == c:
+                cm[c]["tp"] += 1
+            elif p == c and y != c:
+                cm[c]["fp"] += 1
+            elif p != c and y == c:
+                cm[c]["fn"] += 1
+    out = {}
+    for c in classes:
+        tp, fp, fn = cm[c]["tp"], cm[c]["fp"], cm[c]["fn"]
+        prec = tp / max(1, tp + fp)
+        rec = tp / max(1, tp + fn)
+        f1 = 2 * prec * rec / max(1e-8, prec + rec)
+        out[c] = {"precision": prec, "recall": rec, "f1": f1, "support": labels.count(c)}
+    return out
+
+
 def macro_weighted_f1(per_class: Dict[str, Dict[str, float]], labels: List[str]) -> Tuple[float, float]:
-    """计算 macro 与 weighted F1。"""
     counts = defaultdict(int)
     for y in labels:
         counts[y] += 1
@@ -69,7 +71,6 @@ def macro_weighted_f1(per_class: Dict[str, Dict[str, float]], labels: List[str])
 
 
 def concept_activation_metrics(pred_concepts: Dict[str, List[str]], gt_concepts: Dict[str, List[str]]) -> Dict[str, float]:
-    """概念激活的 Precision/Recall/F1（按维度或总体），输入为每样本的概念列表。"""
     tp = fp = fn = 0
     for key in gt_concepts.keys():
         gt = set(gt_concepts[key])
@@ -83,8 +84,54 @@ def concept_activation_metrics(pred_concepts: Dict[str, List[str]], gt_concepts:
     return {"precision": prec, "recall": rec, "f1": f1}
 
 
+def recall_at_k(rankings: Dict[str, List[str]], gt: Dict[str, List[str]], k: int) -> float:
+    hits, total = 0, 0
+    for img, gt_list in gt.items():
+        ranked = rankings.get(img, [])[:k]
+        total += len(gt_list)
+        hits += sum(1 for g in gt_list if g in ranked)
+    return hits / max(1, total)
+
+
+def activation_precision(selected: Dict[str, List[str]], gt: Dict[str, List[str]]) -> float:
+    hits, total = 0, 0
+    for img, sel in selected.items():
+        gt_list = gt.get(img, [])
+        target = gt_list[0] if len(gt_list) > 0 else None
+        if target is None:
+            continue
+        for s in sel:
+            total += 1
+            if s == target:
+                hits += 1
+    return hits / max(1, total)
+
+
+def canon_str(s: str) -> str:
+    import re
+    return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+
+
+def best_label_match(pred: str, candidates: List[str]) -> str:
+    p = set(canon_str(pred).split())
+    best = None
+    best_score = -1.0
+    for c in candidates:
+        cc = set(canon_str(c).split())
+        if len(cc) == 0:
+            continue
+        inter = len(p & cc)
+        union = len(p | cc) if len(p | cc) > 0 else 1
+        jacc = inter / union
+        contain = 1.0 if (p <= cc or cc <= p) else 0.0
+        score = max(jacc, contain)
+        if score > best_score:
+            best_score = score
+            best = c
+    return best if best is not None else pred
+
+
 def multi_label_all_correct(preds: List[Dict[str, str]], labels: List[Dict[str, str]]) -> float:
-    """多维度联合准确率：四维标签全部正确的比例。"""
     correct = 0
     for p, y in zip(preds, labels):
         correct += int(all(p.get(k) == y.get(k) for k in y.keys()))
@@ -92,20 +139,174 @@ def multi_label_all_correct(preds: List[Dict[str, str]], labels: List[Dict[str, 
 
 
 def coverage_score(generated_texts: List[str], activated_concepts: List[List[str]]) -> float:
-    """概念覆盖分：文本是否至少提到每个激活概念的平均比例（简单规则基）。"""
     import re
+    def canon(s: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
     scores = []
     for text, concepts in zip(generated_texts, activated_concepts):
-        t = text.lower()
+        t = canon(text)
         covered = 0
         for c in concepts:
-            c_norm = re.escape(c.lower())
-            if re.search(r"\b" + c_norm + r"\b", t):
+            cc = canon(c)
+            if not cc:
+                continue
+            if (" " + t + " ").find(" " + cc + " ") != -1:
                 covered += 1
         scores.append(covered / max(1, len(concepts)))
     return sum(scores) / max(1, len(scores))
 
 
-def summarize(results: Dict) -> Dict:
-    """汇总并返回可保存的评估字典。"""
+def coverage_per_concept(texts: List[str], labels: List[str]) -> Dict[str, Dict[str, float]]:
+    import re
+    def canon(s: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+    stats: Dict[str, Tuple[int, int]] = {}
+    for t, lab in zip(texts, labels):
+        key = lab or ""
+        if key not in stats:
+            stats[key] = (0, 0)
+        hit = 0
+        tt = canon(t)
+        kk = canon(key)
+        if kk and (" " + tt + " ").find(" " + kk + " ") != -1:
+            hit = 1
+        c_hit, c_tot = stats[key]
+        stats[key] = (c_hit + hit, c_tot + 1)
+    out: Dict[str, Dict[str, float]] = {}
+    for k, (h, tot) in stats.items():
+        out[k] = {"coverage": (h / max(1, tot)), "support": float(tot)}
+    return out
+
+
+def save_results(results: Dict[str, Any], out_path: Path) -> None:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with out_path.open("w") as f:
+        json.dump(results, f, indent=4, sort_keys=True)
+
+
+def summarize(results: Dict[str, Any]) -> Dict[str, Any]:
     return results
+
+
+def strip_diacritics(s: str) -> str:
+    import unicodedata
+    import re
+    if s is None:
+        return ""
+    nfkd = unicodedata.normalize('NFD', s)
+    no_accents = "".join(ch for ch in nfkd if unicodedata.category(ch) != 'Mn')
+    return re.sub(r"\s+", " ", no_accents).strip()
+
+
+def _mutate_ism_to_ist(tokens: List[str]) -> List[str]:
+    out = []
+    for t in tokens:
+        if t.endswith("ism"):
+            out.append(t[:-3] + "ist")
+        else:
+            out.append(t)
+    return out
+
+
+def build_alias_map_for_artists(candidates: List[str]) -> Dict[str, str]:
+    alias_to_many: Dict[str, set] = {}
+    for c in candidates:
+        s = strip_diacritics(c)
+        cs = canon_str(s)
+        tokens = [t for t in cs.split() if t]
+        variants = set()
+        variants.add(cs)
+        variants.add(cs.replace(" ", "-"))
+        if tokens:
+            last = tokens[-1]
+            variants.add(last)
+            variants.add(last.replace(" ", "-"))
+        for v in variants:
+            if not v:
+                continue
+            alias_to_many.setdefault(v, set()).add(c)
+    alias_unique: Dict[str, str] = {}
+    for a, setc in alias_to_many.items():
+        if len(setc) == 1:
+            alias_unique[a] = list(setc)[0]
+    return alias_unique
+
+
+def build_alias_map_for_styles(candidates: List[str]) -> Dict[str, str]:
+    alias_to_many: Dict[str, set] = {}
+    for c in candidates:
+        s = strip_diacritics(c)
+        cs = canon_str(s)
+        tokens = [t for t in cs.split() if t]
+        variants = set()
+        variants.add(cs)
+        variants.add(cs.replace(" ", "-"))
+        mt = _mutate_ism_to_ist(tokens)
+        if mt != tokens:
+            v1 = " ".join(mt)
+            variants.add(v1)
+            variants.add(v1.replace(" ", "-"))
+        for v in variants:
+            if not v:
+                continue
+            alias_to_many.setdefault(v, set()).add(c)
+    alias_unique: Dict[str, str] = {}
+    for a, setc in alias_to_many.items():
+        if len(setc) == 1:
+            alias_unique[a] = list(setc)[0]
+    return alias_unique
+
+
+def _pluralize_last(tokens: List[str]) -> List[str]:
+    out = tokens[:]
+    if len(out) == 0:
+        return out
+    last = out[-1]
+    if last.endswith("s"):
+        return out
+    out[-1] = last + "s"
+    return out
+
+
+def _singularize_last(tokens: List[str]) -> List[str]:
+    out = tokens[:]
+    if len(out) == 0:
+        return out
+    last = out[-1]
+    if last.endswith("s") and not last.endswith("ss"):
+        out[-1] = last[:-1]
+    return out
+
+
+def build_alias_map_for_genres(candidates: List[str]) -> Dict[str, str]:
+    alias_to_many: Dict[str, set] = {}
+    for c in candidates:
+        s = strip_diacritics(c)
+        cs = canon_str(s)
+        tokens = [t for t in cs.split() if t]
+        variants = set()
+        variants.add(cs)
+        variants.add(cs.replace(" ", "-"))
+        pv = " ".join(_pluralize_last(tokens))
+        sv = " ".join(_singularize_last(tokens))
+        variants.add(pv)
+        variants.add(pv.replace(" ", "-"))
+        variants.add(sv)
+        variants.add(sv.replace(" ", "-"))
+        for v in variants:
+            if not v:
+                continue
+            alias_to_many.setdefault(v, set()).add(c)
+    alias_unique: Dict[str, str] = {}
+    for a, setc in alias_to_many.items():
+        if len(setc) == 1:
+            alias_unique[a] = list(setc)[0]
+    return alias_unique
+
+
+def build_alias_maps(artists: List[str], styles: List[str], genres: List[str]) -> Dict[str, Dict[str, str]]:
+    return {
+        "artist": build_alias_map_for_artists(artists),
+        "style": build_alias_map_for_styles(styles),
+        "genre": build_alias_map_for_genres(genres),
+    }

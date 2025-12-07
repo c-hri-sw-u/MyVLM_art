@@ -1,0 +1,464 @@
+{
+    "/home/ubuntu/MyVLM_art/data/dataset/van_gogh/van_gogh_10.jpg": {
+        "Identify the artist, style, and genre of this painting. First provide three lines: 'artist: ...', 'style: ...', 'genre: ...'. Then explain your reasoning in 2-3 sentences. For example, you can discuss brushwork, color palette, and composition... ": "artist: vincent\nstyle: realism\ngenre: genre_painting\nThe painting depicts a woman in a realistic style, characterized by fine brushwork and attention to detail, which is typical of Vincent van Gogh's work. The genre is genre painting, as it portrays a common, everyday scene of a woman nursing a baby, a subject matter that was often explored by artists to capture the intimate moments of domestic life. The monochromatic color palette and loose brushstrokes contribute to the realistic representation of the scene,",
+        "Return a JSON object with exactly these keys: artist, style, genre, evidence. Wrap the JSON between <BEGIN_JSON> and <END_JSON>. If uncertain, use 'Unknown'. Followed by 2-3 brief sentences explaining your reasoning. Do not include any text before or after the JSON.": "{\n\"artist\": \"vincent\",\n\"style\": \"realism\",\n\"genre\": \"genre_painting\",\n\"evidence\": \"The image depicts a woman in a domestic setting, nurturing a child, which is a common subject in genre painting. The detailed observation of the human figure and the intimate moment captured are characteristic of realism. The style is reminiscent of Vincent van Gogh's work, known for its emphasis on the interplay of light and shadow, and the emotional depth of the subjects.\"\n}\n\nThe",
+        "__meta__": {
+            "activation": {
+                "artist": {
+                    "ranked_global": [
+                        [
+                            0,
+                            0.8258246183395386
+                        ],
+                        [
+                            2,
+                            0.4790600538253784
+                        ],
+                        [
+                            3,
+                            0.34499838948249817
+                        ],
+                        [
+                            4,
+                            0.273566871881485
+                        ],
+                        [
+                            1,
+                            0.17225663363933563
+                        ]
+                    ],
+                    "ranked_names": [
+                        "vincent-van-gogh",
+                        "pablo-picasso",
+                        "rembrandt",
+                        "leonardo-da-vinci",
+                        "claude-monet"
+                    ],
+                    "selected_global": [
+                        0
+                    ],
+                    "selected_names": [
+                        "vincent-van-gogh"
+                    ]
+                },
+                "genre": {
+                    "ranked_global": [
+                        [
+                            15,
+                            0.8888970613479614
+                        ],
+                        [
+                            16,
+                            0.554749071598053
+                        ],
+                        [
+                            18,
+                            0.5214433670043945
+                        ],
+                        [
+                            21,
+                            0.33129048347473145
+                        ],
+                        [
+                            17,
+                            0.29575619101524353
+                        ],
+                        [
+                            20,
+                            0.2511694133281708
+                        ],
+                        [
+                            19,
+                            0.2440963089466095
+                        ],
+                        [
+                            14,
+                            0.20999687910079956
+                        ]
+                    ],
+                    "ranked_names": [
+                        "genre_painting",
+                        "portrait",
+                        "sketch_and_study",
+                        "religious_painting",
+                        "still_life",
+                        "nude_painting",
+                        "cityscape",
+                        "landscape"
+                    ],
+                    "selected_global": [
+                        15
+                    ],
+                    "selected_names": [
+                        "genre_painting"
+                    ]
+                },
+                "style": {
+                    "ranked_global": [
+                        [
+                            6,
+                            0.9043470621109009
+                        ],
+                        [
+                            5,
+                            0.5285647511482239
+                        ],
+                        [
+                            11,
+                            0.4542813003063202
+                        ],
+                        [
+                            9,
+                            0.4259594976902008
+                        ],
+                        [
+                            13,
+                            0.38952162861824036
+                        ],
+                        [
+                            10,
+                            0.3562990427017212
+                        ],
+                        [
+                            12,
+                            0.29035618901252747
+                        ],
+                        [
+                            8,
+                            0.1981608271598816
+                        ],
+                        [
+                            7,
+                            0.16543565690517426
+                        ]
+                    ],
+                    "ranked_names": [
+                        "Realism",
+                        "Post_Impressionism",
+                        "Baroque",
+                        "Symbolism",
+                        "High_Renaissance",
+                        "Expressionism",
+                        "Early_Renaissance",
+                        "Cubism",
+                        "Impressionism"
+                    ],
+                    "selected_global": [
+                        6
+                    ],
+                    "selected_names": [
+                        "Realism"
+                    ]
+                }
+            }
+        }
+    },
+    "/home/ubuntu/MyVLM_art/data/dataset/van_gogh/van_gogh_8.jpg": {
+        "Identify the artist, style, and genre of this painting. First provide three lines: 'artist: ...', 'style: ...', 'genre: ...'. Then explain your reasoning in 2-3 sentences. For example, you can discuss brushwork, color palette, and composition... ": "artist: vincent_van_gogh\nstyle: Post_Impressionism\ngenre: landscape\n\nThe painting is a beautiful representation of the Post-Impressionist style, characterized by its bold brushwork and vibrant color palette. The artist, Vincent van Gogh, is known for his unique technique and use of color to convey emotion. The genre of the painting is landscape, depicting a field with trees and a river, which is a common subject in Van Gogh's work. The composition and brushwork are distinctly Van Gogh's",
+        "Return a JSON object with exactly these keys: artist, style, genre, evidence. Wrap the JSON between <BEGIN_JSON> and <END_JSON>. If uncertain, use 'Unknown'. Followed by 2-3 brief sentences explaining your reasoning. Do not include any text before or after the JSON.": "{\n\"artist\": \"vincent_van_gogh\",\n\"style\": \"Post_Impressionism\",\n\"genre\": \"landscape\",\n\"evidence\": \"The painting depicts a landscape with a prominent tree in the foreground, characterized by thick, swirling brushstrokes and vibrant colors. The use of bold, contrasting colors and the loose, expressive style are indicative of Vincent van Gogh's Post-Impressionist technique. The painting is likely a representation of the landscape near the artist's home in the south",
+        "__meta__": {
+            "activation": {
+                "artist": {
+                    "ranked_global": [
+                        [
+                            0,
+                            0.8389887809753418
+                        ],
+                        [
+                            2,
+                            0.38242924213409424
+                        ],
+                        [
+                            1,
+                            0.3676922917366028
+                        ],
+                        [
+                            4,
+                            0.30067092180252075
+                        ],
+                        [
+                            3,
+                            0.18293370306491852
+                        ]
+                    ],
+                    "ranked_names": [
+                        "vincent-van-gogh",
+                        "pablo-picasso",
+                        "claude-monet",
+                        "leonardo-da-vinci",
+                        "rembrandt"
+                    ],
+                    "selected_global": [
+                        0
+                    ],
+                    "selected_names": [
+                        "vincent-van-gogh"
+                    ]
+                },
+                "genre": {
+                    "ranked_global": [
+                        [
+                            14,
+                            0.8955478072166443
+                        ],
+                        [
+                            15,
+                            0.500270426273346
+                        ],
+                        [
+                            16,
+                            0.44758495688438416
+                        ],
+                        [
+                            18,
+                            0.40740275382995605
+                        ],
+                        [
+                            17,
+                            0.31964775919914246
+                        ],
+                        [
+                            20,
+                            0.2924984395503998
+                        ],
+                        [
+                            19,
+                            0.261565238237381
+                        ],
+                        [
+                            21,
+                            0.165500208735466
+                        ]
+                    ],
+                    "ranked_names": [
+                        "landscape",
+                        "genre_painting",
+                        "portrait",
+                        "sketch_and_study",
+                        "still_life",
+                        "nude_painting",
+                        "cityscape",
+                        "religious_painting"
+                    ],
+                    "selected_global": [
+                        14
+                    ],
+                    "selected_names": [
+                        "landscape"
+                    ]
+                },
+                "style": {
+                    "ranked_global": [
+                        [
+                            5,
+                            0.9111099243164062
+                        ],
+                        [
+                            6,
+                            0.5360019207000732
+                        ],
+                        [
+                            7,
+                            0.493423193693161
+                        ],
+                        [
+                            13,
+                            0.3991318345069885
+                        ],
+                        [
+                            10,
+                            0.3274702727794647
+                        ],
+                        [
+                            12,
+                            0.2844046354293823
+                        ],
+                        [
+                            9,
+                            0.26002931594848633
+                        ],
+                        [
+                            11,
+                            0.23903392255306244
+                        ],
+                        [
+                            8,
+                            0.2218133807182312
+                        ]
+                    ],
+                    "ranked_names": [
+                        "Post_Impressionism",
+                        "Realism",
+                        "Impressionism",
+                        "High_Renaissance",
+                        "Expressionism",
+                        "Early_Renaissance",
+                        "Symbolism",
+                        "Baroque",
+                        "Cubism"
+                    ],
+                    "selected_global": [
+                        5
+                    ],
+                    "selected_names": [
+                        "Post_Impressionism"
+                    ]
+                }
+            }
+        }
+    },
+    "/home/ubuntu/MyVLM_art/data/dataset/van_gogh/van_gogh_9.jpg": {
+        "Identify the artist, style, and genre of this painting. First provide three lines: 'artist: ...', 'style: ...', 'genre: ...'. Then explain your reasoning in 2-3 sentences. For example, you can discuss brushwork, color palette, and composition... ": "artist: vincent_van_gogh\nstyle: Post_Impressionism\ngenre: landscape\n\nThe painting is a beautiful representation of the Post-Impressionist landscape genre, characterized by the use of bold colors and brushwork that is typical of Vincent van Gogh's style. The artist's signature swirling lines and thick application of paint are evident in the depiction of the river, rocks, and vegetation. The color palette is vibrant and contrasting, with the blue of the sky and water, the green of the foliage, and the red",
+        "Return a JSON object with exactly these keys: artist, style, genre, evidence. Wrap the JSON between <BEGIN_JSON> and <END_JSON>. If uncertain, use 'Unknown'. Followed by 2-3 brief sentences explaining your reasoning. Do not include any text before or after the JSON.": "{\n\"artist\": \"vincent_van_gogh\",\n\"style\": \"Post_Impressionism\",\n\"genre\": \"landscape\",\n\"evidence\": \"The painting depicts a landscape with a river flowing through a rocky area, with a small village nestled in the background. The brushwork is characterized by thick, swirling lines and vibrant colors, typical of Vincent van Gogh's Post-Impressionist style. The genre is landscape, as it captures the natural environment with a focus on the interplay of light and",
+        "__meta__": {
+            "activation": {
+                "artist": {
+                    "ranked_global": [
+                        [
+                            0,
+                            0.82917320728302
+                        ],
+                        [
+                            2,
+                            0.4151931405067444
+                        ],
+                        [
+                            1,
+                            0.39083951711654663
+                        ],
+                        [
+                            4,
+                            0.2965480387210846
+                        ],
+                        [
+                            3,
+                            0.16192229092121124
+                        ]
+                    ],
+                    "ranked_names": [
+                        "vincent-van-gogh",
+                        "pablo-picasso",
+                        "claude-monet",
+                        "leonardo-da-vinci",
+                        "rembrandt"
+                    ],
+                    "selected_global": [
+                        0
+                    ],
+                    "selected_names": [
+                        "vincent-van-gogh"
+                    ]
+                },
+                "genre": {
+                    "ranked_global": [
+                        [
+                            14,
+                            0.8940308094024658
+                        ],
+                        [
+                            15,
+                            0.5420763492584229
+                        ],
+                        [
+                            19,
+                            0.40609899163246155
+                        ],
+                        [
+                            18,
+                            0.3735811710357666
+                        ],
+                        [
+                            17,
+                            0.3540306091308594
+                        ],
+                        [
+                            16,
+                            0.3287719488143921
+                        ],
+                        [
+                            20,
+                            0.21036191284656525
+                        ],
+                        [
+                            21,
+                            0.18290303647518158
+                        ]
+                    ],
+                    "ranked_names": [
+                        "landscape",
+                        "genre_painting",
+                        "cityscape",
+                        "sketch_and_study",
+                        "still_life",
+                        "portrait",
+                        "nude_painting",
+                        "religious_painting"
+                    ],
+                    "selected_global": [
+                        14
+                    ],
+                    "selected_names": [
+                        "landscape"
+                    ]
+                },
+                "style": {
+                    "ranked_global": [
+                        [
+                            5,
+                            0.9182507395744324
+                        ],
+                        [
+                            7,
+                            0.5277799963951111
+                        ],
+                        [
+                            6,
+                            0.41731733083724976
+                        ],
+                        [
+                            12,
+                            0.3570438027381897
+                        ],
+                        [
+                            13,
+                            0.311202734708786
+                        ],
+                        [
+                            8,
+                            0.30672046542167664
+                        ],
+                        [
+                            9,
+                            0.3039819300174713
+                        ],
+                        [
+                            10,
+                            0.2957192361354828
+                        ],
+                        [
+                            11,
+                            0.2040942907333374
+                        ]
+                    ],
+                    "ranked_names": [
+                        "Post_Impressionism",
+                        "Impressionism",
+                        "Realism",
+                        "Early_Renaissance",
+                        "High_Renaissance",
+                        "Cubism",
+                        "Symbolism",
+                        "Expressionism",
+                        "Baroque"
+                    ],
+                    "selected_global": [
+                        5
+                    ],
+                    "selected_names": [
+                        "Post_Impressionism"
+                    ]
+                }
+            }
+        }
+    }
+}

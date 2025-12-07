@@ -1,0 +1,211 @@
+{
+    "activation": {
+        "artist": {
+            "precision": 1.0,
+            "recall@3": 0.11627906976744186,
+            "recall@5": 0.11627906976744186
+        },
+        "genre": {
+            "precision": 1.0,
+            "recall@3": 0.11627906976744186,
+            "recall@5": 0.11627906976744186
+        },
+        "style": {
+            "precision": 1.0,
+            "recall@3": 0.11627906976744186,
+            "recall@5": 0.11627906976744186
+        }
+    },
+    "natural": {
+        "coverage": 0.5333333333333333,
+        "coverage_per_concept": {
+            "artist": {
+                "vincent-van-gogh": {
+                    "coverage": 0.6,
+                    "support": 10.0
+                }
+            },
+            "genre": {
+                "genre_painting": {
+                    "coverage": 0.5,
+                    "support": 4.0
+                },
+                "landscape": {
+                    "coverage": 0.5,
+                    "support": 4.0
+                },
+                "portrait": {
+                    "coverage": 0.0,
+                    "support": 1.0
+                },
+                "still_life": {
+                    "coverage": 1.0,
+                    "support": 1.0
+                }
+            },
+            "style": {
+                "Post_Impressionism": {
+                    "coverage": 0.6666666666666666,
+                    "support": 6.0
+                },
+                "Realism": {
+                    "coverage": 0.25,
+                    "support": 4.0
+                }
+            }
+        },
+        "macro_f1": {
+            "artist": 0.7499999999999999,
+            "genre": 0.5984848484848485,
+            "style": 0.7
+        },
+        "multi_label_all_correct": 0.3,
+        "per_concept": {
+            "artist": {
+                "vincent-van-gogh": {
+                    "f1": 0.7499999999999999,
+                    "precision": 1.0,
+                    "recall": 0.6,
+                    "support": 10
+                }
+            },
+            "genre": {
+                "genre_painting": {
+                    "f1": 0.7272727272727273,
+                    "precision": 0.5714285714285714,
+                    "recall": 1.0,
+                    "support": 4
+                },
+                "landscape": {
+                    "f1": 0.6666666666666666,
+                    "precision": 1.0,
+                    "recall": 0.5,
+                    "support": 4
+                },
+                "portrait": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 1
+                },
+                "still_life": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 1
+                }
+            },
+            "style": {
+                "Post_Impressionism": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 6
+                },
+                "Realism": {
+                    "f1": 0.4,
+                    "precision": 1.0,
+                    "recall": 0.25,
+                    "support": 4
+                }
+            }
+        },
+        "weighted_f1": {
+            "artist": 0.7499999999999999,
+            "genre": 0.6575757575757576,
+            "style": 0.76
+        }
+    },
+    "saliency": {
+        "paths": {
+            "artist": [],
+            "genre": [],
+            "style": []
+        },
+        "stats": {
+            "artist": {
+                "count": 0.0,
+                "max": 0.0,
+                "mean": 0.0
+            },
+            "genre": {
+                "count": 0.0,
+                "max": 0.0,
+                "mean": 0.0
+            },
+            "style": {
+                "count": 0.0,
+                "max": 0.0,
+                "mean": 0.0
+            }
+        }
+    },
+    "saliency_llava": {
+        "paths": [],
+        "stats": {
+            "count": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+        }
+    },
+    "structured": {
+        "coverage": 0.6666666666666666,
+        "coverage_per_concept": {
+            "artist": {
+                "vincent-van-gogh": {
+                    "coverage": 0.0,
+                    "support": 1.0
+                }
+            },
+            "genre": {
+                "genre_painting": {
+                    "coverage": 1.0,
+                    "support": 1.0
+                }
+            },
+            "style": {
+                "Realism": {
+                    "coverage": 1.0,
+                    "support": 1.0
+                }
+            }
+        },
+        "macro_f1": {
+            "artist": 0.0,
+            "genre": 1.0,
+            "style": 1.0
+        },
+        "multi_label_all_correct": 0.0,
+        "per_concept": {
+            "artist": {
+                "vincent-van-gogh": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 1
+                }
+            },
+            "genre": {
+                "genre_painting": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 1
+                }
+            },
+            "style": {
+                "Realism": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 1
+                }
+            }
+        },
+        "weighted_f1": {
+            "artist": 0.0,
+            "genre": 1.0,
+            "style": 1.0
+        }
+    }
+}
