@@ -57,7 +57,7 @@ class MultiTokenEmbeddingTrainer:
             "genre": Path("artifacts/concept_signals_genre.json"),
         }
         self.stage_a_steps = int(self.cfg.optimization_steps)
-        self.stage_b_steps = max(1, int(self.cfg.optimization_steps // 2))
+        self.stage_b_steps = int(self.cfg.optimization_steps)  # Stage B 和 Stage A 相同 epochs
         self._train_loaders: Dict[str, DataLoader] = {}
         self._val_loaders: Dict[str, DataLoader] = {}
         self._build_stage_loaders()
