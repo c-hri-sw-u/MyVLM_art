@@ -185,10 +185,38 @@ class MultiTokenEmbeddingTrainer:
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0) and (batch_idx % attn_interval == 0)
                 # Stage B: 移除 token_weights，模型不支持此参数
                 token_weights = batch.pop("token_weights", None)
+                labels = batch.get("labels", None)  # 保存 labels 用于加权 loss
                 with torch.cuda.amp.autocast():
                     outputs = self.myvlm.vlm.model(**batch)
-                loss = outputs.loss
-                # TODO: 如需加权 loss，可在此使用 token_weights 手动计算
+                
+                # 使用 token_weights 计算加权 loss
+                if token_weights is not None and labels is not None:
+                    # shift: 预测 token[i+1] 基于 token[0:i]
+                    shift_logits = outputs.logits[..., :-1, :].contiguous()
+                    shift_labels = labels[..., 1:].contiguous()
+                    shift_weights = token_weights[..., 1:].contiguous()
+                    
+                    # 计算每个位置的 loss
+                    vocab_size = shift_logits.size(-1)
+                    loss_fct = torch.nn.CrossEntropyLoss(reduction='none', ignore_index=-100)
+                    per_token_loss = loss_fct(
+                        shift_logits.view(-1, vocab_size),
+                        shift_labels.view(-1)
+                    )
+                    
+                    # 应用权重（只对有效位置）
+                    weights_flat = shift_weights.view(-1)
+                    valid_mask = (shift_labels.view(-1) != -100).float()
+                    weighted_loss = per_token_loss * weights_flat
+                    
+                    # 归一化：按权重和计算平均
+                    weight_sum = (weights_flat * valid_mask).sum()
+                    if weight_sum > 0:
+                        loss = weighted_loss.sum() / weight_sum
+                    else:
+                        loss = outputs.loss  # fallback
+                else:
+                    loss = outputs.loss
                 reg_loss = 0.0
                 if getattr(self.cfg, "reg_lambda", 0.0) > 0 and hasattr(outputs, "attentions") and hasattr(outputs, "concept_token_idxs") and outputs.concept_token_idxs is not None:
                     try:
@@ -212,22 +240,20 @@ class MultiTokenEmbeddingTrainer:
                 pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 # wandb 日志记录
                 if use_wandb:
-                    # 诊断：检查 loss 的原始值
+                    # 原始 loss（未加权）vs 加权 loss
                     raw_loss = outputs.loss.item() if hasattr(outputs.loss, 'item') else float(outputs.loss)
+                    weighted_loss_val = float(loss) - float(reg_loss)  # 减去 reg_loss 得到纯 lm loss
                     wandb.log({
                         "stage": "B",
                         "epoch": j + 1,
                         "batch": batch_idx,
                         "global_step": global_step,
-                        "train/loss": float(loss),
+                        "train/loss": float(loss),              # 总 loss（加权 + reg）
+                        "train/weighted_lm_loss": weighted_loss_val,  # 加权语言建模 loss
+                        "train/raw_lm_loss": raw_loss,          # 原始未加权 loss
                         "train/reg_loss": float(reg_loss),
-                        "train/lm_loss": raw_loss,
-                        "train/lm_loss_raw": raw_loss,  # 原始值用于诊断
                         "lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
                     }, step=global_step)
-                    # 如果 loss 异常小，打印警告
-                    if raw_loss < 1e-6 and raw_loss > 0:
-                        tqdm.write(f"⚠️ Stage B batch {batch_idx}: loss 异常小 = {raw_loss:.2e}")
                 global_step += 1
                 if self.myvlm._should_validate(step, batch_idx):
                     tqdm.write(f"Validating B step {step}")
