@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
 
 import torch
 
@@ -49,6 +50,11 @@ class MyVLMArtConfig:
     seed: int = 42
     grad_accum_steps: int = 4
     attn_reg_interval: int = 4
+
+    # Wandb 日志配置
+    use_wandb: bool = False                      # 是否启用 wandb 日志
+    wandb_project: str = 'myvlm-art'             # wandb 项目名称
+    wandb_run_name: Optional[str] = None         # wandb 运行名称 (None 则自动生成)
 
     def __post_init__(self):
         # 目录派生与存在性校验（保持与当前项目结构兼容）
