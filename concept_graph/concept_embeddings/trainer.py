@@ -164,10 +164,11 @@ class MultiTokenEmbeddingTrainer:
             pbar_a.update(1)
 
         pbar_b = tqdm(total=self.stage_b_steps, desc="Stage B")
-        try:
-            torch.cuda.empty_cache()
-        except Exception:
-            pass
+        # Stage B 开始前彻底清理显存
+        import gc
+        gc.collect()
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
         # 诊断：检查 Stage B 数据集
         if use_wandb:
             sample_b = self._train_loaders["B"].dataset.samples[0] if len(self._train_loaders["B"].dataset.samples) > 0 else {}
@@ -189,32 +190,32 @@ class MultiTokenEmbeddingTrainer:
                 with torch.cuda.amp.autocast():
                     outputs = self.myvlm.vlm.model(**batch)
                 
-                # 使用 token_weights 计算加权 loss
+                # 使用 token_weights 计算加权 loss（显存优化版）
                 if token_weights is not None and labels is not None:
                     # shift: 预测 token[i+1] 基于 token[0:i]
-                    shift_logits = outputs.logits[..., :-1, :].contiguous()
                     shift_labels = labels[..., 1:].contiguous()
                     shift_weights = token_weights[..., 1:].contiguous()
+                    vocab_size = outputs.logits.size(-1)
                     
-                    # 计算每个位置的 loss
-                    vocab_size = shift_logits.size(-1)
+                    # 直接在原始 logits 上操作，避免创建完整副本
                     loss_fct = torch.nn.CrossEntropyLoss(reduction='none', ignore_index=-100)
                     per_token_loss = loss_fct(
-                        shift_logits.view(-1, vocab_size),
-                        shift_labels.view(-1)
+                        outputs.logits[..., :-1, :].reshape(-1, vocab_size),
+                        shift_labels.reshape(-1)
                     )
                     
-                    # 应用权重（只对有效位置）
-                    weights_flat = shift_weights.view(-1)
-                    valid_mask = (shift_labels.view(-1) != -100).float()
-                    weighted_loss = per_token_loss * weights_flat
-                    
-                    # 归一化：按权重和计算平均
+                    # 应用权重
+                    weights_flat = shift_weights.reshape(-1)
+                    valid_mask = (shift_labels.reshape(-1) != -100).float()
                     weight_sum = (weights_flat * valid_mask).sum()
+                    
                     if weight_sum > 0:
-                        loss = weighted_loss.sum() / weight_sum
+                        loss = (per_token_loss * weights_flat).sum() / weight_sum
                     else:
-                        loss = outputs.loss  # fallback
+                        loss = outputs.loss
+                    
+                    # 立即释放中间变量
+                    del per_token_loss, weights_flat, valid_mask, shift_labels, shift_weights
                 else:
                     loss = outputs.loss
                 reg_loss = 0.0
