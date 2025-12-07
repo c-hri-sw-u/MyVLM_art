@@ -184,23 +184,35 @@ class MultiTokenEmbeddingTrainer:
                     break
                 attn_interval = int(getattr(self.cfg, "attn_reg_interval", 1))
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0) and (batch_idx % attn_interval == 0)
-                # Stage B: 移除 token_weights，模型不支持此参数
+                # Stage B: 提取 token_weights 和 labels
                 token_weights = batch.pop("token_weights", None)
-                labels = batch.get("labels", None)  # 保存 labels 用于加权 loss
+                labels = batch.get("labels", None)
+                
                 with torch.cuda.amp.autocast():
                     outputs = self.myvlm.vlm.model(**batch)
                 
-                # 使用 token_weights 计算加权 loss（显存优化版）
+                # 使用 token_weights 计算加权 loss（修复 image tokens 导致的长度不匹配）
                 if token_weights is not None and labels is not None:
-                    # shift: 预测 token[i+1] 基于 token[0:i]
-                    shift_labels = labels[..., 1:].contiguous()
-                    shift_weights = token_weights[..., 1:].contiguous()
-                    vocab_size = outputs.logits.size(-1)
+                    logits = outputs.logits
+                    seq_logits = logits.size(1)
+                    seq_labels = labels.size(1)
                     
-                    # 直接在原始 logits 上操作，避免创建完整副本
+                    # 对齐：image tokens 在序列开头，从 logits 末尾截取
+                    if seq_logits > seq_labels:
+                        logits_aligned = logits[:, -seq_labels:, :]
+                    else:
+                        logits_aligned = logits
+                    
+                    # Shift: 预测下一个 token
+                    shift_logits = logits_aligned[:, :-1, :].contiguous()
+                    shift_labels = labels[:, 1:].contiguous()
+                    shift_weights = token_weights[:, 1:].contiguous()
+                    
+                    # 计算 per-token loss
+                    vocab_size = shift_logits.size(-1)
                     loss_fct = torch.nn.CrossEntropyLoss(reduction='none', ignore_index=-100)
                     per_token_loss = loss_fct(
-                        outputs.logits[..., :-1, :].reshape(-1, vocab_size),
+                        shift_logits.reshape(-1, vocab_size),
                         shift_labels.reshape(-1)
                     )
                     
@@ -210,12 +222,12 @@ class MultiTokenEmbeddingTrainer:
                     weight_sum = (weights_flat * valid_mask).sum()
                     
                     if weight_sum > 0:
-                        loss = (per_token_loss * weights_flat).sum() / weight_sum
+                        loss = (per_token_loss * weights_flat * valid_mask).sum() / weight_sum
                     else:
                         loss = outputs.loss
                     
-                    # 立即释放中间变量
-                    del per_token_loss, weights_flat, valid_mask, shift_labels, shift_weights
+                    # 释放中间变量
+                    del per_token_loss, weights_flat, valid_mask, shift_labels, shift_weights, logits_aligned, shift_logits
                 else:
                     loss = outputs.loss
                 reg_loss = 0.0
