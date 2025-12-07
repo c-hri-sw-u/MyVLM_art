@@ -168,6 +168,11 @@ class MultiTokenEmbeddingTrainer:
             torch.cuda.empty_cache()
         except Exception:
             pass
+        # 诊断：检查 Stage B 数据集
+        if use_wandb:
+            sample_b = self._train_loaders["B"].dataset.samples[0] if len(self._train_loaders["B"].dataset.samples) > 0 else {}
+            tqdm.write(f"[Stage B] 数据集大小: {len(self._train_loaders['B'].dataset)}")
+            tqdm.write(f"[Stage B] 示例 target_keys: {sample_b.get('labels_per_dim', {})}")
         for j in range(self.stage_b_steps):
             step = self.stage_a_steps + j
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", step)
@@ -204,6 +209,8 @@ class MultiTokenEmbeddingTrainer:
                 pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
                 # wandb 日志记录
                 if use_wandb:
+                    # 诊断：检查 loss 的原始值
+                    raw_loss = outputs.loss.item() if hasattr(outputs.loss, 'item') else float(outputs.loss)
                     wandb.log({
                         "stage": "B",
                         "epoch": j + 1,
@@ -211,9 +218,13 @@ class MultiTokenEmbeddingTrainer:
                         "global_step": global_step,
                         "train/loss": float(loss),
                         "train/reg_loss": float(reg_loss),
-                        "train/lm_loss": float(outputs.loss),
+                        "train/lm_loss": raw_loss,
+                        "train/lm_loss_raw": raw_loss,  # 原始值用于诊断
                         "lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
                     }, step=global_step)
+                    # 如果 loss 异常小，打印警告
+                    if raw_loss < 1e-6 and raw_loss > 0:
+                        tqdm.write(f"⚠️ Stage B batch {batch_idx}: loss 异常小 = {raw_loss:.2e}")
                 global_step += 1
                 if self.myvlm._should_validate(step, batch_idx):
                     tqdm.write(f"Validating B step {step}")
