@@ -22,10 +22,17 @@ from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
 import json
 import csv
+import os
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 import hashlib
 import gc
+
+try:
+    import wandb
+    WANDB_AVAILABLE = True
+except ImportError:
+    WANDB_AVAILABLE = False
 
 from concept_graph.concept_embeddings.datasets.llava_concept_graph_dataset import (
     LLaVAConceptGraphDataset,
@@ -56,6 +63,71 @@ class MultiTokenEmbeddingTrainer:
         self._val_loaders: Dict[str, DataLoader] = {}
         self._build_stage_loaders()
         self._injected_layer = None
+        
+        # Initialize wandb logging
+        self.use_wandb = getattr(self.cfg, "use_wandb", False) and WANDB_AVAILABLE
+        self._init_wandb()
+    
+    def _init_wandb(self):
+        """
+        Initialize wandb for logging. API key is read from:
+        1. Environment variable WANDB_API_KEY
+        2. Config attribute wandb_api_key
+        3. ~/.wandb_api_key file
+        """
+        if not self.use_wandb:
+            return
+        
+        if not WANDB_AVAILABLE:
+            print("Warning: wandb not installed. Skipping wandb logging.")
+            self.use_wandb = False
+            return
+        
+        # Try to get API key from multiple sources
+        api_key = None
+        
+        # 1. Environment variable (highest priority)
+        api_key = os.environ.get("WANDB_API_KEY")
+        
+        # 2. Config attribute
+        if not api_key:
+            api_key = getattr(self.cfg, "wandb_api_key", None)
+        
+        # 3. File in home directory
+        if not api_key:
+            key_file = Path.home() / ".wandb_api_key"
+            if key_file.exists():
+                api_key = key_file.read_text().strip()
+        
+        if api_key:
+            wandb.login(key=api_key)
+        
+        # Initialize wandb run
+        wandb_project = getattr(self.cfg, "wandb_project", "myvlm-art-training")
+        wandb_run_name = getattr(self.cfg, "wandb_run_name", f"concept_{self.cfg.concept_name}_seed_{self.cfg.seed}")
+        
+        wandb.init(
+            project=wandb_project,
+            name=wandb_run_name,
+            config={
+                "concept_name": self.cfg.concept_name,
+                "seed": self.cfg.seed,
+                "learning_rate": self.cfg.learning_rate,
+                "batch_size": self.cfg.batch_size,
+                "stage_a_steps": self.stage_a_steps,
+                "stage_b_steps": self.stage_b_steps,
+                "reg_lambda": getattr(self.cfg, "reg_lambda", 0.0),
+                "threshold": self.cfg.threshold,
+                "vlm_type": self.myvlm.cfg.vlm_type,
+            },
+            reinit=True,
+        )
+        print(f"Wandb initialized: project={wandb_project}, run={wandb_run_name}")
+    
+    def _log_wandb(self, metrics: Dict[str, Any], step: int):
+        """Log metrics to wandb if enabled."""
+        if self.use_wandb and WANDB_AVAILABLE:
+            wandb.log(metrics, step=step)
 
     def train(self):
         checkpoints: Dict[int, Dict[str, torch.Tensor]] = {}
@@ -101,6 +173,19 @@ class MultiTokenEmbeddingTrainer:
                     scheduler.step()
                     optimizer.zero_grad(set_to_none=True)
                 pbar_batches_a.set_description(f"Train A {i+1}/{self.stage_a_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
+                
+                # Log to wandb
+                global_step_a = i * len(dl_a) + batch_idx
+                self._log_wandb({
+                    "stage": "A",
+                    "epoch": i,
+                    "batch": batch_idx,
+                    "train/loss": float(loss),
+                    "train/ce_loss": float(outputs.loss),
+                    "train/reg_loss": float(reg_loss),
+                    "train/lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
+                }, step=global_step_a)
+                
                 if self.myvlm._should_validate(i, batch_idx):
                     tqdm.write(f"Validating A step {i+1}")
                     self.myvlm.validate(self._val_loaders["A"], desc=f"Validation A {i+1}/{self.stage_a_steps}")
@@ -161,6 +246,19 @@ class MultiTokenEmbeddingTrainer:
                     scheduler.step()
                     optimizer.zero_grad(set_to_none=True)
                 pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
+                
+                # Log to wandb
+                global_step_b = self.stage_a_steps * len(self._train_loaders["A"]) + j * len(dl_b) + batch_idx
+                self._log_wandb({
+                    "stage": "B",
+                    "epoch": j,
+                    "batch": batch_idx,
+                    "train/loss": float(loss),
+                    "train/ce_loss": float(outputs.loss),
+                    "train/reg_loss": float(reg_loss),
+                    "train/lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
+                }, step=global_step_b)
+                
                 if self.myvlm._should_validate(step, batch_idx):
                     tqdm.write(f"Validating B step {step}")
                     self.myvlm.validate(self._val_loaders["B"], desc=f"Validation B {j+1}/{self.stage_b_steps}")
@@ -183,6 +281,12 @@ class MultiTokenEmbeddingTrainer:
             pbar_b.update(1)
 
         setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "mode", MyVLMLayerMode.INFERENCE)
+        
+        # Finish wandb logging
+        if self.use_wandb and WANDB_AVAILABLE:
+            wandb.finish()
+            print("Wandb run finished.")
+        
         return checkpoints
 
     def _build_stage_loaders(self) -> None:

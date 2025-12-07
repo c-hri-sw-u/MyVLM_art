@@ -116,32 +116,9 @@ class LLaVAConceptGraphDataset(Dataset):
             parts = prompt_full.split(sep)
             parts[0] += sep
             instr_len = len(tokenizer_image_token(parts[0], self.processor.tokenizer)) - 2
-            
-            # 边界检查：确保 instr_len 不会覆盖整个序列
-            # 至少保留 target_text 部分的 token 用于计算 loss
-            seq_len = ids.shape[1]
-            target_text = b.get("target_text", "")
-            if target_text:
-                target_ids = tokenizer_image_token(target_text, self.processor.tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt')
-                min_target_tokens = max(1, target_ids.shape[0] - 2)  # 保守估计
-            else:
-                min_target_tokens = 1
-            max_instr_len = seq_len - 1 - min_target_tokens  # -1 for the first token
-            if instr_len > max_instr_len:
-                print(f"[WARNING] instr_len ({instr_len}) > max_instr_len ({max_instr_len}), clamping. Stage: {self.stage_mode}")
-                print(f"  target_text length: {len(target_text)}, seq_len: {seq_len}")
-                instr_len = max(0, max_instr_len)
-            
             targets = ids.clone()
             targets[:, :1] = -100
             targets[:, 1:1 + instr_len] = -100
-            
-            # 调试：检查有效 labels 数量
-            valid_labels = (targets[0] != -100).sum().item()
-            if valid_labels == 0:
-                print(f"[ERROR] Stage {self.stage_mode}: All labels are -100! Loss will be 0.")
-                print(f"  instr_len={instr_len}, seq_len={seq_len}, target_text='{target_text[:50]}...'")
-            
             input_ids_list.append(ids[0])
             labels_list.append(targets[0])
             if self.stage_mode == "B":
