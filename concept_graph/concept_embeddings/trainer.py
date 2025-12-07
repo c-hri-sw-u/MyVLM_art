@@ -183,9 +183,12 @@ class MultiTokenEmbeddingTrainer:
                     break
                 attn_interval = int(getattr(self.cfg, "attn_reg_interval", 1))
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0) and (batch_idx % attn_interval == 0)
+                # Stage B: 移除 token_weights，模型不支持此参数
+                token_weights = batch.pop("token_weights", None)
                 with torch.cuda.amp.autocast():
                     outputs = self.myvlm.vlm.model(**batch)
                 loss = outputs.loss
+                # TODO: 如需加权 loss，可在此使用 token_weights 手动计算
                 reg_loss = 0.0
                 if getattr(self.cfg, "reg_lambda", 0.0) > 0 and hasattr(outputs, "attentions") and hasattr(outputs, "concept_token_idxs") and outputs.concept_token_idxs is not None:
                     try:
