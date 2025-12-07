@@ -147,8 +147,10 @@ class MyVLM(torch.nn.Module):
     def _collate_func(self, batch: List[Dict[str, Any]]) -> Dict[str, Any]:
         raise NotImplementedError
 
-    def _should_validate(self, i: int, batch_idx: int) -> bool:
-        return i == self.cfg.optimization_steps - 1 or (i % self.cfg.val_interval == 0 and i > 0 and batch_idx == 0)
+    def _should_validate(self, i: int, batch_idx: int, is_last_batch: bool = False) -> bool:
+        # 每个 epoch 结束时验证（最后一个 batch）
+        return is_last_batch
 
-    def _should_save_checkpoint(self, i: int, batch_idx: int) -> bool:
-        return i == self.cfg.optimization_steps - 1 or (i % self.cfg.save_interval == 0 and i > 0 and batch_idx == 0)
+    def _should_save_checkpoint(self, i: int, batch_idx: int, is_last_batch: bool = False, is_last_epoch: bool = False) -> bool:
+        # 只在最后一个 epoch 的最后一个 batch 保存
+        return is_last_epoch and is_last_batch

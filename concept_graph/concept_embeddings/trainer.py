@@ -142,10 +142,12 @@ class MultiTokenEmbeddingTrainer:
                         "lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
                     }, step=global_step)
                 global_step += 1
-                if self.myvlm._should_validate(i, batch_idx):
-                    tqdm.write(f"Validating A step {i+1}")
+                is_last_batch = (batch_idx == len(dl_a) - 1)
+                is_last_epoch = (i == self.stage_a_steps - 1)
+                if self.myvlm._should_validate(i, batch_idx, is_last_batch):
+                    tqdm.write(f"Validating A epoch {i+1}/{self.stage_a_steps}")
                     self.myvlm.validate(self._val_loaders["A"], desc=f"Validation A {i+1}/{self.stage_a_steps}")
-                if self.myvlm._should_save_checkpoint(i, batch_idx):
+                if self.myvlm._should_save_checkpoint(i, batch_idx, is_last_batch, is_last_epoch):
                     state = {}
                     if hasattr(layer_module, "keys") and layer_module.keys is not None:
                         state["keys"] = layer_module.keys.clone().detach().requires_grad_(False).cpu()
@@ -268,10 +270,12 @@ class MultiTokenEmbeddingTrainer:
                         "lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
                     }, step=global_step)
                 global_step += 1
-                if self.myvlm._should_validate(step, batch_idx):
-                    tqdm.write(f"Validating B step {step}")
+                is_last_batch = (batch_idx == len(dl_b) - 1)
+                is_last_epoch = (j == self.stage_b_steps - 1)
+                if self.myvlm._should_validate(j, batch_idx, is_last_batch):
+                    tqdm.write(f"Validating B epoch {j+1}/{self.stage_b_steps}")
                     self.myvlm.validate(self._val_loaders["B"], desc=f"Validation B {j+1}/{self.stage_b_steps}")
-                if self.myvlm._should_save_checkpoint(step, batch_idx):
+                if self.myvlm._should_save_checkpoint(j, batch_idx, is_last_batch, is_last_epoch):
                     state = {}
                     if hasattr(layer_module, "keys") and layer_module.keys is not None:
                         state["keys"] = layer_module.keys.clone().detach().requires_grad_(False).cpu()
