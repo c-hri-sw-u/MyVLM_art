@@ -231,6 +231,17 @@ def run_reasoning(vlm_wrapper, activated_concepts: Optional[Dict[str, Dict[str, 
             head.load_prototypes(ck)
             idx_to_concept_map[dim] = head.idx_to_concept.get(dim, [])
     outputs: Dict[str, Dict[str, Any]] = {}
+    saliency_n = int(getattr(cfg, "saliency_sample_n", 0))
+    saliency_mode = str(getattr(cfg, "saliency_sample_mode", "first")).strip().lower()
+    sel_idxs: List[int] = []
+    if saliency_n > 0:
+        N = len(images)
+        k = min(saliency_n, N)
+        if saliency_mode == "random":
+            import random
+            sel_idxs = sorted(random.sample(range(N), k))
+        else:
+            sel_idxs = list(range(k))
     for i, img in enumerate(images):
         p = Path(img)
         try:
@@ -290,28 +301,30 @@ def run_reasoning(vlm_wrapper, activated_concepts: Optional[Dict[str, Dict[str, 
                 pass
         res: Dict[str, str] = {}
         attn_cache: Dict[str, Any] = {}
-        for prompt in prompts:
-            inputs = vlm_wrapper.preprocess(image_path=p, prompt=prompt)
-            with torch.cuda.amp.autocast():
-                out = vlm_wrapper.model.generate(
-                    inputs=inputs['input_ids'],
-                    images=inputs['image_tensor'],
-                    concept_signals=vlm_wrapper.prepare_concept_signals(sig),
-                    do_sample=True if getattr(vlm_wrapper, "temperature", 0.2) > 0 else False,
-                    temperature=getattr(vlm_wrapper, "temperature", 0.2),
-                    top_p=getattr(vlm_wrapper, "top_p", 0.7),
-                    stopping_criteria=[inputs['stopping_criteria']],
-                    max_new_tokens=int(getattr(cfg, "max_reason_tokens", 200)),
-                    output_attentions=False,
-                    return_dict_in_generate=True,
-                )
-            text = vlm_wrapper.processor.tokenizer.batch_decode(out.sequences, skip_special_tokens=True)[0]
-            res[prompt] = text
-            attn_cache[prompt] = getattr(out, "attentions", None)
         out_entry: Dict[str, Any] = {"__meta__": meta}
-        out_entry.update(res)
+        if not bool(getattr(cfg, "saliency_only", False)):
+            for prompt in prompts:
+                inputs = vlm_wrapper.preprocess(image_path=p, prompt=prompt)
+                with torch.cuda.amp.autocast():
+                    out = vlm_wrapper.model.generate(
+                        inputs=inputs['input_ids'],
+                        images=inputs['image_tensor'],
+                        concept_signals=vlm_wrapper.prepare_concept_signals(sig),
+                        do_sample=True if getattr(vlm_wrapper, "temperature", 0.2) > 0 else False,
+                        temperature=getattr(vlm_wrapper, "temperature", 0.2),
+                        top_p=getattr(vlm_wrapper, "top_p", 0.7),
+                        stopping_criteria=[inputs['stopping_criteria']],
+                        max_new_tokens=int(getattr(cfg, "max_reason_tokens", 200)),
+                        output_attentions=False,
+                        return_dict_in_generate=True,
+                    )
+                text = vlm_wrapper.processor.tokenizer.batch_decode(out.sequences, skip_special_tokens=True)[0]
+                res[prompt] = text
+                attn_cache[prompt] = getattr(out, "attentions", None)
+            out_entry.update(res)
         outputs[str(p)] = out_entry
-        if bool(getattr(cfg, "save_saliency", False)):
+        do_sal = bool(getattr(cfg, "save_saliency", False)) and (saliency_n <= 0 or i in sel_idxs)
+        if do_sal:
             source = str(getattr(cfg, "saliency_source", "prototype")).strip().lower()
             try:
                 print(f"保存显著图: source={source}, grid={int(getattr(cfg, 'saliency_grid', 16))}")
@@ -364,12 +377,8 @@ def run_reasoning(vlm_wrapper, activated_concepts: Optional[Dict[str, Dict[str, 
                             pass
             if source in ("llava_structured", "llava", "both"):
                 try:
-                    try:
-                        print("生成LLaVA显著图: 遮挡损失")
-                    except Exception:
-                        pass
                     s_prompt = build_prompt_structured({"labels_per_dim": {k: ac.get(k, []) for k in ["artist", "style", "genre"]}}, structured_cfg)
-                    s_text = out_entry.get(s_prompt, "")
+                    s_text = out_entry.get(s_prompt, "") if not bool(getattr(cfg, "saliency_only", False)) else ""
                     tmp_inputs = vlm_wrapper.prepare_inputs(image=Image.open(p), prompt=s_prompt, target=s_text)
                     heat = _llava_occlusion_saliency(vlm_wrapper, tmp_inputs, sig, grid=int(getattr(cfg, "saliency_grid", 16)))
                     out_img = cfg.output_path / "saliency" / "llava" / f"{p.stem}.png"

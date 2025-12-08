@@ -55,6 +55,9 @@ class MyVLMArtConfig:
     save_saliency: bool = False
     saliency_grid: int = 16
     saliency_source: str = 'prototype'       # prototype / llava_structured
+    saliency_sample_n: int = 0
+    saliency_sample_mode: str = 'first'
+    saliency_only: bool = False
     limit: int = 0                           # 推理时可选限制图片数量（0 表示不限制）
     input_json: str = ''                     # 评估时可指定 reasoning.json 的绝对路径
     dataset_json: str = 'wikiart_5artists_dataset.json'  # 数据集标签 JSON 文件名

@@ -1,0 +1,551 @@
+{
+    "activation": {
+        "artist": {
+            "precision": 0.98,
+            "recall@3": 1.0,
+            "recall@5": 1.0
+        },
+        "genre": {
+            "precision": 0.7058823529411765,
+            "recall@3": 0.98,
+            "recall@5": 1.0
+        },
+        "style": {
+            "precision": 0.7368421052631579,
+            "recall@3": 1.0,
+            "recall@5": 1.0
+        }
+    },
+    "natural": {
+        "coverage": 0.5400000000000001,
+        "coverage_per_concept": {
+            "artist": {
+                "claude-monet": {
+                    "coverage": 0.2,
+                    "support": 10.0
+                },
+                "leonardo-da-vinci": {
+                    "coverage": 1.0,
+                    "support": 10.0
+                },
+                "pablo-picasso": {
+                    "coverage": 0.9,
+                    "support": 10.0
+                },
+                "rembrandt": {
+                    "coverage": 0.8,
+                    "support": 10.0
+                },
+                "vincent-van-gogh": {
+                    "coverage": 0.9,
+                    "support": 10.0
+                }
+            },
+            "genre": {
+                "cityscape": {
+                    "coverage": 0.6,
+                    "support": 5.0
+                },
+                "genre_painting": {
+                    "coverage": 0.8571428571428571,
+                    "support": 7.0
+                },
+                "landscape": {
+                    "coverage": 1.0,
+                    "support": 8.0
+                },
+                "nude_painting": {
+                    "coverage": 0.0,
+                    "support": 4.0
+                },
+                "portrait": {
+                    "coverage": 0.625,
+                    "support": 8.0
+                },
+                "religious_painting": {
+                    "coverage": 0.6,
+                    "support": 5.0
+                },
+                "sketch_and_study": {
+                    "coverage": 0.0,
+                    "support": 9.0
+                },
+                "still_life": {
+                    "coverage": 1.0,
+                    "support": 4.0
+                }
+            },
+            "style": {
+                "Baroque": {
+                    "coverage": 0.2,
+                    "support": 10.0
+                },
+                "Cubism": {
+                    "coverage": 0.3333333333333333,
+                    "support": 3.0
+                },
+                "Early_Renaissance": {
+                    "coverage": 0.0,
+                    "support": 4.0
+                },
+                "Expressionism": {
+                    "coverage": 0.0,
+                    "support": 3.0
+                },
+                "High_Renaissance": {
+                    "coverage": 0.5,
+                    "support": 6.0
+                },
+                "Impressionism": {
+                    "coverage": 0.5555555555555556,
+                    "support": 9.0
+                },
+                "Post_Impressionism": {
+                    "coverage": 0.25,
+                    "support": 4.0
+                },
+                "Realism": {
+                    "coverage": 0.25,
+                    "support": 8.0
+                },
+                "Symbolism": {
+                    "coverage": 0.0,
+                    "support": 3.0
+                }
+            }
+        },
+        "macro_f1": {
+            "artist": 0.921164505466565,
+            "genre": 0.5492618316347899,
+            "style": 0.3330067593225488
+        },
+        "multi_label_all_correct": 0.3,
+        "per_concept": {
+            "artist": {
+                "claude-monet": {
+                    "f1": 0.8695652173913044,
+                    "precision": 0.7692307692307693,
+                    "recall": 1.0,
+                    "support": 10
+                },
+                "leonardo-da-vinci": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 10
+                },
+                "pablo-picasso": {
+                    "f1": 0.9,
+                    "precision": 0.9,
+                    "recall": 0.9,
+                    "support": 10
+                },
+                "rembrandt": {
+                    "f1": 0.888888888888889,
+                    "precision": 1.0,
+                    "recall": 0.8,
+                    "support": 10
+                },
+                "vincent-van-gogh": {
+                    "f1": 0.9473684210526316,
+                    "precision": 1.0,
+                    "recall": 0.9,
+                    "support": 10
+                }
+            },
+            "genre": {
+                "cityscape": {
+                    "f1": 0.7499999999999999,
+                    "precision": 1.0,
+                    "recall": 0.6,
+                    "support": 5
+                },
+                "genre_painting": {
+                    "f1": 0.4827586206896552,
+                    "precision": 0.3181818181818182,
+                    "recall": 1.0,
+                    "support": 7
+                },
+                "landscape": {
+                    "f1": 0.8421052631578948,
+                    "precision": 0.7272727272727273,
+                    "recall": 1.0,
+                    "support": 8
+                },
+                "nude_painting": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 4
+                },
+                "portrait": {
+                    "f1": 0.7692307692307693,
+                    "precision": 1.0,
+                    "recall": 0.625,
+                    "support": 8
+                },
+                "religious_painting": {
+                    "f1": 0.7499999999999999,
+                    "precision": 1.0,
+                    "recall": 0.6,
+                    "support": 5
+                },
+                "sketch_and_study": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 9
+                },
+                "still_life": {
+                    "f1": 0.8,
+                    "precision": 0.6666666666666666,
+                    "recall": 1.0,
+                    "support": 4
+                }
+            },
+            "style": {
+                "Baroque": {
+                    "f1": 0.4736842105263158,
+                    "precision": 0.32142857142857145,
+                    "recall": 0.9,
+                    "support": 10
+                },
+                "Cubism": {
+                    "f1": 0.5,
+                    "precision": 1.0,
+                    "recall": 0.3333333333333333,
+                    "support": 3
+                },
+                "Early_Renaissance": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 4
+                },
+                "Expressionism": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 3
+                },
+                "High_Renaissance": {
+                    "f1": 0.5454545454545454,
+                    "precision": 0.6,
+                    "recall": 0.5,
+                    "support": 6
+                },
+                "Impressionism": {
+                    "f1": 0.7142857142857143,
+                    "precision": 1.0,
+                    "recall": 0.5555555555555556,
+                    "support": 9
+                },
+                "Post_Impressionism": {
+                    "f1": 0.4,
+                    "precision": 0.3333333333333333,
+                    "recall": 0.5,
+                    "support": 4
+                },
+                "Realism": {
+                    "f1": 0.36363636363636365,
+                    "precision": 0.6666666666666666,
+                    "recall": 0.25,
+                    "support": 8
+                },
+                "Symbolism": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 3
+                }
+            }
+        },
+        "weighted_f1": {
+            "artist": 0.921164505466565,
+            "genre": 0.5393999720787379,
+            "style": 0.40894463431305544
+        }
+    },
+    "saliency": {
+        "paths": {
+            "artist": [],
+            "genre": [],
+            "style": []
+        },
+        "stats": {
+            "artist": {
+                "count": 0.0,
+                "max": 0.0,
+                "mean": 0.0
+            },
+            "genre": {
+                "count": 0.0,
+                "max": 0.0,
+                "mean": 0.0
+            },
+            "style": {
+                "count": 0.0,
+                "max": 0.0,
+                "mean": 0.0
+            }
+        }
+    },
+    "saliency_llava": {
+        "paths": [],
+        "stats": {
+            "count": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+        }
+    },
+    "structured": {
+        "coverage": 0.6466666666666668,
+        "coverage_per_concept": {
+            "artist": {
+                "claude-monet": {
+                    "coverage": 0.6,
+                    "support": 10.0
+                },
+                "leonardo-da-vinci": {
+                    "coverage": 1.0,
+                    "support": 10.0
+                },
+                "pablo-picasso": {
+                    "coverage": 1.0,
+                    "support": 10.0
+                },
+                "rembrandt": {
+                    "coverage": 0.8,
+                    "support": 10.0
+                },
+                "vincent-van-gogh": {
+                    "coverage": 0.8,
+                    "support": 10.0
+                }
+            },
+            "genre": {
+                "cityscape": {
+                    "coverage": 0.4,
+                    "support": 5.0
+                },
+                "genre_painting": {
+                    "coverage": 1.0,
+                    "support": 7.0
+                },
+                "landscape": {
+                    "coverage": 1.0,
+                    "support": 8.0
+                },
+                "nude_painting": {
+                    "coverage": 0.0,
+                    "support": 4.0
+                },
+                "portrait": {
+                    "coverage": 0.75,
+                    "support": 8.0
+                },
+                "religious_painting": {
+                    "coverage": 0.0,
+                    "support": 5.0
+                },
+                "sketch_and_study": {
+                    "coverage": 0.0,
+                    "support": 9.0
+                },
+                "still_life": {
+                    "coverage": 1.0,
+                    "support": 4.0
+                }
+            },
+            "style": {
+                "Baroque": {
+                    "coverage": 0.4,
+                    "support": 10.0
+                },
+                "Cubism": {
+                    "coverage": 0.6666666666666666,
+                    "support": 3.0
+                },
+                "Early_Renaissance": {
+                    "coverage": 0.0,
+                    "support": 4.0
+                },
+                "Expressionism": {
+                    "coverage": 0.3333333333333333,
+                    "support": 3.0
+                },
+                "High_Renaissance": {
+                    "coverage": 0.8333333333333334,
+                    "support": 6.0
+                },
+                "Impressionism": {
+                    "coverage": 1.0,
+                    "support": 9.0
+                },
+                "Post_Impressionism": {
+                    "coverage": 0.75,
+                    "support": 4.0
+                },
+                "Realism": {
+                    "coverage": 0.25,
+                    "support": 8.0
+                },
+                "Symbolism": {
+                    "coverage": 0.6666666666666666,
+                    "support": 3.0
+                }
+            }
+        },
+        "macro_f1": {
+            "artist": 0.9196825396825397,
+            "genre": 0.7237058080808081,
+            "style": 0.4596397161614553
+        },
+        "multi_label_all_correct": 0.24,
+        "per_concept": {
+            "artist": {
+                "claude-monet": {
+                    "f1": 0.8571428571428572,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.9,
+                    "support": 10
+                },
+                "leonardo-da-vinci": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 10
+                },
+                "pablo-picasso": {
+                    "f1": 0.9523809523809523,
+                    "precision": 0.9090909090909091,
+                    "recall": 1.0,
+                    "support": 10
+                },
+                "rembrandt": {
+                    "f1": 0.888888888888889,
+                    "precision": 1.0,
+                    "recall": 0.8,
+                    "support": 10
+                },
+                "vincent-van-gogh": {
+                    "f1": 0.9,
+                    "precision": 0.9,
+                    "recall": 0.9,
+                    "support": 10
+                }
+            },
+            "genre": {
+                "cityscape": {
+                    "f1": 0.5454545454545454,
+                    "precision": 0.5,
+                    "recall": 0.6,
+                    "support": 5
+                },
+                "genre_painting": {
+                    "f1": 0.7000000000000001,
+                    "precision": 0.5384615384615384,
+                    "recall": 1.0,
+                    "support": 7
+                },
+                "landscape": {
+                    "f1": 0.888888888888889,
+                    "precision": 0.8,
+                    "recall": 1.0,
+                    "support": 8
+                },
+                "nude_painting": {
+                    "f1": 0.6666666666666666,
+                    "precision": 1.0,
+                    "recall": 0.5,
+                    "support": 4
+                },
+                "portrait": {
+                    "f1": 0.625,
+                    "precision": 0.625,
+                    "recall": 0.625,
+                    "support": 8
+                },
+                "religious_painting": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 5
+                },
+                "sketch_and_study": {
+                    "f1": 0.3636363636363636,
+                    "precision": 1.0,
+                    "recall": 0.2222222222222222,
+                    "support": 9
+                },
+                "still_life": {
+                    "f1": 1.0,
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "support": 4
+                }
+            },
+            "style": {
+                "Baroque": {
+                    "f1": 0.5217391304347826,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.6,
+                    "support": 10
+                },
+                "Cubism": {
+                    "f1": 0.5714285714285715,
+                    "precision": 0.5,
+                    "recall": 0.6666666666666666,
+                    "support": 3
+                },
+                "Early_Renaissance": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 4
+                },
+                "Expressionism": {
+                    "f1": 0.5,
+                    "precision": 1.0,
+                    "recall": 0.3333333333333333,
+                    "support": 3
+                },
+                "High_Renaissance": {
+                    "f1": 0.7692307692307692,
+                    "precision": 0.7142857142857143,
+                    "recall": 0.8333333333333334,
+                    "support": 6
+                },
+                "Impressionism": {
+                    "f1": 0.6666666666666666,
+                    "precision": 0.5,
+                    "recall": 1.0,
+                    "support": 9
+                },
+                "Post_Impressionism": {
+                    "f1": 0.0,
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "support": 4
+                },
+                "Realism": {
+                    "f1": 0.3076923076923077,
+                    "precision": 0.4,
+                    "recall": 0.25,
+                    "support": 8
+                },
+                "Symbolism": {
+                    "f1": 0.8,
+                    "precision": 1.0,
+                    "recall": 0.6666666666666666,
+                    "support": 3
+                }
+            }
+        },
+        "weighted_f1": {
+            "artist": 0.9196825396825397,
+            "genre": 0.6935555555555555,
+            "style": 0.47817200191113235
+        }
+    }
+}
