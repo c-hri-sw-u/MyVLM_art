@@ -27,6 +27,12 @@ from tqdm import tqdm
 import hashlib
 import gc
 
+try:
+    import wandb
+    WANDB_AVAILABLE = True
+except ImportError:
+    WANDB_AVAILABLE = False
+
 from concept_graph.concept_embeddings.datasets.llava_concept_graph_dataset import (
     LLaVAConceptGraphDataset,
 )
@@ -51,7 +57,7 @@ class MultiTokenEmbeddingTrainer:
             "genre": Path("artifacts/concept_signals_genre.json"),
         }
         self.stage_a_steps = int(self.cfg.optimization_steps)
-        self.stage_b_steps = max(1, int(self.cfg.optimization_steps // 2))
+        self.stage_b_steps = int(self.cfg.optimization_steps)  # Stage B 和 Stage A 相同 epochs
         self._train_loaders: Dict[str, DataLoader] = {}
         self._val_loaders: Dict[str, DataLoader] = {}
         self._build_stage_loaders()
@@ -62,7 +68,29 @@ class MultiTokenEmbeddingTrainer:
         setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "training", True)
         setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "mode", MyVLMLayerMode.TRAIN)
 
+        # 初始化 wandb（如果可用且配置启用）
+        use_wandb = WANDB_AVAILABLE and getattr(self.cfg, "use_wandb", False)
+        if use_wandb:
+            wandb_project = getattr(self.cfg, "wandb_project", "myvlm-art-concept-embedding")
+            wandb_run_name = getattr(self.cfg, "wandb_run_name", f"concept_{self.cfg.concept_name}_seed_{self.cfg.seed}")
+            wandb.init(
+                project=wandb_project,
+                name=wandb_run_name,
+                config={
+                    "concept_name": self.cfg.concept_name,
+                    "seed": self.cfg.seed,
+                    "learning_rate": self.cfg.learning_rate,
+                    "batch_size": self.cfg.batch_size,
+                    "stage_a_steps": self.stage_a_steps,
+                    "stage_b_steps": self.stage_b_steps,
+                    "reg_lambda": getattr(self.cfg, "reg_lambda", 0.0),
+                    "threshold": self.cfg.threshold,
+                },
+            )
+            tqdm.write(f"[wandb] Initialized: project={wandb_project}, run={wandb_run_name}")
+
         optimizer, scheduler = None, None
+        global_step = 0  # 全局步数计数器
 
         pbar_a = tqdm(total=self.stage_a_steps, desc="Stage A")
         for i in range(self.stage_a_steps):
@@ -101,10 +129,25 @@ class MultiTokenEmbeddingTrainer:
                     scheduler.step()
                     optimizer.zero_grad(set_to_none=True)
                 pbar_batches_a.set_description(f"Train A {i+1}/{self.stage_a_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
-                if self.myvlm._should_validate(i, batch_idx):
-                    tqdm.write(f"Validating A step {i+1}")
+                # wandb 日志记录
+                if use_wandb:
+                    wandb.log({
+                        "stage": "A",
+                        "epoch": i + 1,
+                        "batch": batch_idx,
+                        "global_step": global_step,
+                        "train/loss": float(loss),
+                        "train/reg_loss": float(reg_loss),
+                        "train/lm_loss": float(outputs.loss),
+                        "lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
+                    }, step=global_step)
+                global_step += 1
+                is_last_batch = (batch_idx == len(dl_a) - 1)
+                is_last_epoch = (i == self.stage_a_steps - 1)
+                if self.myvlm._should_validate(i, batch_idx, is_last_batch):
+                    tqdm.write(f"Validating A epoch {i+1}/{self.stage_a_steps}")
                     self.myvlm.validate(self._val_loaders["A"], desc=f"Validation A {i+1}/{self.stage_a_steps}")
-                if self.myvlm._should_save_checkpoint(i, batch_idx):
+                if self.myvlm._should_save_checkpoint(i, batch_idx, is_last_batch, is_last_epoch):
                     state = {}
                     if hasattr(layer_module, "keys") and layer_module.keys is not None:
                         state["keys"] = layer_module.keys.clone().detach().requires_grad_(False).cpu()
@@ -123,10 +166,16 @@ class MultiTokenEmbeddingTrainer:
             pbar_a.update(1)
 
         pbar_b = tqdm(total=self.stage_b_steps, desc="Stage B")
-        try:
-            torch.cuda.empty_cache()
-        except Exception:
-            pass
+        # Stage B 开始前彻底清理显存
+        import gc
+        gc.collect()
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+        # 诊断：检查 Stage B 数据集
+        if use_wandb:
+            sample_b = self._train_loaders["B"].dataset.samples[0] if len(self._train_loaders["B"].dataset.samples) > 0 else {}
+            tqdm.write(f"[Stage B] 数据集大小: {len(self._train_loaders['B'].dataset)}")
+            tqdm.write(f"[Stage B] 示例 target_keys: {sample_b.get('labels_per_dim', {})}")
         for j in range(self.stage_b_steps):
             step = self.stage_a_steps + j
             setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "iter", step)
@@ -137,9 +186,52 @@ class MultiTokenEmbeddingTrainer:
                     break
                 attn_interval = int(getattr(self.cfg, "attn_reg_interval", 1))
                 batch["output_attentions"] = bool(getattr(self.cfg, "reg_lambda", 0.0) > 0) and (batch_idx % attn_interval == 0)
+                # Stage B: 提取 token_weights 和 labels
+                token_weights = batch.pop("token_weights", None)
+                labels = batch.get("labels", None)
+                
                 with torch.cuda.amp.autocast():
                     outputs = self.myvlm.vlm.model(**batch)
-                loss = outputs.loss
+                
+                # 使用 token_weights 计算加权 loss（修复 image tokens 导致的长度不匹配）
+                if token_weights is not None and labels is not None:
+                    logits = outputs.logits
+                    seq_logits = logits.size(1)
+                    seq_labels = labels.size(1)
+                    
+                    # 对齐：image tokens 在序列开头，从 logits 末尾截取
+                    if seq_logits > seq_labels:
+                        logits_aligned = logits[:, -seq_labels:, :]
+                    else:
+                        logits_aligned = logits
+                    
+                    # Shift: 预测下一个 token
+                    shift_logits = logits_aligned[:, :-1, :].contiguous()
+                    shift_labels = labels[:, 1:].contiguous()
+                    shift_weights = token_weights[:, 1:].contiguous()
+                    
+                    # 计算 per-token loss
+                    vocab_size = shift_logits.size(-1)
+                    loss_fct = torch.nn.CrossEntropyLoss(reduction='none', ignore_index=-100)
+                    per_token_loss = loss_fct(
+                        shift_logits.reshape(-1, vocab_size),
+                        shift_labels.reshape(-1)
+                    )
+                    
+                    # 应用权重
+                    weights_flat = shift_weights.reshape(-1)
+                    valid_mask = (shift_labels.reshape(-1) != -100).float()
+                    weight_sum = (weights_flat * valid_mask).sum()
+                    
+                    if weight_sum > 0:
+                        loss = (per_token_loss * weights_flat * valid_mask).sum() / weight_sum
+                    else:
+                        loss = outputs.loss
+                    
+                    # 释放中间变量
+                    del per_token_loss, weights_flat, valid_mask, shift_labels, shift_weights, logits_aligned, shift_logits
+                else:
+                    loss = outputs.loss
                 reg_loss = 0.0
                 if getattr(self.cfg, "reg_lambda", 0.0) > 0 and hasattr(outputs, "attentions") and hasattr(outputs, "concept_token_idxs") and outputs.concept_token_idxs is not None:
                     try:
@@ -161,10 +253,29 @@ class MultiTokenEmbeddingTrainer:
                     scheduler.step()
                     optimizer.zero_grad(set_to_none=True)
                 pbar_batches_b.set_description(f"Train B {j+1}/{self.stage_b_steps} | Loss: {float(loss):0.3f} | Reg: {float(reg_loss):0.3f}")
-                if self.myvlm._should_validate(step, batch_idx):
-                    tqdm.write(f"Validating B step {step}")
+                # wandb 日志记录
+                if use_wandb:
+                    # 原始 loss（未加权）vs 加权 loss
+                    raw_loss = outputs.loss.item() if hasattr(outputs.loss, 'item') else float(outputs.loss)
+                    weighted_loss_val = float(loss) - float(reg_loss)  # 减去 reg_loss 得到纯 lm loss
+                    wandb.log({
+                        "stage": "B",
+                        "epoch": j + 1,
+                        "batch": batch_idx,
+                        "global_step": global_step,
+                        "train/loss": float(loss),              # 总 loss（加权 + reg）
+                        "train/weighted_lm_loss": weighted_loss_val,  # 加权语言建模 loss
+                        "train/raw_lm_loss": raw_loss,          # 原始未加权 loss
+                        "train/reg_loss": float(reg_loss),
+                        "lr": scheduler.get_last_lr()[0] if scheduler else self.cfg.learning_rate,
+                    }, step=global_step)
+                global_step += 1
+                is_last_batch = (batch_idx == len(dl_b) - 1)
+                is_last_epoch = (j == self.stage_b_steps - 1)
+                if self.myvlm._should_validate(j, batch_idx, is_last_batch):
+                    tqdm.write(f"Validating B epoch {j+1}/{self.stage_b_steps}")
                     self.myvlm.validate(self._val_loaders["B"], desc=f"Validation B {j+1}/{self.stage_b_steps}")
-                if self.myvlm._should_save_checkpoint(step, batch_idx):
+                if self.myvlm._should_save_checkpoint(j, batch_idx, is_last_batch, is_last_epoch):
                     state = {}
                     if hasattr(layer_module, "keys") and layer_module.keys is not None:
                         state["keys"] = layer_module.keys.clone().detach().requires_grad_(False).cpu()
@@ -183,6 +294,12 @@ class MultiTokenEmbeddingTrainer:
             pbar_b.update(1)
 
         setattr(eval(f"self.myvlm.vlm.{self.myvlm.layer}"), "mode", MyVLMLayerMode.INFERENCE)
+        
+        # 关闭 wandb
+        if use_wandb:
+            wandb.finish()
+            tqdm.write("[wandb] Run finished.")
+        
         return checkpoints
 
     def _build_stage_loaders(self) -> None:
