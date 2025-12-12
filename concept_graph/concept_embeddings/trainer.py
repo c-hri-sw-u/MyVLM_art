@@ -1,22 +1,3 @@
-"""
-简要介绍 (ZH):
-  概念嵌入（多 token）训练器。联合优化：
-  - 语言建模损失（交叉熵），让 VLM 在解释/分类输出中自然提及并利用激活概念
-  - 注意力正则损失，抑制某些概念 token 主导，保持多概念协同稳定
-
-Overview (EN):
-  Trainer for multi-token concept embeddings. Jointly optimize language modeling (CE) and attention regularization
-  to encourage coherent multi-concept reasoning while preventing dominance of specific concept tokens.
-
-Inputs/Outputs:
-  - Inputs: batched images, activated concept signals (prototype similarities), prompts & targets
-  - Outputs: checkpoints of concept embeddings per iteration, evaluation logs on validation split
-
-阶段化训练调度：
-阶段 A：使用 from_csv(csv_path, images_root, ..., stage_mode="A", w_keys=1.0, w_reason=0.0)；跑若干 epoch 至稳定
-阶段 B：切换 stage_mode="B"，w_reason=0.2，学习理由的语言风格；定期验证三键分类是否稳定
-"""
-
 import torch
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple

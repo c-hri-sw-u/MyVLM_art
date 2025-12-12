@@ -1,12 +1,3 @@
-"""
-简要介绍 (ZH):
-  合成脚本冒烟测试。读取数据集样例，打印生成的 prompt 与 LLM 原始输出，验证模板与管线。
-
-Overview (EN):
-  Synthesis smoke test. Loads a sample, prints the generated prompt and raw model output to verify templates
-  and pipeline wiring.
-"""
-
 import argparse
 import sys
 from pathlib import Path

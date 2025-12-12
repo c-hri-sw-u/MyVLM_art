@@ -1,26 +1,3 @@
-"""
-简要介绍 (ZH):
-  原型概念头。为每个概念维护 CLIP 特征空间的原型向量 p_c（如 ViT‑B/16, 512 维），
-  计算查询图像的相似度 s_c=cos_sim(CLIP(x_q), p_c)，并按阈值 τ 激活。
-
-Overview (EN):
-  Prototype-based concept head in CLIP feature space. Provides per-concept prototypes and cosine-similarity
-  scoring used to activate concepts and to drive gating in the embedding layer. This serves as the concept
-  detection backbone for the multi-granular concept graph.
-
-Outputs & Interface:
-  - extract_signal(image_paths, dimension) -> Dict[Path, Dict[int, Tensor([1 - s, s])]]
-    Returns full similarity scores per concept for downstream gating.
-
-Status:
-  - Implemented CLIP loading, feature normalization, prototype build/save/load, and signal extraction.
-
-Remaining Work:
-  - Optional per-dimension temperature calibration of scores.
-  - Optional EMA updates of prototypes during training.
-  - Thresholding is handled downstream in MultiTokenConceptLayer; no hard filtering here.
-"""
-
 from pathlib import Path
 from typing import Dict, List, Optional, Union, Tuple
 

@@ -1,12 +1,3 @@
-"""
-简要介绍 (ZH):
-  概念信号导出工具。读取原型检查点与数据集，批量计算每张图的概念相似度，并输出 JSON/CSV。
-
-Overview (EN):
-  Concept signal exporter. Loads prototype checkpoints and dataset, computes per‑image concept similarities,
-  and writes JSON/CSV for downstream gating and training.
-"""
-
 import argparse
 import json
 from pathlib import Path

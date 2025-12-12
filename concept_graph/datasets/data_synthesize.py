@@ -1,12 +1,3 @@
-"""
-简要介绍 (ZH):
-  目标文本合成脚本。调用 OpenRouter 将标签转换为训练用 keys/reason 文本，并缓存到 CSV/JSON。
-
-Overview (EN):
-  Target text synthesis. Uses OpenRouter to convert labels into training keys/reason text and saves caches
-  to CSV/JSON for Stage A/B training.
-"""
-
 import os
 import sys
 import json

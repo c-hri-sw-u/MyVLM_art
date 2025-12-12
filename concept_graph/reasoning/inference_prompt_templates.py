@@ -1,21 +1,3 @@
-"""
-简要介绍 (ZH):
-  解释性推理的提示词模板库。根据已激活的多粒度概念（艺术家/风格/题材/媒介），
-  自动生成用于 LLaVA 的对话式提示词，用于“解释为何是某艺术家”或“描述作品特征”。
-
-Overview (EN):
-  Prompt templates for explainable reasoning. Given activated multi-granular concepts, compose conversational
-  prompts for LLaVA to produce natural language justifications and descriptive outputs.
-
-Status:
-  - Natural and structured prompts implemented; more templates can be added.
-
-Remaining Work:
-  1) Add variants: classification explanation, style-only description, genre/medium hybrids, counterfactuals.
-  2) Improve templating and length control; expose options via config.
-  3) Integrate with `reasoning_runner.py` for multi-template selection.
-"""
-
 from typing import Any, Dict, Optional
 
 
